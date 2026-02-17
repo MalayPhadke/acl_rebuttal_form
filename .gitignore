@@ -2,3 +2,5 @@ get_results.py
 synthesis-a89ec-firebase-adminsdk-7rxn2-340276533d.json
 *.csv
 *.xlsx
+images/
+audio/
