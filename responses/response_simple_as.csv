@@ -1,8 +1,0 @@
-user_id,trial_id,response,gt,correct,reaction_time_ms
-as,01_var_009,NO,no,True,2296
-as,one_before_var04_sp05.0.wav,YES,yes,True,27190
-as,01_var_006,NO,no,True,3310
-as,1_original_7,YES,Yes,True,2225
-as,one_before_var05_sp06.7.wav,NO,yes,False,5948
-as,01_var_001,YES,yes,True,1698
-as,1_original_8,YES,Yes,True,1622

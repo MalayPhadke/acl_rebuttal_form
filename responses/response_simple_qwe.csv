@@ -1,5 +1,0 @@
-user_id,trial_id,response,gt,correct,reaction_time_ms
-qwe,01_var_008,NO,no,True,3041
-qwe,03_var_001,NO,no,True,2642
-qwe,1_original_8,YES,Yes,True,2223
-qwe,03_var_005,NO,no,True,2158

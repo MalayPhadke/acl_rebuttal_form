@@ -1,4 +1,0 @@
-user_id,trial_id,type,filename,question,response,correct,gt,reaction_time_ms,timestamp,image_path,variation,gt_ab,task_source,duration,audio_path,answer
-eds,01_var_005,image,01_var_005.png,Is the aeroplane left of the bicycle?,YES,True,yes,2272,2026-02-19T00:37:59.964783,/home/malayphadke/acl_rebuttal_form/lr_sweep/01_var_005.png,Im01_original,A,image_matrix_complex_complex.csv,0.0,,
-eds,clean_step02_db-024,audio,clean_step02_db-024.wav,Is the sneezing sound louder than the insects sound?,NO,True,no,70802,2026-02-19T00:39:26.079560,,,,metadata.csv,11.999795918367347,/home/malayphadke/acl_rebuttal_form/volume_task/clean_step02_db-024.wav,no
-eds,03_var_010,image,03_var_010.png,Is the cube smaller than the cylinder?,YES,True,yes,1512,2026-02-19T00:39:30.931067,/home/malayphadke/acl_rebuttal_form/size_sweep/03_var_010.png,Im03_shape_src,A,size_matrix_basic_basic.csv,0.0,,

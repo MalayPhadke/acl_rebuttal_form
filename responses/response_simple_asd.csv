@@ -1,9 +1,0 @@
-user_id,trial_id,response,gt,correct,reaction_time_ms
-asd,noise_both_var09_sp13.3.wav,YES,no,False,1078
-asd,03_var_001,NO,no,True,2794
-asd,01_var_009,NO,no,True,6624
-asd,1_original_6,YES,Yes,True,10007
-asd,1_original_8,YES,Yes,True,1367
-asd,noise_both_var06_sp08.3.wav,YES,no,False,2077
-asd,1_original_3,NO,Yes,False,2084
-asd,03_var_010,YES,yes,True,2007
