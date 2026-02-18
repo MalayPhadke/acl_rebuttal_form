@@ -1,0 +1,4 @@
+user_id,trial_id,response,gt,correct,reaction_time_ms
+eds,01_var_005,YES,yes,True,2272
+eds,clean_step02_db-024,NO,no,True,70802
+eds,03_var_010,YES,yes,True,1512

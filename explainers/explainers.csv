@@ -1,0 +1,3 @@
+id,path,question,gt
+01_var_004,/home/malayphadke/acl_rebuttal_form/explainers/01_var_004.png,Is the sphere left of the cylinder?,yes
+clean_var01_sp00.0.wav,/home/malay/first_var/1/clean/clean_var01_sp00.0.wav,Is the helicopter sound before the crying_baby sound?,yes

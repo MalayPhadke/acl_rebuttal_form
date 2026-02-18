@@ -1,0 +1,3 @@
+user_id,trial_id,type,filename,question,response,correct,gt,reaction_time_ms,timestamp,answer,audio_path,task_source,duration,image_path,variation,gt_ab
+sfd,noise_both_var01_sp00.0.wav,audio,noise_both_var01_sp00.0.wav,Is the clapping sound before the airplane sound?,NO,False,yes,3082,2026-02-18T22:41:44.531350,yes,/home/malayphadke/acl_rebuttal_form/temporal_loc_task/noise_both_var01_sp00.0.wav,metadata.csv,20.0,,,
+sfd,01_var_008,image,01_var_008.png,Is the aeroplane left of the bicycle?,NO,True,no,4499,2026-02-18T22:41:52.166342,,,image_matrix_complex_complex.csv,0.0,/home/malayphadke/acl_rebuttal_form/lr_sweep/01_var_008.png,Im01_original,B

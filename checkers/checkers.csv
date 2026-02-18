@@ -1,0 +1,3 @@
+id,image_path,question,gt,variation,gt_ab
+01_var_001,/home/malayphadke/acl_rebuttal_form/checkers/01_var_001.png,Is the sphere left of the aeroplane?,yes,Im01_original,A
+01_var_005,/home/malayphadke/acl_rebuttal_form/checkers/01_var_005.png,Is the sphere left of the aeroplane?,yes,Im01_original,A

@@ -1,0 +1,2 @@
+user_id,trial_id,type,filename,question,response,correct,gt,reaction_time_ms,timestamp,image_path,variation,gt_ab,task_source,duration
+zds,01_var_005,image,01_var_005.png,Is the aeroplane left of the bicycle?,NO,False,yes,3833,2026-02-18T22:31:18.156614,/home/malayphadke/acl_rebuttal_form/lr_sweep/01_var_005.png,Im01_original,A,image_matrix_complex_complex.csv,0
