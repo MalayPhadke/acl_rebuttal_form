@@ -1,0 +1,11 @@
+id,image_path,question,gt,variation,gt_ab
+03_var_001,/home/malayphadke/acl_rebuttal_form/size_sweep/03_var_001.png,Is the cube smaller than the cylinder?,no,Im03_shape_src,B
+03_var_002,/home/malayphadke/acl_rebuttal_form/size_sweep/03_var_002.png,Is the cube smaller than the cylinder?,no,Im03_shape_src,B
+03_var_003,/home/malayphadke/acl_rebuttal_form/size_sweep/03_var_003.png,Is the cube smaller than the cylinder?,no,Im03_shape_src,B
+03_var_004,/home/malayphadke/acl_rebuttal_form/size_sweep/03_var_004.png,Is the cube smaller than the cylinder?,no,Im03_shape_src,B
+03_var_005,/home/malayphadke/acl_rebuttal_form/size_sweep/03_var_005.png,Is the cube smaller than the cylinder?,no,Im03_shape_src,B
+03_var_006,/home/malayphadke/acl_rebuttal_form/size_sweep/03_var_006.png,Is the cube smaller than the cylinder?,no,Im03_shape_src,B
+03_var_007,/home/malayphadke/acl_rebuttal_form/size_sweep/03_var_007.png,Is the cube smaller than the cylinder?,yes,Im03_shape_src,A
+03_var_008,/home/malayphadke/acl_rebuttal_form/size_sweep/03_var_008.png,Is the cube smaller than the cylinder?,yes,Im03_shape_src,A
+03_var_009,/home/malayphadke/acl_rebuttal_form/size_sweep/03_var_009.png,Is the cube smaller than the cylinder?,yes,Im03_shape_src,A
+03_var_010,/home/malayphadke/acl_rebuttal_form/size_sweep/03_var_010.png,Is the cube smaller than the cylinder?,yes,Im03_shape_src,A

@@ -1,0 +1,11 @@
+id,variation_id,variation_name,step,focus_count,distractor_count,image_path,focus_shape,focus_color,question,gt
+1_original_0,1,original,0,3,5,/home/malayphadke/acl_rebuttal_form/distractor_sweep/CUC_DIST_01_original_000000.png,cylinder,blue,Are there exactly 3 cylinders in the image?,Yes
+1_original_1,1,original,1,3,6,/home/malayphadke/acl_rebuttal_form/distractor_sweep/CUC_DIST_01_original_000001.png,cylinder,blue,Are there exactly 3 cylinders in the image?,Yes
+1_original_2,1,original,2,3,7,/home/malayphadke/acl_rebuttal_form/distractor_sweep/CUC_DIST_01_original_000002.png,cylinder,blue,Are there exactly 3 cylinders in the image?,Yes
+1_original_3,1,original,3,3,8,/home/malayphadke/acl_rebuttal_form/distractor_sweep/CUC_DIST_01_original_000003.png,cylinder,blue,Are there exactly 3 cylinders in the image?,Yes
+1_original_4,1,original,4,3,9,/home/malayphadke/acl_rebuttal_form/distractor_sweep/CUC_DIST_01_original_000004.png,cylinder,blue,Are there exactly 3 cylinders in the image?,Yes
+1_original_5,1,original,5,3,10,/home/malayphadke/acl_rebuttal_form/distractor_sweep/CUC_DIST_01_original_000005.png,cylinder,blue,Are there exactly 3 cylinders in the image?,Yes
+1_original_6,1,original,6,3,9,/home/malayphadke/acl_rebuttal_form/distractor_sweep/CUC_DIST_01_original_000006.png,cylinder,blue,Are there exactly 3 cylinders in the image?,Yes
+1_original_7,1,original,7,3,8,/home/malayphadke/acl_rebuttal_form/distractor_sweep/CUC_DIST_01_original_000007.png,cylinder,blue,Are there exactly 3 cylinders in the image?,Yes
+1_original_8,1,original,8,3,6,/home/malayphadke/acl_rebuttal_form/distractor_sweep/CUC_DIST_01_original_000008.png,cylinder,blue,Are there exactly 3 cylinders in the image?,Yes
+1_original_9,1,original,9,3,5,/home/malayphadke/acl_rebuttal_form/distractor_sweep/CUC_DIST_01_original_000009.png,cylinder,blue,Are there exactly 3 cylinders in the image?,Yes

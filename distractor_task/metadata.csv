@@ -1,0 +1,11 @@
+id,question,audio_path,answer
+one_before_var01_sp00.0.wav,Is the helicopter sound before the baby crying sound?,/home/malayphadke/acl_rebuttal_form/distractor_task/var01_sp00.0.wav,yes
+one_before_var02_sp01.7.wav,Is the helicopter sound before the baby crying sound?,/home/malayphadke/acl_rebuttal_form/distractor_task/var02_sp01.7.wav,yes
+one_before_var03_sp03.3.wav,Is the helicopter sound before the baby crying sound?,/home/malayphadke/acl_rebuttal_form/distractor_task/var03_sp03.3.wav,yes
+one_before_var04_sp05.0.wav,Is the helicopter sound before the baby crying sound?,/home/malayphadke/acl_rebuttal_form/distractor_task/var04_sp05.0.wav,yes
+one_before_var05_sp06.7.wav,Is the helicopter sound before the baby crying sound?,/home/malayphadke/acl_rebuttal_form/distractor_task/var05_sp06.7.wav,yes
+one_before_var06_sp08.3.wav,Is the helicopter sound before the baby crying sound?,/home/malayphadke/acl_rebuttal_form/distractor_task/var06_sp08.3.wav,no
+one_before_var07_sp10.0.wav,Is the helicopter sound before the baby crying sound?,/home/malayphadke/acl_rebuttal_form/distractor_task/var07_sp10.0.wav,no
+one_before_var08_sp11.7.wav,Is the helicopter sound before the baby crying sound?,/home/malayphadke/acl_rebuttal_form/distractor_task/var08_sp11.7.wav,no
+one_before_var09_sp13.3.wav,Is the helicopter sound before the baby crying sound?,/home/malayphadke/acl_rebuttal_form/distractor_task/var09_sp13.3.wav,no
+one_before_var10_sp15.0.wav,Is the helicopter sound before the baby crying sound?,/home/malayphadke/acl_rebuttal_form/distractor_task/var10_sp15.0.wav,no

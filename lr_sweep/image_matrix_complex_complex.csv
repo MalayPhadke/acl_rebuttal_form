@@ -1,0 +1,11 @@
+id,image_path,question,gt,variation,gt_ab
+01_var_001,/home/malayphadke/acl_rebuttal_form/lr_sweep/01_var_001.png,Is the aeroplane left of the bicycle?,yes,Im01_original,A
+01_var_002,/home/malayphadke/acl_rebuttal_form/lr_sweep/01_var_002.png,Is the aeroplane left of the bicycle?,yes,Im01_original,A
+01_var_003,/home/malayphadke/acl_rebuttal_form/lr_sweep/01_var_003.png,Is the aeroplane left of the bicycle?,yes,Im01_original,A
+01_var_004,/home/malayphadke/acl_rebuttal_form/lr_sweep/01_var_004.png,Is the aeroplane left of the bicycle?,yes,Im01_original,A
+01_var_005,/home/malayphadke/acl_rebuttal_form/lr_sweep/01_var_005.png,Is the aeroplane left of the bicycle?,yes,Im01_original,A
+01_var_006,/home/malayphadke/acl_rebuttal_form/lr_sweep/01_var_006.png,Is the aeroplane left of the bicycle?,no,Im01_original,B
+01_var_007,/home/malayphadke/acl_rebuttal_form/lr_sweep/01_var_007.png,Is the aeroplane left of the bicycle?,no,Im01_original,B
+01_var_008,/home/malayphadke/acl_rebuttal_form/lr_sweep/01_var_008.png,Is the aeroplane left of the bicycle?,no,Im01_original,B
+01_var_009,/home/malayphadke/acl_rebuttal_form/lr_sweep/01_var_009.png,Is the aeroplane left of the bicycle?,no,Im01_original,B
+01_var_010,/home/malayphadke/acl_rebuttal_form/lr_sweep/01_var_010.png,Is the aeroplane left of the bicycle?,no,Im01_original,B

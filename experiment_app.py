@@ -10,12 +10,12 @@ import contextlib
 # --- Configuration ---
 # Specific CSV paths to load
 DATA_FILES = [
-    "/home/malayphadke/acl_rebuttal_form/lr_sweep/image_matrix_complex_complex.csv",
-    "/home/malayphadke/acl_rebuttal_form/distractor_sweep/distractor_matrix_basic_basic.csv",
-    "/home/malayphadke/acl_rebuttal_form/size_sweep/size_matrix_basic_basic.csv",
-    "/home/malayphadke/acl_rebuttal_form/distractor_task/metadata.csv",
-    "/home/malayphadke/acl_rebuttal_form/volume_task/metadata.csv",
-    "/home/malayphadke/acl_rebuttal_form/temporal_loc_task/metadata.csv"
+    "lr_sweep/image_matrix_complex_complex.csv",
+    "distractor_sweep/distractor_matrix_basic_basic.csv",
+    "size_sweep/size_matrix_basic_basic.csv",
+    "distractor_task/metadata.csv",
+    "volume_task/metadata.csv",
+    "temporal_loc_task/metadata.csv"
 ]
 RESPONSES_DIR = "responses" # Directory to save per-user responses
 SUBSAMPLE_SIZE = None # Use all data

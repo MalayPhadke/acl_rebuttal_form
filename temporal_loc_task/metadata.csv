@@ -1,0 +1,11 @@
+id,question,answer,audio_path
+noise_both_var01_sp00.0.wav,Is the clapping sound before the airplane sound?,yes,/home/malayphadke/acl_rebuttal_form/temporal_loc_task/noise_both_var01_sp00.0.wav
+noise_both_var02_sp01.7.wav,Is the clapping sound before the airplane sound?,yes,/home/malayphadke/acl_rebuttal_form/temporal_loc_task/noise_both_var02_sp01.7.wav
+noise_both_var03_sp03.3.wav,Is the clapping sound before the airplane sound?,yes,/home/malayphadke/acl_rebuttal_form/temporal_loc_task/noise_both_var03_sp03.3.wav
+noise_both_var04_sp05.0.wav,Is the clapping sound before the airplane sound?,yes,/home/malayphadke/acl_rebuttal_form/temporal_loc_task/noise_both_var04_sp05.0.wav
+noise_both_var05_sp06.7.wav,Is the clapping sound before the airplane sound?,yes,/home/malayphadke/acl_rebuttal_form/temporal_loc_task/noise_both_var05_sp06.7.wav
+noise_both_var06_sp08.3.wav,Is the clapping sound before the airplane sound?,no,/home/malayphadke/acl_rebuttal_form/temporal_loc_task/noise_both_var06_sp08.3.wav
+noise_both_var07_sp10.0.wav,Is the clapping sound before the airplane sound?,no,/home/malayphadke/acl_rebuttal_form/temporal_loc_task/noise_both_var07_sp10.0.wav
+noise_both_var08_sp11.7.wav,Is the clapping sound before the airplane sound?,no,/home/malayphadke/acl_rebuttal_form/temporal_loc_task/noise_both_var08_sp11.7.wav
+noise_both_var09_sp13.3.wav,Is the clapping sound before the airplane sound?,no,/home/malayphadke/acl_rebuttal_form/temporal_loc_task/noise_both_var09_sp13.3.wav
+noise_both_var10_sp15.0.wav,Is the clapping sound before the airplane sound?,no,/home/malayphadke/acl_rebuttal_form/temporal_loc_task/noise_both_var10_sp15.0.wav
