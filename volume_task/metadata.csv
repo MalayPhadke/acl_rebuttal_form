@@ -1,11 +1,11 @@
 id,audio_path,question,answer
-clean_step01_db-029/home/malayphadke/acl_rebuttal_form/volume_task/clean_step01_db-029.wav,Is the sneezing sound louder than the insects sound?,no
-clean_step02_db-024/home/malayphadke/acl_rebuttal_form/volume_task/clean_step02_db-024.wav,Is the sneezing sound louder than the insects sound?,no
-clean_step03_db-020/home/malayphadke/acl_rebuttal_form/volume_task/clean_step03_db-020.wav,Is the sneezing sound louder than the insects sound?,no
-clean_step04_db-015/home/malayphadke/acl_rebuttal_form/volume_task/clean_step04_db-015.wav,Is the sneezing sound louder than the insects sound?,no
-clean_step05_db-011/home/malayphadke/acl_rebuttal_form/volume_task/clean_step05_db-011.wav,Is the sneezing sound louder than the insects sound?,no
-clean_step06_db-009/home/malayphadke/acl_rebuttal_form/volume_task/clean_step06_db-009.wav,Is the sneezing sound louder than the insects sound?,yes
-clean_step07_db-004/home/malayphadke/acl_rebuttal_form/volume_task/clean_step07_db-004.wav,Is the sneezing sound louder than the insects sound?,yes
-clean_step08_db+000/home/malayphadke/acl_rebuttal_form/volume_task/clean_step08_db+000.wav,Is the sneezing sound louder than the insects sound?,yes
-clean_step09_db+004/home/malayphadke/acl_rebuttal_form/volume_task/clean_step09_db+004.wav,Is the sneezing sound louder than the insects sound?,yes
-clean_step10_db+009/home/malayphadke/acl_rebuttal_form/volume_task/clean_step10_db+009.wav,Is the sneezing sound louder than the insects sound?,yes
+clean_step01_db-029,/home/malay/third_var/1/clean/clean_step01_db-029.wav,Is the fireworks sound louder than the rain sound?,no
+clean_step02_db-024,/home/malay/third_var/1/clean/clean_step02_db-024.wav,Is the fireworks sound louder than the rain sound?,no
+clean_step03_db-020,/home/malay/third_var/1/clean/clean_step03_db-020.wav,Is the fireworks sound louder than the rain sound?,no
+clean_step04_db-015,/home/malay/third_var/1/clean/clean_step04_db-015.wav,Is the fireworks sound louder than the rain sound?,no
+clean_step05_db-011,/home/malay/third_var/1/clean/clean_step05_db-011.wav,Is the fireworks sound louder than the rain sound?,no
+clean_step06_db-009,/home/malay/third_var/1/clean/clean_step06_db-009.wav,Is the fireworks sound louder than the rain sound?,yes
+clean_step07_db-004,/home/malay/third_var/1/clean/clean_step07_db-004.wav,Is the fireworks sound louder than the rain sound?,yes
+clean_step08_db+000,/home/malay/third_var/1/clean/clean_step08_db+000.wav,Is the fireworks sound louder than the rain sound?,yes
+clean_step09_db+004,/home/malay/third_var/1/clean/clean_step09_db+004.wav,Is the fireworks sound louder than the rain sound?,yes
+clean_step10_db+009,/home/malay/third_var/1/clean/clean_step10_db+009.wav,Is the fireworks sound louder than the rain sound?,yes
