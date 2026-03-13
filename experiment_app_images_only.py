@@ -14,9 +14,9 @@ from google.oauth2.service_account import Credentials
 # --- Configuration ---
 IMAGE_CSV = "images.csv"
 INPUT_FOLDERS = [
-    "/home/leaplab/acl_rebuttal_form/NExTVideo_0038_3277823769",
-    "/home/leaplab/acl_rebuttal_form/NExTVideo_1000_3824469712",
-    "/home/leaplab/acl_rebuttal_form/NExTVideo_1106_6016405951",
+    "NExTVideo_0038_3277823769",
+    "NExTVideo_1000_3824469712",
+    "NExTVideo_1106_6016405951",
 ]
 SUBSAMPLE_SIZE = None  # Use all rows
 
