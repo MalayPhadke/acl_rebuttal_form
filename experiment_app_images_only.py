@@ -338,32 +338,26 @@ def instructions_page():
 
 
 def countdown_page():
-    # Hide Sidebar, Header, and Footer for a clean countdown
-    st.markdown(
-        """
-        <style>
-            [data-testid="stSidebar"], [data-testid="stHeader"], [data-testid="stFooter"] {
-                display: none !important;
-            }
-            .stApp {
-                background-color: white !important;
-            }
-        </style>
-        """,
-        unsafe_allow_html=True,
-    )
-    
+    # Full-screen overlay to ensure nothing else is visible
     placeholder = st.empty()
-    # Ensure background clears immediately
-    placeholder.markdown("<div style='height:80vh;'></div>", unsafe_allow_html=True)
-    time.sleep(0.1) 
-
+    
     for num in [3, 2, 1]:
         with placeholder.container():
             st.markdown(
-                f"<div style='display:flex; justify-content:center; align-items:center; height:80vh;'>"
-                f"<span style='font-size:140px; font-weight:bold; color:#4A90D9;'>{num}</span>"
-                f"</div>",
+                f"""
+                <style>
+                    /* Force hide absolute everything else */
+                    #root > div:nth-child(1) > div.withScreencast > div > div > div > section {{
+                        overflow: hidden !important;
+                    }}
+                    [data-testid="stSidebar"], [data-testid="stHeader"], [data-testid="stFooter"] {{
+                        display: none !important;
+                    }}
+                </style>
+                <div style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: white; z-index: 999999; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+                    <span style="font-size: 140px; font-weight: bold; color: #4A90D9; margin-top: -10vh;">{num}</span>
+                </div>
+                """,
                 unsafe_allow_html=True,
             )
         time.sleep(1)
