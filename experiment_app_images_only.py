@@ -272,15 +272,29 @@ def record_response(trial, answer, confidence):
 
 
 def scroll_to_top(label=""):
-    """Inject JS to scroll the parent window to top."""
-    # We include a dynamic label in a comment to ensure Streamlit treats this as new content
+    """Inject JS to scroll Streamlit's main container to top (works on mobile)."""
     st.components.v1.html(
         f"""
         <!-- {label} -->
         <script>
-            setTimeout(function() {{
-                window.parent.window.scrollTo(0,0);
-            }}, 50);
+            function scrollToTop() {{
+                // Streamlit's actual scrollable container
+                var container = window.parent.document.querySelector('[data-testid="stAppViewContainer"]');
+                if (container) {{
+                    container.scrollTo({{top: 0, behavior: 'instant'}});
+                }}
+                // Fallbacks
+                var main = window.parent.document.querySelector('.main');
+                if (main) main.scrollTop = 0;
+                window.parent.document.documentElement.scrollTop = 0;
+                window.parent.document.body.scrollTop = 0;
+                window.parent.scrollTo(0, 0);
+            }}
+            // Fire at multiple delays to catch slow mobile renders
+            scrollToTop();
+            setTimeout(scrollToTop, 100);
+            setTimeout(scrollToTop, 300);
+            setTimeout(scrollToTop, 600);
         </script>
         """,
         height=0,
