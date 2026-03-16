@@ -271,7 +271,16 @@ def record_response(trial, answer, confidence):
     st.rerun()
 
 
+def scroll_to_top():
+    """Inject JS to scroll the parent window to top."""
+    st.components.v1.html(
+        "<script>window.parent.window.scrollTo(0,0);</script>",
+        height=0,
+    )
+
+
 def instructions_page():
+    scroll_to_top()
     st.title("Reaction Time Experiment (Images Only)")
     st.write(
         """
@@ -329,8 +338,27 @@ def instructions_page():
 
 
 def countdown_page():
+    # Hide Sidebar, Header, and Footer for a clean countdown
+    st.markdown(
+        """
+        <style>
+            [data-testid="stSidebar"], [data-testid="stHeader"], [data-testid="stFooter"] {
+                display: none !important;
+            }
+            .stApp {
+                background-color: white !important;
+            }
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
+    
     placeholder = st.empty()
-    for num in range(st.session_state.countdown_num, 0, -1):
+    # Ensure background clears immediately
+    placeholder.markdown("<div style='height:80vh;'></div>", unsafe_allow_html=True)
+    time.sleep(0.1) 
+
+    for num in [3, 2, 1]:
         with placeholder.container():
             st.markdown(
                 f"<div style='display:flex; justify-content:center; align-items:center; height:80vh;'>"
@@ -339,11 +367,13 @@ def countdown_page():
                 unsafe_allow_html=True,
             )
         time.sleep(1)
+    
     st.session_state.page = "experiment"
     st.rerun()
 
 
 def experiment_page():
+    scroll_to_top()
     total = len(st.session_state.trials)
     idx = st.session_state.current_trial_index
 
@@ -417,6 +447,7 @@ def experiment_page():
 
 
 def done_page():
+    scroll_to_top()
     st.title("Experiment Complete")
     st.success("Thank you for participating!")
 
@@ -442,12 +473,6 @@ def done_page():
 
 def main():
     st.set_page_config(page_title="Reaction Time Experiment (Images Only)")
-
-    # Scroll to top script
-    st.components.v1.html(
-        "<script>window.parent.window.scrollTo(0,0);</script>",
-        height=0,
-    )
 
     page = st.session_state.page
     if page == "instructions":
