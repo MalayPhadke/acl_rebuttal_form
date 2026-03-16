@@ -271,10 +271,12 @@ def record_response(trial, answer, confidence):
     st.rerun()
 
 
-def scroll_to_top(key=None):
+def scroll_to_top(label=""):
     """Inject JS to scroll the parent window to top."""
+    # We include a dynamic label in a comment to ensure Streamlit treats this as new content
     st.components.v1.html(
         f"""
+        <!-- {label} -->
         <script>
             setTimeout(function() {{
                 window.parent.window.scrollTo(0,0);
@@ -282,12 +284,11 @@ def scroll_to_top(key=None):
         </script>
         """,
         height=0,
-        key=key,
     )
 
 
 def instructions_page():
-    scroll_to_top(key="scroll_instructions")
+    scroll_to_top(label="instructions")
     st.title("Reaction Time Experiment (Images Only)")
     st.write(
         """
@@ -376,7 +377,7 @@ def countdown_page():
 def experiment_page():
     total = len(st.session_state.trials)
     idx = st.session_state.current_trial_index
-    scroll_to_top(key=f"scroll_exp_{idx}")
+    scroll_to_top(label=f"exp_{idx}")
 
     if idx >= total:
         st.session_state.page = "done"
@@ -448,7 +449,7 @@ def experiment_page():
 
 
 def done_page():
-    scroll_to_top(key="scroll_done")
+    scroll_to_top(label="done")
     st.title("Experiment Complete")
     st.success("Thank you for participating!")
 
