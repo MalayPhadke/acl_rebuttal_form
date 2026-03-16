@@ -278,12 +278,34 @@ def instructions_page():
         ### Instructions
 
         1. You will see a series of **images** and a question for each image.
-        2. Rate your **certainty** in your answer on a scale of 1 to 5.
-        3. Answer **YES** or **NO** by clicking the buttons.
-        4. **Note:** You must select a certainty score before you can submit your YES/NO answer.
-        5. A 3-second countdown appears between trials.
+        2. Evaluate how certainly the question can be answered based on the image using one of the following:
+            - **1. Can be answered with very high certainty**
+            - **2. Can be answered with somewhat certainty**
+            - **3. Can be answered but not so certainly**
+            - **4. Can be answered with significant ambiguity**
+            - **5. Cannot be answered**
+        3. Also, select the **ANSWER (YES or NO)**.
+        4. A 3-second countdown appears between trials.
         """
     )
+
+    st.markdown("---")
+    st.write("### Examples")
+    st.write("Question: **Is the child standing on the chair?**")
+
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        st.image("frame_0110.png", use_container_width=True)
+        st.write("**Cannot be answered**")
+    with col2:
+        st.image("frame_0226.png", use_container_width=True)
+        st.write("**Can be answered but not so certainly**")
+        st.write("**Answer: Yes**")
+    with col3:
+        st.image("frame_0440.png", use_container_width=True)
+        st.write("**Can be answered with very high certainty**")
+        st.write("**Answer: Yes**")
+    st.markdown("---")
 
     user_id_input = st.text_input("Enter your Participant ID:", value=st.session_state.user_id)
 
@@ -340,7 +362,7 @@ def experiment_page():
     st.markdown("---")
 
     # Prompt text above image
-    st.markdown(f'How certainly the question "**{trial["question"]}**" can be answered given the below image? Also answer the question with Yes or No.')
+    st.markdown(f'<p style="text-align: center; font-size: 24px; font-weight: bold;">Question: {trial["question"]}</p>', unsafe_allow_html=True)
 
     image_path = trial.get("filename")
     if image_path and os.path.exists(image_path):
@@ -354,33 +376,34 @@ def experiment_page():
         st.session_state.start_time = time.time()
 
     st.markdown("---")
-    st.write("**Certainty Score**")
+    st.write("From the given image, the question can be:")
 
     # Initialize certainty in session state if not present
     state_key = f"cert_choice_{idx}"
     if state_key not in st.session_state:
         st.session_state[state_key] = None
 
-    confidence_map = {
-        1: "Highly Uncertain",
-        2: "Somewhat Uncertain",
-        3: "Neutral",
-        4: "Somewhat Certain",
-        5: "Highly Certain"
-    }
+    confidence_options = [
+        "answered with very high certainty",
+        "answered with somewhat certainty",
+        "answered but not so certainly",
+        "answered with significant ambiguity",
+        "can not be answered"
+    ]
 
-    # Certainty Cells (Buttons)
-    cols = st.columns(5)
-    for val in range(1, 6):
-        with cols[val-1]:
-            # Highlight selected button
-            is_selected = st.session_state[state_key] == val
-            btn_type = "primary" if is_selected else "secondary"
-            if st.button(confidence_map[val], key=f"btn_{idx}_{val}", use_container_width=True, type=btn_type):
-                st.session_state[state_key] = val
+    for i, option in enumerate(confidence_options, 1):
+        is_selected = st.session_state[state_key] == i
+        btn_type = "primary" if is_selected else "secondary"
+        if st.button(option, key=f"btn_{idx}_{i}", use_container_width=True, type=btn_type):
+            st.session_state[state_key] = i
+            if i == 5:
+                # If 5 is selected, record N/A and move to next trial
+                record_response(trial, "N/A", 5)
+            else:
                 st.rerun()
 
     st.markdown("<br>", unsafe_allow_html=True)
+    st.write("and the ANSWER is")
 
     col1, col2 = st.columns(2)
     with col1:
