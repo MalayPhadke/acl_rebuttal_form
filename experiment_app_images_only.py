@@ -271,16 +271,23 @@ def record_response(trial, answer, confidence):
     st.rerun()
 
 
-def scroll_to_top():
+def scroll_to_top(key=None):
     """Inject JS to scroll the parent window to top."""
     st.components.v1.html(
-        "<script>window.parent.window.scrollTo(0,0);</script>",
+        f"""
+        <script>
+            setTimeout(function() {{
+                window.parent.window.scrollTo(0,0);
+            }}, 50);
+        </script>
+        """,
         height=0,
+        key=key,
     )
 
 
 def instructions_page():
-    scroll_to_top()
+    scroll_to_top(key="scroll_instructions")
     st.title("Reaction Time Experiment (Images Only)")
     st.write(
         """
@@ -367,9 +374,9 @@ def countdown_page():
 
 
 def experiment_page():
-    scroll_to_top()
     total = len(st.session_state.trials)
     idx = st.session_state.current_trial_index
+    scroll_to_top(key=f"scroll_exp_{idx}")
 
     if idx >= total:
         st.session_state.page = "done"
@@ -441,7 +448,7 @@ def experiment_page():
 
 
 def done_page():
-    scroll_to_top()
+    scroll_to_top(key="scroll_done")
     st.title("Experiment Complete")
     st.success("Thank you for participating!")
 
