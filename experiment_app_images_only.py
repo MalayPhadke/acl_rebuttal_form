@@ -295,14 +295,14 @@ def instructions_page():
 
     col1, col2, col3 = st.columns(3)
     with col1:
-        st.image("frame_0110.png", use_container_width=True)
+        st.image("frame_0110.png", width="stretch")
         st.write("**Cannot be answered**")
     with col2:
-        st.image("frame_0226.png", use_container_width=True)
+        st.image("frame_0226.png", width="stretch")
         st.write("**Can be answered but not so certainly**")
         st.write("**Answer: Yes**")
     with col3:
-        st.image("frame_0440.png", use_container_width=True)
+        st.image("frame_0440.png", width="stretch")
         st.write("**Can be answered with very high certainty**")
         st.write("**Answer: Yes**")
     st.markdown("---")
@@ -329,20 +329,17 @@ def instructions_page():
 
 
 def countdown_page():
-    num = st.session_state.countdown_num
-    if num <= 0:
-        st.session_state.page = "experiment"
-        st.rerun()
-        return
-
-    st.markdown(
-        f"<div style='display:flex; justify-content:center; align-items:center; height:80vh;'>"
-        f"<span style='font-size:140px; font-weight:bold; color:#4A90D9;'>{num}</span>"
-        f"</div>",
-        unsafe_allow_html=True,
-    )
-    time.sleep(1)
-    st.session_state.countdown_num -= 1
+    placeholder = st.empty()
+    for num in range(st.session_state.countdown_num, 0, -1):
+        with placeholder.container():
+            st.markdown(
+                f"<div style='display:flex; justify-content:center; align-items:center; height:80vh;'>"
+                f"<span style='font-size:140px; font-weight:bold; color:#4A90D9;'>{num}</span>"
+                f"</div>",
+                unsafe_allow_html=True,
+            )
+        time.sleep(1)
+    st.session_state.page = "experiment"
     st.rerun()
 
 
@@ -368,7 +365,7 @@ def experiment_page():
     if image_path and os.path.exists(image_path):
         col1, col2, col3 = st.columns([1, 6, 1])
         with col2:
-            st.image(image_path, caption="", use_container_width=True)
+            st.image(image_path, caption="", width="stretch")
     else:
         st.warning(f"Image not found: {image_path}")
 
@@ -445,6 +442,12 @@ def done_page():
 
 def main():
     st.set_page_config(page_title="Reaction Time Experiment (Images Only)")
+
+    # Scroll to top script
+    st.components.v1.html(
+        "<script>window.parent.window.scrollTo(0,0);</script>",
+        height=0,
+    )
 
     page = st.session_state.page
     if page == "instructions":
