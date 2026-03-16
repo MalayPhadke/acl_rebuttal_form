@@ -278,14 +278,10 @@ def instructions_page():
         ### Instructions
 
         1. You will see a series of **images** and a question for each image.
-        2. Rate your **certainty** in your answer on a scale of 1 to 5:
-           - **1**: Highly Uncertain
-           - **2**: Somewhat Uncertain
-           - **3**: Neutral
-           - **4**: Somewhat Certain
-           - **5**: Highly Certain
-        3. Answer **YES** or **NO** by clicking the buttons as quickly and accurately as possible.
-        4. A 3-second countdown appears between trials.
+        2. Rate your **certainty** in your answer on a scale of 1 to 5.
+        3. Answer **YES** or **NO** by clicking the buttons.
+        4. **Note:** You must select a certainty score before you can submit your YES/NO answer.
+        5. A 3-second countdown appears between trials.
         """
     )
 
@@ -360,10 +356,10 @@ def experiment_page():
     st.markdown("---")
     st.write("**Certainty Score**")
 
-    # Initialize certainty in session state if not present or if trial changed
+    # Initialize certainty in session state if not present
     state_key = f"cert_choice_{idx}"
     if state_key not in st.session_state:
-        st.session_state[state_key] = 3  # Default to Neutral
+        st.session_state[state_key] = None
 
     confidence_map = {
         1: "Highly Uncertain",
@@ -378,7 +374,8 @@ def experiment_page():
     for val in range(1, 6):
         with cols[val-1]:
             # Highlight selected button
-            btn_type = "primary" if st.session_state[state_key] == val else "secondary"
+            is_selected = st.session_state[state_key] == val
+            btn_type = "primary" if is_selected else "secondary"
             if st.button(confidence_map[val], key=f"btn_{idx}_{val}", use_container_width=True, type=btn_type):
                 st.session_state[state_key] = val
                 st.rerun()
@@ -391,12 +388,12 @@ def experiment_page():
     with col2:
         no_clicked = st.button("NO", use_container_width=True, key=f"no_{idx}")
 
-    confidence = st.session_state[state_key]
-
-    if yes_clicked:
-        record_response(trial, "yes", confidence)
-    elif no_clicked:
-        record_response(trial, "no", confidence)
+    if yes_clicked or no_clicked:
+        if st.session_state[state_key] is None:
+            st.error("⚠️ Please select a **Certainty Score** before answering YES or NO.")
+        else:
+            answer = "yes" if yes_clicked else "no"
+            record_response(trial, answer, st.session_state[state_key])
 
 
 def done_page():
