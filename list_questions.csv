@@ -1,0 +1,4 @@
+video_path,question,frames,center_frames,gt_answer,primary_category
+/home/debarpanb1/NExTVideo/1000/3824469712.mp4,Is the boy on the vehicle?,"[0380, 0387, 0393, 0395, 0398, 0408, 0412, 0415, 0417, 0419]",[0412],no,Geometric
+/home/debarpanb1/NExTVideo/1106/6016405951.mp4,Is the black dog on the sofa?,"[0067, 0080, 0085, 0100, 0123, 0150, 0160, 0170, 0190, 0193]",[0123],yes,Compositional
+/home/debarpanb1/NExTVideo/0038/3277823769.mp4,Is the baby standing?,"[0346, 0497, 0514, 0582, 1477, 1699, 1741, 1753, 1776, 1878]",[1477],no,Semantic

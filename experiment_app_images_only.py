@@ -205,7 +205,7 @@ def load_image_data():
     return trials
 
 
-def prepare_result(trial, response, reaction_time):
+def prepare_result(trial, response, confidence, reaction_time):
     """Prepare result payload and local result row in same shape as original app."""
     gt = trial.get("gt", "").lower()
     resp = response.lower()
@@ -221,6 +221,7 @@ def prepare_result(trial, response, reaction_time):
         "filename": os.path.basename(trial["filename"]) if trial.get("filename") else "unknown",
         "question": trial.get("question", ""),
         "response": response,
+        "confidence": confidence,
         "correct": correct,
         "gt": trial.get("gt", ""),
         "reaction_time_ms": int(reaction_time * 1000),
@@ -238,6 +239,7 @@ def prepare_result(trial, response, reaction_time):
         "user_id": user_id,
         "trial_id": message_result["trial_id"],
         "response": message_result["response"],
+        "confidence": message_result["confidence"],
         "gt": message_result["gt"],
         "correct": message_result["correct"],
         "reaction_time_ms": message_result["reaction_time_ms"],
@@ -250,11 +252,11 @@ def prepare_result(trial, response, reaction_time):
     }
 
 
-def record_response(trial, answer):
+def record_response(trial, answer, confidence):
     end_time = time.time()
     reaction_time = end_time - st.session_state.start_time
     response = answer.strip().lower()
-    save_data = prepare_result(trial, response, reaction_time)
+    save_data = prepare_result(trial, response, confidence, reaction_time)
     creds, spreadsheet_url = _build_gspread_creds()
     threading.Thread(
         target=_bg_write_result,
@@ -276,8 +278,14 @@ def instructions_page():
         ### Instructions
 
         1. You will see a series of **images** and a question for each image.
-        2. Answer **YES** or **NO** as quickly and accurately as possible.
-        3. A 3-second countdown appears between trials.
+        2. Rate your **certainty** in your answer on a scale of 1 to 5:
+           - **1**: Highly Uncertain
+           - **2**: Somewhat Uncertain
+           - **3**: Neutral
+           - **4**: Somewhat Certain
+           - **5**: Highly Certain
+        3. Answer **YES** or **NO** by clicking the buttons as quickly and accurately as possible.
+        4. A 3-second countdown appears between trials.
         """
     )
 
@@ -335,6 +343,9 @@ def experiment_page():
     st.write(f"Trial {idx + 1} of {total}")
     st.markdown("---")
 
+    # Prompt text above image
+    st.markdown(f'How certainly the question "**{trial["question"]}**" can be answered given the below image? Also answer the question with Yes or No.')
+
     image_path = trial.get("filename")
     if image_path and os.path.exists(image_path):
         col1, col2, col3 = st.columns([1, 6, 1])
@@ -343,18 +354,49 @@ def experiment_page():
     else:
         st.warning(f"Image not found: {image_path}")
 
-    st.markdown(f"### {trial['question']}")
-
     if st.session_state.start_time is None:
         st.session_state.start_time = time.time()
 
+    st.markdown("---")
+    st.write("**Certainty Score**")
+
+    # Initialize certainty in session state if not present or if trial changed
+    state_key = f"cert_choice_{idx}"
+    if state_key not in st.session_state:
+        st.session_state[state_key] = 3  # Default to Neutral
+
+    confidence_map = {
+        1: "Highly Uncertain",
+        2: "Somewhat Uncertain",
+        3: "Neutral",
+        4: "Somewhat Certain",
+        5: "Highly Certain"
+    }
+
+    # Certainty Cells (Buttons)
+    cols = st.columns(5)
+    for val in range(1, 6):
+        with cols[val-1]:
+            # Highlight selected button
+            btn_type = "primary" if st.session_state[state_key] == val else "secondary"
+            if st.button(confidence_map[val], key=f"btn_{idx}_{val}", use_container_width=True, type=btn_type):
+                st.session_state[state_key] = val
+                st.rerun()
+
+    st.markdown("<br>", unsafe_allow_html=True)
+
     col1, col2 = st.columns(2)
     with col1:
-        if st.button("YES", use_container_width=True, key=f"yes_{idx}"):
-            record_response(trial, "yes")
+        yes_clicked = st.button("YES", use_container_width=True, key=f"yes_{idx}")
     with col2:
-        if st.button("NO", use_container_width=True, key=f"no_{idx}"):
-            record_response(trial, "no")
+        no_clicked = st.button("NO", use_container_width=True, key=f"no_{idx}")
+
+    confidence = st.session_state[state_key]
+
+    if yes_clicked:
+        record_response(trial, "yes", confidence)
+    elif no_clicked:
+        record_response(trial, "no", confidence)
 
 
 def done_page():

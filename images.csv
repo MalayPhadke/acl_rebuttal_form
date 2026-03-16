@@ -1,3 +1,4 @@
+image_path,question,gt_answer,primary_category
 NExTVideo_1000_3824469712/frame_0380.png,Is the boy on the vehicle?,no,geometric
 NExTVideo_1000_3824469712/frame_0387.png,Is the boy on the vehicle?,no,geometric
 NExTVideo_1000_3824469712/frame_0393.png,Is the boy on the vehicle?,no,geometric
