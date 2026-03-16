@@ -19,7 +19,7 @@ def parse_list(s):
 
 def main():
     # 1. Load list_questions.csv
-    list_questions_path = '/home/leaplab/acl_rebuttal_form/list_questions.csv'
+    list_questions_path = '/home/leaplab/Downloads/acl_rebuttal_form/list_questions.csv'
     df_questions = pd.read_csv(list_questions_path)
     
     # Precompute maps
@@ -44,11 +44,14 @@ def main():
                 shifted_map[(q_text, f)] = i - ref_idx
 
     # 2. Load all response metadata
-    files = glob.glob('/home/leaplab/acl_rebuttal_form/form sheet - response_metadata_*.csv')
+    files = glob.glob('/home/leaplab/Downloads/acl_rebuttal_form/form sheet - response_metadata_*.csv')
     df_responses = pd.concat([pd.read_csv(f) for f in files], ignore_index=True)
     df_responses['frame_num'] = df_responses['filename'].apply(extract_frame_number)
     df_responses['Result'] = df_responses['correct'].map({True: 'Correct', False: 'Incorrect'})
     df_responses['shifted_index'] = df_responses.apply(lambda r: shifted_map.get((r['question'].strip(), r['frame_num'])), axis=1)
+
+    # Min-max normalization for confidence (1-5 -> 0-1)
+    df_responses['confidence_norm'] = (df_responses['confidence'] - 1) / 4
 
     # Ensure category field is consistent (lowercase)
     df_responses['category'] = df_responses['category'].str.lower()
@@ -79,18 +82,18 @@ def main():
         f_to_idx = {f: idx for idx, f in enumerate(f_order)}
         cat_df['plot_index'] = cat_df['frame_num'].map(f_to_idx)
         
-        # Calculate mean RT per frame
-        mean_rt = cat_df.groupby('plot_index')['reaction_time_ms'].mean().reset_index()
+        # Calculate mean Confidence per frame
+        mean_conf = cat_df.groupby('plot_index')['confidence_norm'].mean().reset_index()
         
         # Plot mean line
-        sns.lineplot(data=mean_rt, x='plot_index', y='reaction_time_ms', ax=ax, 
-                     color='black', linewidth=2, label='Mean RT', marker='o')
+        sns.lineplot(data=mean_conf, x='plot_index', y='confidence_norm', ax=ax, 
+                     color='black', linewidth=2, label='Mean Confidence', marker='o')
         
         # Plot individual dots (Correct/Incorrect)
         # We manually scatter them to ensure blue/red coloring
         for res, color in [('Correct', 'blue'), ('Incorrect', 'red')]:
             subset = cat_df[cat_df['Result'] == res]
-            ax.scatter(subset['plot_index'], subset['reaction_time_ms'], 
+            ax.scatter(subset['plot_index'], subset['confidence_norm'], 
                        color=color, alpha=0.6, s=40, label=f"{res} Response")
             
         # Mark Center Frame
@@ -98,11 +101,12 @@ def main():
             center_idx = f_to_idx[center_f]
             ax.axvline(x=center_idx, color='green', linestyle='--', linewidth=2, label='Center Frame')
             
-        ax.set_title(f"Reaction Time: {cat.capitalize()}", fontsize=14)
+        ax.set_title(f"Confidence: {cat.capitalize()}", fontsize=14)
         ax.set_xticks(range(len(f_order)))
         ax.set_xticklabels(f_order, rotation=45)
         ax.set_xlabel("Frame Number")
-        ax.set_ylabel("RT (ms)")
+        ax.set_ylabel("Normalized Confidence (0-1)")
+        ax.set_ylim(-0.05, 1.05)
         ax.legend()
 
     # Subplot 4: Mean of all categories with reindexing
@@ -113,33 +117,32 @@ def main():
     for cat in categories:
         cat_data = df_reindexed[df_reindexed['category'] == cat]
         if not cat_data.empty:
-            mean_cat = cat_data.groupby('shifted_index')['reaction_time_ms'].mean().reset_index()
-            sns.lineplot(data=mean_cat, x='shifted_index', y='reaction_time_ms', ax=ax_all, 
+            mean_cat = cat_data.groupby('shifted_index')['confidence_norm'].mean().reset_index()
+            sns.lineplot(data=mean_cat, x='shifted_index', y='confidence_norm', ax=ax_all, 
                          label=f"{cat.capitalize()}", alpha=0.5, linestyle='--')
             
     # Total mean line
-    mean_all = df_reindexed.groupby('shifted_index')['reaction_time_ms'].mean().reset_index()
-    sns.lineplot(data=mean_all, x='shifted_index', y='reaction_time_ms', ax=ax_all, 
+    mean_all = df_reindexed.groupby('shifted_index')['confidence_norm'].mean().reset_index()
+    sns.lineplot(data=mean_all, x='shifted_index', y='confidence_norm', ax=ax_all, 
                  color='black', linewidth=3, marker='s', label='ALL Categories (Mean)')
     
-    # Individual trial dots for the reindexed plot?
-    # User said "remvoe the scatter plot" but also "mark correct/incorrect".
-    # I'll add them here too but maybe smaller.
+    # Individual trial dots for the reindexed plot
     for res, color in [('Correct', 'blue'), ('Incorrect', 'red')]:
         subset = df_reindexed[df_reindexed['Result'] == res]
-        ax_all.scatter(subset['shifted_index'], subset['reaction_time_ms'], 
+        ax_all.scatter(subset['shifted_index'], subset['confidence_norm'], 
                        color=color, alpha=0.3, s=20)
 
     # Mark Center Frame at 0
     ax_all.axvline(x=0, color='green', linestyle='--', linewidth=2, label='Center Frame (0)')
     
-    ax_all.set_title("Aligned Average (Shifted Index)", fontsize=14)
+    ax_all.set_title("Aligned Average Confidence", fontsize=14)
     ax_all.set_xlabel("Relative Frame Index (Center = 0)")
-    ax_all.set_ylabel("RT (ms)")
+    ax_all.set_ylabel("Normalized Confidence (0-1)")
+    ax_all.set_ylim(-0.05, 1.05)
     ax_all.legend()
 
     plt.tight_layout()
-    output_path = '/home/leaplab/acl_rebuttal_form/reaction_time_analysis_grid.png'
+    output_path = '/home/leaplab/Downloads/acl_rebuttal_form/confidence_analysis_grid.png'
     plt.savefig(output_path, dpi=300)
     print(f"Analysis plot saved to {output_path}")
 

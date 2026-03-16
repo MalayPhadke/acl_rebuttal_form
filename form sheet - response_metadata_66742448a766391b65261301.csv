@@ -1,0 +1,30 @@
+user_id,trial_id,type,filename,question,response,confidence,correct,gt,reaction_time_ms,timestamp,category
+66742448a766391b65261301,13,image,frame_0514.png,Is the baby standing?,n/a,5,False,no,11613,2026-03-16T16:17:20.290096,semantic
+66742448a766391b65261301,7,image,frame_0412.png,Is the boy on the vehicle?,yes,3,True,yes,23885,2026-03-16T16:17:47.496840,geometric
+66742448a766391b65261301,30,image,frame_0193.png,Is the black dog on the sofa?,yes,1,False,no,8873,2026-03-16T16:17:59.609663,compositional
+66742448a766391b65261301,1,image,frame_0380.png,Is the boy on the vehicle?,no,1,True,no,9887,2026-03-16T16:18:12.750812,geometric
+66742448a766391b65261301,22,image,frame_0080.png,Is the black dog on the sofa?,no,3,False,yes,11039,2026-03-16T16:18:27.060485,compositional
+66742448a766391b65261301,14,image,frame_0582.png,Is the baby standing?,no,2,True,no,12723,2026-03-16T16:18:43.090000,semantic
+66742448a766391b65261301,5,image,frame_0398.png,Is the boy on the vehicle?,no,4,True,no,13797,2026-03-16T16:19:00.131184,geometric
+66742448a766391b65261301,27,image,frame_0160.png,Is the black dog on the sofa?,yes,1,False,no,7321,2026-03-16T16:19:10.683822,compositional
+66742448a766391b65261301,17,image,frame_1741.png,Is the baby standing?,yes,1,True,yes,6624,2026-03-16T16:19:20.583071,semantic
+66742448a766391b65261301,2,image,frame_0387.png,Is the boy on the vehicle?,no,1,True,no,11470,2026-03-16T16:19:35.305393,geometric
+66742448a766391b65261301,12,image,frame_0497.png,Is the baby standing?,no,3,True,no,11756,2026-03-16T16:19:50.307569,semantic
+66742448a766391b65261301,23,image,frame_0085.png,Is the black dog on the sofa?,no,1,False,yes,11503,2026-03-16T16:20:05.055443,compositional
+66742448a766391b65261301,11,image,frame_0346.png,Is the baby standing?,n/a,5,False,no,10955,2026-03-16T16:20:19.255727,semantic
+66742448a766391b65261301,21,image,frame_0067.png,Is the black dog on the sofa?,no,1,False,yes,7818,2026-03-16T16:20:30.312506,compositional
+66742448a766391b65261301,4,image,frame_0395.png,Is the boy on the vehicle?,no,3,True,no,14384,2026-03-16T16:20:47.936012,geometric
+66742448a766391b65261301,18,image,frame_1753.png,Is the baby standing?,yes,1,True,yes,5550,2026-03-16T16:20:56.710878,semantic
+66742448a766391b65261301,10,image,frame_0419.png,Is the boy on the vehicle?,yes,1,True,yes,7236,2026-03-16T16:21:07.175032,geometric
+66742448a766391b65261301,26,image,frame_0150.png,Is the black dog on the sofa?,yes,2,False,no,11746,2026-03-16T16:21:22.121854,compositional
+66742448a766391b65261301,16,image,frame_1699.png,Is the baby standing?,n/a,5,False,yes,7905,2026-03-16T16:21:33.260911,semantic
+66742448a766391b65261301,25,image,frame_0123.png,Is the black dog on the sofa?,yes,2,False,no,11279,2026-03-16T16:21:47.768077,compositional
+66742448a766391b65261301,28,image,frame_0170.png,Is the black dog on the sofa?,yes,1,False,no,6101,2026-03-16T16:22:07.308701,compositional
+66742448a766391b65261301,20,image,frame_1878.png,Is the baby standing?,yes,3,True,yes,14738,2026-03-16T16:22:25.377168,semantic
+66742448a766391b65261301,9,image,frame_0417.png,Is the boy on the vehicle?,yes,1,True,yes,5385,2026-03-16T16:22:34.127560,geometric
+66742448a766391b65261301,19,image,frame_1776.png,Is the baby standing?,yes,1,True,yes,7362,2026-03-16T16:22:44.775040,semantic
+66742448a766391b65261301,29,image,frame_0190.png,Is the black dog on the sofa?,yes,1,False,no,7967,2026-03-16T16:22:56.006828,compositional
+66742448a766391b65261301,3,image,frame_0393.png,Is the boy on the vehicle?,no,3,True,no,10164,2026-03-16T16:23:09.416590,geometric
+66742448a766391b65261301,15,image,frame_1477.png,Is the baby standing?,no,1,False,yes,7351,2026-03-16T16:23:20.030096,semantic
+66742448a766391b65261301,24,image,frame_0100.png,Is the black dog on the sofa?,no,1,False,yes,7815,2026-03-16T16:23:31.085874,compositional
+66742448a766391b65261301,6,image,frame_0408.png,Is the boy on the vehicle?,no,3,True,no,9971,2026-03-16T16:23:44.287703,geometric

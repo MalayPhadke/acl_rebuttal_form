@@ -15,8 +15,8 @@ from google.oauth2.service_account import Credentials
 IMAGE_CSV = "images.csv"
 INPUT_FOLDERS = [
     "NExTVideo_0038_3277823769",
-    "NExTVideo_1000_3824469712",
-    "NExTVideo_1106_6016405951",
+    "NExTVideo_0089_6868234420",
+    "NExTVideo_1104_5508995205",
 ]
 SUBSAMPLE_SIZE = None  # Use all rows
 
