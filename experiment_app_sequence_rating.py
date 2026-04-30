@@ -440,103 +440,62 @@ def experiment_page():
     trial = st.session_state.trials[idx]
     part = st.session_state.selected_part
 
+    st.markdown(f"<div style='margin-top: -20px;'><p><b>Part {part}</b> — Question {idx + 1} of {total}</p></div>", unsafe_allow_html=True)
     st.progress(idx / total)
-    st.write(
-        f"**Part {part}** — Question {idx + 1} of {total}"
-    )
-    st.markdown("---")
 
     # Question heading
     st.markdown(
-        f'<h4 style="text-align: center; color: #2c3e50; font-size: 18px;">Question: {trial["question"]}</h4>',
+        f'<h4 style="text-align: center; color: #2c3e50; font-size: 16px; margin-top: 5px;">Question: {trial["question"]}</h4>',
         unsafe_allow_html=True,
     )
     st.markdown(
-        f'<p style="text-align: center; color: #7f8c8d; font-size: 13px;">Category: {trial["category"]}</p>',
+        f'<p style="text-align: center; color: #7f8c8d; font-size: 12px; margin-top: -5px;">Category: {trial["category"]}</p>',
         unsafe_allow_html=True,
     )
 
     if st.session_state.start_time is None:
         st.session_state.start_time = time.time()
 
-    st.markdown("---")
+    # Display 10 images in a 5+5 grid with rating inputs
     st.markdown(
-        "<p style='font-size: 14px;'><b>Rate each image below on a scale of 1–10</b> (1 = cannot answer at all, 10 = very high certainty):</p>",
+        "<p style='font-size: 12px; margin-bottom: 0px; margin-top: -10px;'><b>Rate each image (1–10):</b> 1 = cannot answer, 10 = very high certainty</p>",
         unsafe_allow_html=True,
     )
-    st.markdown("")
 
-    # Display 10 images with rating sliders
-    ratings = []
-    for i, (frame_num, img_path) in enumerate(
-        zip(trial["frames"], trial["image_paths"])
-    ):
-        st.markdown(
-            f'<p style="font-weight: bold; font-size: 15px; margin-bottom: 0px; margin-top: 10px;">Image {i + 1}  (Frame {frame_num})</p>',
-            unsafe_allow_html=True,
-        )
-        st.markdown(
-            f'<p style="font-size: 13px; color: #555; margin-bottom: 8px;"><i>Q: {trial["question"]}</i></p>',
-            unsafe_allow_html=True,
-        )
+    ratings = [None] * len(trial["frames"])
+    row_layouts = [5, 5]
 
-        col_img, col_rating = st.columns([3, 2])
-        with col_img:
-            if os.path.exists(img_path):
-                st.image(img_path, width="stretch")
-            else:
-                st.warning(f"Image not found: {img_path}")
+    idx_counter = 0
+    for row_num, num_cols in enumerate(row_layouts):
+        cols = st.columns(5)
+        for col_idx in range(num_cols):
+            if idx_counter >= len(trial["frames"]):
+                break
 
-        with col_rating:
-            st.markdown(
-                '<div style="display: flex; align-items: center; height: 100%; padding-top: 20px;">',
-                unsafe_allow_html=True,
-            )
-            rating = st.slider(
-                f"Rating for Image {i + 1}",
-                min_value=1,
-                max_value=10,
-                value=5,
-                key=f"rating_{idx}_{i}",
-                label_visibility="collapsed",
-            )
-            # Show semantic label
-            if rating <= 2:
-                label_text = "Cannot answer"
-                label_color = "#e74c3c"
-            elif rating <= 4:
-                label_text = "Low certainty"
-                label_color = "#e67e22"
-            elif rating <= 6:
-                label_text = "Moderate"
-                label_color = "#f1c40f"
-            elif rating <= 8:
-                label_text = "High certainty"
-                label_color = "#2ecc71"
-            else:
-                label_text = "Very high certainty"
-                label_color = "#27ae60"
-            st.markdown(
-                f'<p style="text-align: center; color: {label_color}; font-weight: bold; font-size: 14px;">{label_text}</p>',
-                unsafe_allow_html=True,
-            )
-            st.markdown("</div>", unsafe_allow_html=True)
+            frame_num = trial["frames"][idx_counter]
+            img_path = trial["image_paths"][idx_counter]
 
-            ratings.append(rating)
+            with cols[col_idx]:
+                if os.path.exists(img_path):
+                    st.image(img_path, use_container_width=True)
+                else:
+                    st.warning("Missing")
 
-        if i < len(trial["frames"]) - 1:
-            st.markdown(
-                '<hr style="border: none; border-top: 1px dashed #bdc3c7; margin: 5px 0;">',
-                unsafe_allow_html=True,
-            )
+                rating = st.number_input(
+                    f"Img {idx_counter + 1}",
+                    min_value=1,
+                    max_value=10,
+                    value=5,
+                    step=1,
+                    key=f"rating_{idx}_{idx_counter}",
+                    label_visibility="collapsed",
+                )
 
-    st.markdown("---")
+                ratings[idx_counter] = rating
 
-    # Good datapoint question
-    st.markdown(
-        '<h4 style="text-align: center;">Is this a good datapoint?</h4>',
-        unsafe_allow_html=True,
-    )
+            idx_counter += 1
+
+    st.markdown('<hr style="border: none; border-top: 1px solid #bdc3c7; margin: 5px 0;">', unsafe_allow_html=True)
 
     good_dp_key = f"good_dp_{idx}"
     comment_key = f"comment_{idx}"
@@ -544,7 +503,10 @@ def experiment_page():
     if good_dp_key not in st.session_state:
         st.session_state[good_dp_key] = None
 
-    col_yes, col_no = st.columns(2)
+    # Put Yes, No, Submit on the exact same row!
+    col_label, col_yes, col_no, col_submit = st.columns([2, 1, 1, 2])
+    with col_label:
+        st.markdown('<p style="font-weight: bold; margin-top: 10px;">Is this a good datapoint?</p>', unsafe_allow_html=True)
     with col_yes:
         yes_type = "primary" if st.session_state[good_dp_key] == "yes" else "secondary"
         if st.button("Yes", key=f"gdp_yes_{idx}", use_container_width=True, type=yes_type):
@@ -556,30 +518,27 @@ def experiment_page():
             st.session_state[good_dp_key] = "no"
             st.rerun()
 
-    # Comment box (always visible, but required if "No" is selected)
     comment = ""
     if st.session_state[good_dp_key] == "no":
         comment = st.text_area(
-            "Please explain why this is not a good datapoint:",
+            "Explain why this is not a good datapoint:",
             key=comment_key,
-            height=100,
+            height=68,
         )
 
-    st.markdown("---")
-
-    # Submit button
-    if st.button("Submit & Next →", use_container_width=True, type="primary", key=f"submit_{idx}"):
-        if st.session_state[good_dp_key] is None:
-            st.error("⚠️ Please answer whether this is a **good datapoint** (Yes/No) before submitting.")
-        elif st.session_state[good_dp_key] == "no" and not comment.strip():
-            st.error("⚠️ Please provide a comment explaining why this is **not** a good datapoint.")
-        else:
-            record_response(
-                trial,
-                ratings,
-                st.session_state[good_dp_key],
-                comment.strip() if comment else "",
-            )
+    with col_submit:
+        if st.button("Submit & Next →", use_container_width=True, type="primary", key=f"submit_{idx}"):
+            if st.session_state[good_dp_key] is None:
+                st.error("⚠️ Please answer whether this is a **good datapoint** (Yes/No) before submitting.")
+            elif st.session_state[good_dp_key] == "no" and not comment.strip():
+                st.error("⚠️ Please provide a comment explaining why this is **not** a good datapoint.")
+            else:
+                record_response(
+                    trial,
+                    ratings,
+                    st.session_state[good_dp_key],
+                    comment.strip() if comment else "",
+                )
 
 
 def done_page():
@@ -613,6 +572,45 @@ def main():
     st.set_page_config(
         page_title="Image Sequence Rating Experiment",
         layout="wide",
+    )
+    
+    st.markdown(
+        """
+        <style>
+            .block-container {
+                padding-top: 0rem;
+                padding-bottom: 0rem;
+                max-width: 100%;
+            }
+            header {visibility: hidden; height: 0px;}
+            #MainMenu {visibility: hidden; height: 0px;}
+            footer {visibility: hidden; height: 0px;}
+            
+            /* Squeeze all stMarkdown/stText margins */
+            p, h4 {
+                margin-bottom: 0rem !important;
+                padding-bottom: 0rem !important;
+            }
+            
+            /* Compact number inputs */
+            .stNumberInput {
+                padding-top: 0px !important;
+                padding-bottom: 0px !important;
+            }
+            .stNumberInput label {
+                font-size: 11px !important;
+                margin-bottom: 0px !important;
+            }
+            
+            /* Reduce gaps between rows */
+            div[data-testid="stVerticalBlock"] > div {
+                padding-top: 0rem !important;
+                padding-bottom: 0rem !important;
+                gap: 0rem !important;
+            }
+        </style>
+        """,
+        unsafe_allow_html=True,
     )
 
     page = st.session_state.page
