@@ -4,6 +4,7 @@ import seaborn as sns
 import glob
 import os
 import re
+import numpy as np
 
 def extract_frame_number(filename):
     match = re.search(r'frame_(\d+)', filename)
@@ -57,94 +58,183 @@ def main():
     df_responses['category'] = df_responses['category'].str.lower()
     categories = ['geometric', 'compositional', 'semantic']
     
-    # 3. Plotting Setup
-    fig, axes = plt.subplots(2, 2, figsize=(16, 12))
-    axes = axes.flatten()
+    # 3. New Plotting Setup: Uncertainty / Accuracy / ECE Analysis Grid
+    # Following the style of the reference script with shaded regions (min/max and mean +/- std)
     
-    # Global styling
-    sns.set_theme(style="whitegrid")
+    # Uncertainty is 1 - confidence_norm
+    df_responses['uncertainty'] = df_responses['confidence_norm']
+    # Ensure correct is numeric (0/1)
+    df_responses['correct_val'] = df_responses['correct'].astype(float)
     
-    # Subplots 1-3: Individual Categories
-    for i, cat in enumerate(categories):
-        ax = axes[i]
-        cat_df = df_responses[df_responses['category'] == cat].copy()
+    df_reindexed = df_responses.dropna(subset=['shifted_index']).copy()
+    
+    def compute_ece(confidences, accuracies, n_bins=10):
+        confidences = np.array(confidences)
+        accuracies = np.array(accuracies)
+        if not len(confidences): return np.nan
+        bin_boundaries = np.linspace(0, 1, n_bins + 1)
+        ece = 0.0
+        n = len(confidences)
+        for i in range(n_bins):
+            if i == 0:
+                mask = (confidences >= bin_boundaries[i]) & (confidences <= bin_boundaries[i+1])
+            else:
+                mask = (confidences > bin_boundaries[i]) & (confidences <= bin_boundaries[i+1])
+            bin_size = np.sum(mask)
+            if bin_size > 0:
+                avg_conf = np.mean(confidences[mask])
+                avg_acc = np.mean(accuracies[mask])
+                ece += (bin_size / n) * abs(avg_acc - avg_conf)
+        return float(ece)
+
+    def get_metric_curves(df_segment):
+        # We compute metrics per question (sequence) at each relative index to get a distribution
+        questions = df_segment['question'].unique()
+        u_curves = []
+        a_curves = []
+        e_curves = []
+        counts = {} # rel_index -> total samples
+        
+        for q in questions:
+            q_df = df_segment[df_segment['question'] == q]
+            u_c, a_c, e_c = {}, {}, {}
+            for rel_idx, group in q_df.groupby('shifted_index'):
+                u_c[rel_idx] = group['uncertainty'].mean()
+                a_c[rel_idx] = group['correct_val'].mean()
+                e_c[rel_idx] = compute_ece(group['confidence_norm'], group['correct_val'])
+                counts[rel_idx] = counts.get(rel_idx, 0) + len(group)
+            u_curves.append(u_c)
+            a_curves.append(a_c)
+            e_curves.append(e_c)
+        return u_curves, a_curves, e_curves, counts
+
+    def plot_shaded_row(axes_row, curves_list, counts, color_theme, metric_label, min_samples=5, show_shading=True, break_at_zero=False):
+        # curves_list: list of dicts {rel_idx: value}
+        # metric_label: for y-axis
+        all_steps = sorted(set().union(*[set(c.keys()) for c in curves_list]))
+        # Filter steps by minimum sample count
+        valid_steps = [s for s in all_steps if counts.get(s, 0) >= min_samples]
+        
+        if not valid_steps:
+            axes_row.text(0.5, 0.5, "No Data", ha='center', va='center', transform=axes_row.transAxes)
+            return
+
+        means, mins, maxs, stds = [], [], [], []
+        for s in valid_steps:
+            vals = [c[s] for c in curves_list if s in c and not np.isnan(c[s])]
+            if vals:
+                arr = np.array(vals)
+                means.append(np.mean(arr))
+                mins.append(np.min(arr))
+                maxs.append(np.max(arr))
+                stds.append(np.std(arr) / np.sqrt(len(arr)))
+            else:
+                means.append(np.nan); mins.append(np.nan); maxs.append(np.nan); stds.append(0)
+
+        means, mins, maxs, stds = map(np.array, [means, mins, maxs, stds])
+        
+        # Plotting
+        if show_shading:
+            # Shading represents the standard error of the mean across across different sequences (questions)
+            axes_row.fill_between(valid_steps, means - stds, means + stds, color=color_theme, alpha=0.25)
+        
+        # Filter out NaNs
+        mask = np.isfinite(means)
+        valid_steps_arr = np.array(valid_steps)
+        
+        if break_at_zero:
+            # Plot negative and positive segments separately to create a gap at the center frame (0)
+            neg_mask = (valid_steps_arr < 0) & mask
+            pos_mask = (valid_steps_arr > 0) & mask
+            zero_mask = (valid_steps_arr == 0) & mask
+            
+            axes_row.plot(valid_steps_arr[neg_mask], means[neg_mask], marker='o', linewidth=2, markersize=4, color=color_theme)
+            axes_row.plot(valid_steps_arr[pos_mask], means[pos_mask], marker='o', linewidth=2, markersize=4, color=color_theme)
+            
+            # Draw the point at 0 if it exists, but do not connect it to the lines
+            if np.any(zero_mask):
+                axes_row.plot(valid_steps_arr[zero_mask], means[zero_mask], marker='o', markersize=4, color=color_theme, linestyle='None')
+        else:
+            # Standard continuous plot connecting all valid points
+            axes_row.plot(valid_steps_arr[mask], means[mask], marker='o', linewidth=2, markersize=4, color=color_theme)
+        
+        axes_row.axvline(x=0, color='red', linestyle='--', alpha=0.7)
+        axes_row.grid(True, alpha=0.3)
+        
+        # Add sample count text (optional but helpful)
+        if len(maxs) > 0 and np.any(np.isfinite(maxs)) and np.any(np.isfinite(mins)):
+            offset = 0.05 * (np.nanmax(maxs) - np.nanmin(mins))
+        else:
+            offset = 0.05
+            
+        for i, s in enumerate(valid_steps):
+            if np.isfinite(means[i]):
+                axes_row.text(s, mins[i] - offset if metric_label == 'Uncertainty' else maxs[i] + offset, 
+                              str(int(counts[s])), ha='center', va='center', fontsize=6, alpha=0.7)
+
+    plot_cats = categories + ['all']
+    metrics = ['Uncertainty', 'Accuracy', 'ECE']
+    colors = {'Uncertainty': 'tab:red', 'Accuracy': 'tab:green', 'ECE': 'tab:blue'}
+    
+    fig, axes = plt.subplots(len(metrics), len(plot_cats), figsize=(5 * len(plot_cats), 4 * len(metrics)), sharex=True)
+    
+    for col_idx, cat in enumerate(plot_cats):
+        cat_df = df_reindexed if cat == 'all' else df_reindexed[df_reindexed['category'] == cat]
         
         if cat_df.empty:
-            ax.set_title(f"{cat.capitalize()} (No Data)")
+            for row_idx in range(len(metrics)):
+                axes[row_idx, col_idx].text(0.5, 0.5, "No Data", ha='center', va='center')
             continue
             
-        # Get the question text for this category to find the frame order
-        q_text = cat_df['question'].iloc[0].strip()
-        f_order = frames_order_map.get(q_text, [])
-        center_f = center_frame_map.get(q_text)
+        u_curves, a_curves, e_curves, counts = get_metric_curves(cat_df)
         
-        # Map frame numbers to a simple integer index (0, 1, 2...) for plotting
-        f_to_idx = {f: idx for idx, f in enumerate(f_order)}
-        cat_df['plot_index'] = cat_df['frame_num'].map(f_to_idx)
+        # Uncertainty
+        plot_shaded_row(axes[0, col_idx], u_curves, counts, colors['Uncertainty'], 'Uncertainty', show_shading=True)
+        # Accuracy
+        plot_shaded_row(axes[1, col_idx], a_curves, counts, colors['Accuracy'], 'Accuracy', show_shading=False, break_at_zero=True)
+        # ECE
+        plot_shaded_row(axes[2, col_idx], e_curves, counts, colors['ECE'], 'ECE', show_shading=False, break_at_zero=True)
         
-        # Calculate mean Confidence per frame
-        mean_conf = cat_df.groupby('plot_index')['confidence_norm'].mean().reset_index()
-        
-        # Plot mean line
-        sns.lineplot(data=mean_conf, x='plot_index', y='confidence_norm', ax=ax, 
-                     color='black', linewidth=2, label='Mean Confidence', marker='o')
-        
-        # Plot individual dots (Correct/Incorrect)
-        # We manually scatter them to ensure blue/red coloring
-        for res, color in [('Correct', 'blue'), ('Incorrect', 'red')]:
-            subset = cat_df[cat_df['Result'] == res]
-            ax.scatter(subset['plot_index'], subset['confidence_norm'], 
-                       color=color, alpha=0.6, s=40, label=f"{res} Response")
-            
-        # Mark Center Frame
-        if center_f in f_to_idx:
-            center_idx = f_to_idx[center_f]
-            ax.axvline(x=center_idx, color='green', linestyle='--', linewidth=2, label='Center Frame')
-            
-        ax.set_title(f"Confidence: {cat.capitalize()}", fontsize=14)
-        ax.set_xticks(range(len(f_order)))
-        ax.set_xticklabels(f_order, rotation=45)
-        ax.set_xlabel("Frame Number")
-        ax.set_ylabel("Normalized Confidence (0-1)")
-        ax.set_ylim(-0.05, 1.05)
-        ax.legend()
+        # Titles and Labels
+        axes[0, col_idx].set_title(f"{cat.capitalize()}", fontsize=16, fontweight='bold')
+        for row_idx in range(len(metrics)):
+            if col_idx == 0:
+                axes[row_idx, col_idx].set_ylabel(metrics[row_idx], fontsize=14, fontweight='bold')
+            if row_idx == len(metrics) - 1:
+                axes[row_idx, col_idx].set_xlabel("Relative Frame Index (Center=0)", fontsize=12)
+            if metrics[row_idx] in ['Uncertainty', 'Accuracy', 'ECE']:
+                axes[row_idx, col_idx].set_ylim(-0.05, 1.05)
 
-    # Subplot 4: Mean of all categories with reindexing
-    ax_all = axes[3]
-    df_reindexed = df_responses.dropna(subset=['shifted_index'])
+    plt.suptitle("Human Response Analysis: Uncertainty, Accuracy, and Calibration", fontsize=20, fontweight='bold', y=0.98)
+    plt.tight_layout(rect=[0, 0, 1, 0.96])
     
-    # Group by shifted_index and category for separate lines, then a total mean
-    for cat in categories:
-        cat_data = df_reindexed[df_reindexed['category'] == cat]
-        if not cat_data.empty:
-            mean_cat = cat_data.groupby('shifted_index')['confidence_norm'].mean().reset_index()
-            sns.lineplot(data=mean_cat, x='shifted_index', y='confidence_norm', ax=ax_all, 
-                         label=f"{cat.capitalize()}", alpha=0.5, linestyle='--')
-            
-    # Total mean line
-    mean_all = df_reindexed.groupby('shifted_index')['confidence_norm'].mean().reset_index()
-    sns.lineplot(data=mean_all, x='shifted_index', y='confidence_norm', ax=ax_all, 
-                 color='black', linewidth=3, marker='s', label='ALL Categories (Mean)')
-    
-    # Individual trial dots for the reindexed plot
-    for res, color in [('Correct', 'blue'), ('Incorrect', 'red')]:
-        subset = df_reindexed[df_reindexed['Result'] == res]
-        ax_all.scatter(subset['shifted_index'], subset['confidence_norm'], 
-                       color=color, alpha=0.3, s=20)
-
-    # Mark Center Frame at 0
-    ax_all.axvline(x=0, color='green', linestyle='--', linewidth=2, label='Center Frame (0)')
-    
-    ax_all.set_title("Aligned Average Confidence", fontsize=14)
-    ax_all.set_xlabel("Relative Frame Index (Center = 0)")
-    ax_all.set_ylabel("Normalized Confidence (0-1)")
-    ax_all.set_ylim(-0.05, 1.05)
-    ax_all.legend()
-
-    plt.tight_layout()
     output_path = '/home/leaplab/Downloads/acl_rebuttal_form/confidence_analysis_grid.png'
     plt.savefig(output_path, dpi=300)
     print(f"Analysis plot saved to {output_path}")
+
+    # 4. Separate Horizontal Plot for 'All Categories'
+    fig_all, axes_all = plt.subplots(1, 3, figsize=(18, 5))
+    
+    # Get metrics for ALL data
+    u_curves, a_curves, e_curves, counts = get_metric_curves(df_reindexed)
+    
+    # Plot each metric horizontally
+    plot_shaded_row(axes_all[0], u_curves, counts, colors['Uncertainty'], 'Uncertainty', show_shading=True, break_at_zero=False)
+    plot_shaded_row(axes_all[1], a_curves, counts, colors['Accuracy'], 'Accuracy', show_shading=False, break_at_zero=True)
+    plot_shaded_row(axes_all[2], e_curves, counts, colors['ECE'], 'ECE', show_shading=False, break_at_zero=True)
+    
+    # Styling for the standalone plot
+    for i, metric in enumerate(metrics):
+        axes_all[i].set_title(f"{metric}", fontsize=16, fontweight='bold')
+        axes_all[i].set_xlabel("Relative Frame Index (Center=0)", fontsize=12)
+        axes_all[i].set_ylabel(metric, fontsize=14, fontweight='bold')
+        if metric in ['Uncertainty', 'Accuracy', 'ECE']:
+            axes_all[i].set_ylim(-0.05, 1.05)
+            
+    plt.tight_layout()
+    output_path_all = '/home/leaplab/Downloads/acl_rebuttal_form/all_categories_metrics.png'
+    plt.savefig(output_path_all, dpi=300)
+    print(f"All Categories standalone plot saved to {output_path_all}")
 
 if __name__ == "__main__":
     main()

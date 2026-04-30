@@ -1,4 +1,113 @@
 video_path,question,frames,center_frames,gt_answer,primary_category
-/home/debarpanb1/NExTVideo/1000/3824469712.mp4,Is the boy on the vehicle?,"[0380, 0387, 0393, 0395, 0398, 0408, 0412, 0415, 0417, 0419]",[0408],no,Geometric
-/home/debarpanb1/NExTVideo/0089/6868234420.mp4,Is the girl standing on the chair?,"[1320, 1325, 1330, 1335, 1345, 1350, 1355, 1360, 1365, 1370]",[1345],no,Semantic
-/home/debarpanb1/NExTVideo/1104/5508995205.mp4,Are exactly 2 adults holding babies in the pool?,"[0500, 0520, 0540, 0580, 0600, 0628, 0650, 0665, 0680, 0700]","[0600, 0628]",[yes yes],Compositional
+images/NExTVideo/0089/3066966990.mp4,Is the boy with white t-shirt at the left of the boy with black t-shirt?,"[1840, 1845, 1850, 1855, 1860, 1865, 1870, 1875, 1880, 1884]",[1875],yes,Compositional
+images/NExTVideo/0089/6868234420.mp4,Is the girl standing on the chair?,"[1320, 1325, 1330, 1335, 1345, 1350, 1355, 1360, 1365, 1370]",[1345],no,Semantic
+images/NExTVideo/0090/5329653093.mp4,Are both the dogs standing on the snow?,"[0410, 0430, 0760, 1245, 1250, 1255, 1260, 1265, 1270, 1280]",[1255],no,Semantic
+images/NExTVideo/0090/7001183247.mp4,Is the man with white t-shirt at the right of the man with black t-shirt?,"[0077, 0078, 0080, 0082, 0088, 0090, 0092, 0094, 0096, 0098]","[0082, 0088]",yes,Compositional
+images/NExTVideo/1009/4738042036.mp4,Is the child standing on his legs?,"[0015, 0025, 0035, 0050, 0070, 0080, 0090, 0092, 0104, 0114]",[0080],no,Semantic
+images/NExTVideo/1203/3339687949.mp4,Is the baby on the carpet?,"[0080, 0090, 0124, 0150, 0175, 0190, 0200, 0220, 0240, 0250]",[0190],yes,Geometric
+images/NExTVideo/1203/3798468368.mp4,Is the child standing on the chair?,"[0000, 0060, 0110, 0160, 0226, 0300, 0320, 0350, 0400, 0440]",[0226],no,Semantic
+images/NExTVideo/1203/4039610385.mp4,Is the black shirt woman at the right of the red shirt man?,"[0200, 0210, 0220, 0230, 0240, 0260, 0270, 0300, 0310, 0320]",[0260],yes,Compositional
+images/NExTVideo/1009/5996570774.mp4,Is the child at the right of the woman?,"[0010, 0015, 0018, 0023, 0028, 0040, 0045, 0050, 0055, 0060]",[0040],yes,Geometric
+images/NExTVideo/1009/6118838509.mp4,Is the tortoise looking upwards?,"[0080, 0120, 0140, 0170, 0180, 0190, 0200, 0210, 0220, 0230]",[0180],no,Semantic
+images/NExTVideo/1009/6416652333.mp4,Is the baby boy skidding towards his back?,"[0030, 0060, 0080, 0095, 0120, 0185, 0195, 0200, 0210, 0225]",[0185],no,Semantic
+images/NExTVideo/1009/6420147083.mp4,Is the boy looking upwards?,"[0080, 0100, 0120, 0130, 0140, 0145, 0148, 0150, 0160, 0180]",[0145],no,Semantic
+images/NExTVideo/1009/6663748603.mp4,Is the man looking at the book in his hand?,"[0050, 0055, 0060, 0064, 0065, 0066, 0070, 0075, 0078, 0080]",[0065],no,Semantic
+images/NExTVideo/1009/8612900766.mp4,Are there exactly two men in the scene?,"[0370, 0390, 0400, 0410, 0460, 0480, 0600, 0610, 0615, 0620]",[0600],yes,Geometric
+images/NExTVideo/0101/3122394310.mp4,Is the man at the left of the woman?,"[600, 0610, 0615, 0620, 0630, 0635, 0645, 0675, 0680, 0685]",[0645],yes,Geometric
+images/NExTVideo/0101/3404210548.mp4,Is the man sitting on snow?,"[0260, 0265, 0270, 0275, 0280, 0285, 0288, 0290, 0294, 0298]",[0280],yes,Semantic
+images/NExTVideo/0101/4316096248.mp4,Is the bride feeding cake to the groom?,"[1550, 1570, 1600, 1660, 1670, 1680, 1685, 1690, 1695, 1770]",[1680],no,Semantic
+images/NExTVideo/0101/4740074365.mp4,Is the bride at the left of the groom?,"[0080, 0100, 0125, 0140, 0150, 0250, 0260, 0270, 0300, 0330]",[0250],yes,Geometric
+images/NExTVideo/0101/4846820256.mp4,Is the boy at the left of the man?,"[0120, 0122, 0124, 0126, 0134, 0155, 0157, 0158, 0159, 0160]",[0134],yes,Geometric
+images/NExTVideo/1000/2594144360.mp4,Is the baby sitting on the floor?,"[0140, 0143, 0145, 0147, 0150, 0151, 0152, 0153, 0154, 0155]",[0150],no,Semantic
+images/NExTVideo/1000/2594144360.mp4,Is the dog in front of the baby?,"[0348, 0355, 0388, 0395, 0410, 0415, 0418, 0419, 0420, 0421]",[0410],yes,Geometric
+images/NExTVideo/1000/2623063774.mp4,Is the child looking at the toys he is playing with?,"[0230, 0235, 0240, 0245, 0247, 0251, 0255, 0257, 0262, 0265]",[0247],yes,Semantic
+images/NExTVideo/1000/3273928480.mp4,Is the dog at the left of the woman?,"[0300, 0303, 0306, 0308, 0310, 0315, 0318, 0328, 0332, 0335]",[0315],yes,Geometric
+images/NExTVideo/1000/3297776560.mp4,Are there eaxctly three woman in the scene?,"[0840, 0843, 0846, 0850, 0852, 0855, 0857, 0860, 0862, 0864]",[0857],"[yes, yes]",Geometric
+images/NExTVideo/1000/3298675598.mp4,Is the insect on the palm?,"[0550, 0560, 0565, 0568, 0585, 0590, 0595, 0600, 0603, 0607]","[0585, 0590]",yes,Geometric
+images/NExTVideo/1000/3322267252.mp4,Is the man with yellow pullover at the left of the man with red pullover?,"[1337, 1340, 1345, 1350, 1355, 1360, 1420, 1427, 1430, 1435]","[1360, 1420]",no,Compositional
+images/NExTVideo/1000/3380344744.mp4,Is the baby wrapped with a piece of cloth?,"[0460, 0465, 0468, 0470, 0474, 0478, 0482, 0485, 0490, 0495]",[0478],no,Semantic
+images/NExTVideo/1000/3388598772.mp4,Is the man kissing the woman?,"[0100, 0150, 0152, 0155, 0158, 0160, 0161, 0162, 0165, 0168]","[0158, 0160]",no,Semantic
+images/NExTVideo/1000/3390247475.mp4,Is the man with brown t-shirt drinking a beer?,"[0549, 0552, 0555, 0558, 0560, 0562, 0565, 0570, 0580, 0590]",[0558],no,Compositional
+images/NExTVideo/1000/3664990087.mp4,Are there exactly two men in the scene?,"[0314, 0316, 0319, 0322, 0325, 0328, 0330, 0333, 0336, 0345]",[0325],"[yes, yes]",Geometric
+images/NExTVideo/1000/3669067230.mp4,Are there exactly two red plastic cups in the scene?,"[0255, 0263, 0264, 0265, 0268, 0271, 0275, 0278, 0282, 0335]",[0265],no,Compositional
+images/NExTVideo/1000/3824469712.mp4,Is the boy on the vehicle?,"[0380, 0387, 0393, 0395, 0398, 0408, 0412, 0415, 0417, 0419]",[0412],no,Geometric
+images/NExTVideo/1000/4116558765.mp4,Are there exactly two cats in the scene?,"[0885, 0900, 0910, 0920, 0975, 0985, 0990, 2380, 2400, 2410]",[0990],"[yes, yes]",Geometric
+images/NExTVideo/1000/4227464140.mp4,Is the man looking at the television?,"[0490, 0500, 0502, 0504, 0506, 0508, 0510, 0512, 0515, 0520]",[0506],yes,Semantic
+images/NExTVideo/1000/4405872555.mp4,Is the child at the left of the woman?,"[0188, 0193, 0196, 0199, 0203, 0210, 0215, 0220, 0225, 0229]",[0210],yes,Geometric
+images/NExTVideo/1000/4550392934.mp4,Are both the birds standing in water?,"[1210, 1218, 1234, 1236, 1238, 1240, 1245, 1248, 1250, 1252]",[1240],no,Semantic
+images/NExTVideo/1000/4638541063.mp4,Are there exactly two cats in the image?,"[0000, 0010, 0015, 0020, 0025, 0030, 0035, 0040, 0041, 0042]","[0030, 0035]",yes,Geometric
+images/NExTVideo/1001/2667165452.mp4,Is the woman looking towards her left?,"[0000, 0028, 0035, 0036, 0037, 0038, 0039, 0040, 0041, 0045]",[0036],yes,Semantic
+images/NExTVideo/1001/3098102850.mp4,Are there exactly two cats in the scene?,"[0435, 0445, 0455, 0465, 0470, 0475, 0480, 0500, 0505, 0525]","[0475, 0480]",yes,Geometric
+images/NExTVideo/1001/3249160519.mp4,Are the two babies in the scene sitting beside each other?,"[0430, 0450, 0460, 0475, 0480, 0485, 0488, 0490, 0496, 0500]","[0485, 0488]",no,Semantic
+images/NExTVideo/1101/2558039818.mp4,Is the baby on the right side of the man?,"[0582, 0615, 0623, 0635, 0644, 0650, 0666, 0689, 0700, 0724]","[0644, 0650]",no,Geometric
+images/NExTVideo/1101/2574374895.mp4,Is the baby sitting on the sofa?,"[0100, 0120, 0144, 0170, 0200, 0237, 0240, 0250, 0271, 0300]","[0237, 0240]",yes,Semantic
+images/NExTVideo/1101/3397265196.mp4,Are there 4 men on the stage?,"[0079, 0089, 0100, 0104, 0123, 0132, 0136, 0140, 0144, 0148]","[0100, 0104]",yes,Geometric
+images/NExTVideo/1101/3321261856.mp4,Is th toddle lifting her right leg?,"[0560, 0565, 0568, 0570, 0573, 0575, 0580, 0585, 0590, 0594]","[0573, 0575]",yes,Semantic
+images/NExTVideo/1101/3483300439.mp4,Is the military lady shaking hands with the military man?,"[0273, 0274, 0275, 0278, 0279, 0280, 0281, 0285, 0287, 0290]","[0278, 0279]",yes,Semantic
+images/NExTVideo/1101/3676488640.mp4,Are there red and orange container behind the baby?,"[0896, 0900, 0905, 0909, 0925, 0926, 0930, 0935, 0940, 0947]","[0925, 0926]",yes,Compositional
+images/NExTVideo/1101/3753830144.mp4,Are there yellow and pink chalks at the bottom of the board?,"[0164, 0165, 0166, 0169, 0177, 0180, 0185, 0190, 0195, 0200]","[0169, 0177]",yes,Compositional
+images/NExTVideo/1101/3812429626.mp4,Is there a black shirt man ahead of the orange shirt man?,"[0459, 0460, 0463, 0464, 0473, 0474, 0480, 0484, 0486, 0489]","[0473, 0474]",no,Compositional
+images/NExTVideo/1101/4542514917.mp4,Is the man looking at the baby's face?,"[0097, 0098, 0100, 0101, 0102, 0104, 0105, 0106, 0107, 0108]","[0102, 0104]",no,Semantic
+images/NExTVideo/1103/2510696559.mp4,Is the cyclist jumping off the stairs?,"[1000, 1024, 1067, 1172, 1186, 1206, 1210, 1215, 1220, 1225]","[1172, 1186]",yes,Semantic
+images/NExTVideo/1103/2831643292.mp4,Are there exactly 2 men in the scene?,"[0077, 0080, 0082, 0085, 0088, 0090, 0092, 0095, 0098, 0100]","[0088, 0090]",yes,Geometric
+images/NExTVideo/1103/3441428429.mp4,Is the female dancer on the left side of the male dancer?,"[0474, 0480, 0484, 0499, 0504, 0509, 0514, 0519, 0523, 0527]","[0499, 0504]",no,Compositional
+images/NExTVideo/1103/3650010049.mp4,Are there exactly 2 women on the boat?,"[0050, 0065, 0080, 0090, 0107, 0114, 0135, 0140, 0160, 0200]","[0107, 0114]",yes,Geometric
+images/NExTVideo/1104/4573056419.mp4,Are there exactly 5 people on the stage?,"[0398, 0409, 0415, 0421, 0500, 0505, 0581, 0585, 0594, 0606]","[0500, 0505]",[yes yes],Geometric
+images/NExTVideo/1104/4760431362.mp4,Are there 2 dogs on the bed?,"[0040, 0042, 0048, 0053, 0058, 0059, 0066, 0073, 0078, 0087]","[0058, 0059]",[yes yes],Geometric
+images/NExTVideo/1104/4839268164.mp4,Is the boy drinking from the yellow cup?,"[0268, 0270, 0273, 0278, 0283, 0284, 0286, 0290, 0294, 0299]","[0283, 0284]",[no no],Semantic
+images/NExTVideo/1104/5508995205.mp4,Are exactly 2 adults holding babies in the pool?,"[0500, 0520, 0540, 0580, 0600, 0628, 0650, 0665, 0680, 0700]","[0600, 0628]",[yes yes],Compositional
+images/NExTVideo/1105/2623764605.mp4,Are there exactly 2 cats on the floor mat?,"[0145, 0160, 0185, 0207, 0208, 0320, 0330, 0340, 0350, 0360]","[0207, 0208]",[yes yes],Geometric
+images/NExTVideo/1105/4375052499.mp4,Is the baby girl in middle of the boys?,"[0006, 0020, 0030, 0040, 0053, 0058, 0080, 0100, 0112, 0115]","[0053, 0058]",no,Compositional
+images/NExTVideo/1105/6253141636.mp4,Are there 2 toddlers on the bed?,"[0386, 0400, 0420, 0450, 0475, 0500, 0525, 0550, 0575, 0624]",[0475],[yes yes],Geometric
+images/NExTVideo/1105/6709738709.mp4,Is the cat opening its mouth?,"[1620, 1630, 1635, 1638, 1642, 1644, 1650, 1655, 1660, 1665]","[1642, 1644]",yes,Semantic
+images/NExTVideo/1106/2797596111.mp4,Are there exactly 4 guitarists on the stage?,"[0608, 0615, 0623, 0628, 0637, 0666, 0689, 0700, 0724, 0792]",[0637],[yes yes],Compositional
+images/NExTVideo/1106/3459862895.mp4,Is the baby boy sitting on the toy train?,"[1492, 1500, 1510, 1540, 1570, 1572, 1580, 1600, 1630, 1647]","[1570, 1572]",[yes yes],Semantic
+images/NExTVideo/1106/4229009987.mp4,Is the toddler picking up the toy baby?,"[0100, 0120, 0130, 0142, 0145, 0150, 0155, 0160, 0170, 0200]","[0142, 0145]",yes,Semantic
+images/NExTVideo/1106/4519737098.mp4,Are there exactly 3 birds in the scene?,"[0000, 0012, 0018, 0022, 0032, 0036, 0042, 0048, 0052, 0056]",[0032],yes,Geometric
+images/NExTVideo/1106/6016405951.mp4,Is the black dog on the sofa?,"[0067, 0080, 0085, 0100, 0123, 0150, 0160, 0170, 0190, 0193]",[0123],yes,Compositional
+images/NExTVideo/1106/7828681900.mp4,Are there exactly 3 birds in the scene?,"[0405, 0410, 0415, 0420, 0431, 0440, 0445, 0450, 0455, 0473]",[0431],yes,Geometric
+images/NExTVideo/0051/2400074985.mp4,Are both hands above her head?,"[760, 770, 780, 790, 800, 810, 815, 820, 830, 840]",[815],no,Geometric
+images/NExTVideo/0051/3702633786.mp4,Is the dog on bathtub?,"[1130, 1140, 1150, 1160, 1170, 1190, 1245, 1250, 1255, 1260]","[1190, 1245]",no,Geometric
+images/NExTVideo/0051/6783561967.mp4,Are there two cats in the room?,"[200, 210, 220, 225, 228, 232, 230, 235, 240, 290]",[225],no,Geometric
+images/NExTVideo/0051/8697708107.mp4,Is the cat on top of the laptop?,"[0350, 0351, 0352, 0354, 0355, 0360, 0365, 0370, 0380, 0390]",[0360],no,Geometric
+images/NExTVideo/0051/11585666326.mp4,Are there two people in the image?,"[0940, 0945, 0950, 0958, 0960, 0970, 0976, 0980, 1000, 1005]",[0970],yes,Geometric
+images/NExTVideo/0052/5455648195.mp4,Is the baby touching telephone?,"[0110, 0150, 0160, 0170, 0175, 0190, 0200, 0220, 0230, 0240]",[175],no,Semantic
+images/NExTVideo/0052/10041199716.mp4,Is child feeding the baby,"[1700, 1720, 1730, 1740, 1760, 1770, 1780, 1840, 1845, 1850]",[1780],no,Semantic
+images/NExTVideo/0053/3701610241.mp4,Has the plane landed?,"[0100, 0110, 0120, 0122, 0124, 0126, 0128, 0130, 0131, 0132]",[126],no,Semantic
+images/NExTVideo/0053/5599511471.mp4,Did the person catch the ball,"[0084, 0085, 0086, 0087, 0088, 0091, 0092, 0093, 0094, 0095]","[92, 93]",no,Semantic
+images/NExTVideo/0054/2612939953.mp4,Are there two people riding the horse,"[0020, 0030, 0040, 0050, 0060, 0080, 0090, 0100, 0170, 0180]",[0080],no,Semantic
+images/NExTVideo/0054/2971876369.mp4,Are there three grandmas in the image,"[0225, 0240, 0250, 0276, 0277, 0290, 0300, 0305, 0307, 0310]",[0277],yes,Compositional
+images/NExTVideo/0054/11276956514.mp4,Are both hands of the priest on the head of the girl,"[0250, 0255, 0260, 0270, 0275, 0290, 0295, 0300, 0310, 0320]",[0295],no,Compositional
+images/NExTVideo/0055/3446247254.mp4,Has the plane landed?,"[0110, 0120, 0130, 0150, 0170, 0172, 0180, 0185, 0190, 0195]",[0172],no,Semantic
+images/NExTVideo/0055/8727084602.mp4,Is the cat on laptop?,"[1700, 1800, 1850, 1920, 1940, 1945, 1950, 1951, 1955, 1960]","[1940, 1945]",yes,Geometric
+images/NExTVideo/0056/3336398510.mp4,Has the person with parachute landed?,"[0130, 0133, 0135, 0137, 0138, 0140, 0143, 0145, 0150, 0151]",[0137],no,Semantic
+images/NExTVideo/0057/3381752581.mp4,Is the cat standing?,"[0750, 0780, 0880, 0900, 0933, 0935, 0938, 0940, 0945, 0950]",[0935],no,Semantic
+images/NExTVideo/0057/7001078933.mp4,Did they impact each other?,"[325, 350, 360, 365, 367, 368, 370, 373, 375, 380]",[370],no,Semantic
+images/NExTVideo/0058/3851961428.mp4,Is the boy wearing glasses?,"[0000, 0010, 0020, 0030, 0040, 0075, 0080, 0085, 0090, 0100]",[0075],yes,Semantic
+images/NExTVideo/0059/2400084970.mp4,Are there two people visible?,"[470, 480, 500, 510, 520, 540, 550, 565, 570, 575]",[550],yes,Geometric
+images/NExTVideo/0060/5856167780.mp4,Is the kid jumping in the air?,"[510, 520, 525, 528, 530, 532, 533, 535, 537, 540]","[532, 533]",no,Semantic
+images/NExTVideo/0061/3530395394.mp4,Is there a pig in the picture?,"[830, 835, 840, 850, 855, 880, 890, 900, 905, 910]","[855, 880]",[yes yes],Semantic
+images/NExTVideo/0000/5650793185.mp4,Is the man touching the swing?,"[0087, 0080, 0034, 0038, 0040, 0054, 0077, 0043, 0048, 0107]",[0040],yes,Semantic
+images/NExTVideo/0002/10192494165.mp4,Is the book on baby lap?,"[0063, 0075, 0086, 0094, 0101, 0110, 0142, 0159, 0175, 0188]",[0101],yes,Geometric
+images/NExTVideo/0003/5251212639.mp4,Is the dog touching the table?,"[0000, 0171, 0179, 0197, 0225, 0221, 0210, 0219, 0681, 0709]",[0225],no,Geometric
+images/NExTVideo/0004/9525696229.mp4,Is the children on the sand?,"[0000, 0074, 0120, 0138, 0159, 0231, 0170, 0188, 0206, 0221]",[0159],yes,Geometric
+images/NExTVideo/0004/11566980553.mp4,Are there 2 person?,"[0538, 0159, 0165, 0170, 0180, 0186, 0651, 0864, 0892, 0962]",[0180],yes,Geometric
+images/NExTVideo/0005/3250020598.mp4,Is the baby laying on the floor?,"[0661, 0643, 0632, 0512, 0497, 0479, 0457, 0448, 0423, 0002]",[0497],yes,Semantic
+images/NExTVideo/0006/2478396375.mp4,Are there two baby in the scene?,"[0006, 0038, 0175, 0080, 0047, 0136, 0698, 0751, 0602, 0770]",[0047],yes,Geometric
+images/NExTVideo/0008/2744507539.mp4,Is the man standing on ground?,"[0015, 0038, 0053, 0076, 0089, 0116, 0125, 0133, 0153, 0287]",[0089],no,Semantic
+images/NExTVideo/0008/6320611157.mp4,Is the toddler sitting?,"[0000, 0972, 1004, 1024, 1032, 1187, 1201, 1291, 1654, 1757]",[1032],no,Semantic
+images/NExTVideo/0009/11566930393.mp4,Is the child standing?,"[0000, 0252, 0231, 0196, 0472, 0555, 0790, 0782, 0784, 0792]",[0472],no,Semantic
+images/NExTVideo/0015/4609514164.mp4,Are both the lion sitting?,"[0031, 0053, 0142, 0167, 0279, 0285, 0300, 0326, 0343, 0358]",[0279],no,Semantic
+images/NExTVideo/0020/2454242177.mp4,Is the baby standing?,"[0001, 0073, 0158, 0189, 0267, 0423, 0432, 0512, 0548, 0717]",[0267],no,Semantic
+images/NExTVideo/0020/9209893989.mp4,Is there a rock in boy hand?,"[0042, 0002, 0092, 0062, 0097, 0814, 1042, 0439, 0572, 0484]",[0097],no,Geometric
+images/NExTVideo/0026/5986131986.mp4,Is the girl left of the tree?,"[0117, 0138, 0185, 0201, 0211, 0223, 0235, 0246, 0273, 0289]",[0211],yes,Geometric
+images/NExTVideo/0028/3085751774.mp4,Is the girl holding the dog?,"[0172, 0085, 0442, 0461, 0531, 0565, 0594, 0619, 0652, 0716]",[0531],no,Semantic
+images/NExTVideo/0031/4006742735.mp4,Is the icecream nearer to girl than boy?,"[0000, 0010, 0013, 0017, 0020, 0023, 0029, 0035, 0430, 0654]",[0020],no,Geometric
+images/NExTVideo/0031/4805511103.mp4,Is the boy standing on ground?,"[0000, 0081, 0083, 0085, 0227, 0874, 0878, 0884, 0889, 0896]",[0227],no,Semantic
+images/NExTVideo/0031/5516830700.mp4,Is the baby standing?,"[0000, 0076, 0123, 0298, 0336, 0356, 0802, 0819, 0849, 0904]",[0336],no,Semantic
+images/NExTVideo/0033/2834146886.mp4,Is the dog inside the dogbed?,"[0680, 0691, 0708, 0717, 0725, 0741, 0752, 0769, 0859, 0871]",[0725],no,Geometric
+images/NExTVideo/0033/3105754589.mp4,Is the dog sitting on bed?,"[0223, 0206, 0168, 0483, 0982, 1070, 1166, 1215, 1287, 1404]",[0982],no,Semantic
+images/NExTVideo/0034/4740345442.mp4,Is the blue boy foot on the ground?,"[0001, 0036, 0471, 0460, 0456, 0042, 0093, 0120, 0106, 0347]",[0456],no,Compositional
+images/NExTVideo/0034/5296671076.mp4,Is the boy sitting?,"[0000, 0436, 0470, 0407, 0409, 0417, 1675, 1691, 1708, 1761]",[0409],no,Semantic
+images/NExTVideo/0038/3277823769.mp4,Is the baby standing?,"[0346, 0497, 0514, 0582, 1477, 1699, 1741, 1753, 1776, 1878]",[1477],no,Semantic
+images/NExTVideo/0039/5351925965.mp4,Is the bird sitting on man's hand?,"[0022, 0094, 0110, 0106, 0103, 0865, 0890, 0895, 0917, 0947]",[0103],no,Semantic
