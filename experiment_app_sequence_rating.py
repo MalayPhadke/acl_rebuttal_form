@@ -16,15 +16,33 @@ from google.oauth2.service_account import Credentials
 # --- Configuration ---
 # QUESTIONS_CSV = "list_questions.csv"
 # IMAGES_BASE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "images")
+# --- Path Resolution ---
+def _find_file(filename, start_dir=None):
+    """Search for a file starting from start_dir, walking up to 3 parent levels."""
+    if start_dir is None:
+        start_dir = os.path.dirname(os.path.abspath(__file__))
+    candidate = start_dir
+    for _ in range(4):  # check current dir + 3 parents
+        path = os.path.join(candidate, filename)
+        if os.path.exists(path):
+            return path
+        candidate = os.path.dirname(candidate)
+    return os.path.join(start_dir, filename)  # fallback: return expected path even if missing
 
-# Try to look in current dir, or fallback to parent dir
-base_dir = os.path.dirname(os.path.abspath(__file__))
-if not os.path.exists(os.path.join(base_dir, "video_frames_kalash_new")):
-    base_dir = os.path.dirname(base_dir) # Go up one level to Videoframe_extract
+def _find_dir(dirname, start_dir=None):
+    """Search for a directory starting from start_dir, walking up to 3 parent levels."""
+    if start_dir is None:
+        start_dir = os.path.dirname(os.path.abspath(__file__))
+    candidate = start_dir
+    for _ in range(4):
+        path = os.path.join(candidate, dirname)
+        if os.path.isdir(path):
+            return path
+        candidate = os.path.dirname(candidate)
+    return os.path.join(start_dir, dirname)  # fallback
 
-QUESTIONS_CSV_1_2 = os.path.join(base_dir, "list_questions_kalash_new.csv")
-IMAGES_BASE_DIR_1_2 = os.path.join(base_dir, "video_frames_kalash_new")
-
+QUESTIONS_CSV_1_2   = _find_file("list_questions_kalash_new.csv")
+IMAGES_BASE_DIR_1_2 = _find_dir("video_frames_kalash_new")
 # QUESTIONS_CSV_3_4 = "/home/debarpanb1/Videoframe_extract/list_questions_saksham.csv"
 # IMAGES_BASE_DIR_3_4 = "/home/debarpanb1/Videoframe_extract/video_frames_saksham_filtered"
 
