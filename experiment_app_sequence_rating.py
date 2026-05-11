@@ -17,8 +17,13 @@ from google.oauth2.service_account import Credentials
 # QUESTIONS_CSV = "list_questions.csv"
 # IMAGES_BASE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "images")
 
-QUESTIONS_CSV_1_2 = "list_questions_kalash_new.csv"
-IMAGES_BASE_DIR_1_2 = os.path.join(os.path.dirname(os.path.abspath(__file__)), "video_frames_kalash_new")
+# Try to look in current dir, or fallback to parent dir
+base_dir = os.path.dirname(os.path.abspath(__file__))
+if not os.path.exists(os.path.join(base_dir, "video_frames_kalash_new")):
+    base_dir = os.path.dirname(base_dir) # Go up one level to Videoframe_extract
+
+QUESTIONS_CSV_1_2 = os.path.join(base_dir, "list_questions_kalash_new.csv")
+IMAGES_BASE_DIR_1_2 = os.path.join(base_dir, "video_frames_kalash_new")
 
 # QUESTIONS_CSV_3_4 = "/home/debarpanb1/Videoframe_extract/list_questions_saksham.csv"
 # IMAGES_BASE_DIR_3_4 = "/home/debarpanb1/Videoframe_extract/video_frames_saksham_filtered"
@@ -166,7 +171,7 @@ def load_questions_data(part):
     # csv_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), QUESTIONS_CSV)
     
     if part in [1, 2]:
-        csv_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), QUESTIONS_CSV_1_2)
+        csv_path = QUESTIONS_CSV_1_2
         images_dir = IMAGES_BASE_DIR_1_2
     # elif part in [3, 4]:
     #     csv_path = QUESTIONS_CSV_3_4
