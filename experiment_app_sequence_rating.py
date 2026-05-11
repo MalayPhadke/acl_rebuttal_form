@@ -14,15 +14,23 @@ from google.oauth2.service_account import Credentials
 
 
 # --- Configuration ---
-QUESTIONS_CSV = "list_questions.csv"
-IMAGES_BASE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "images")
+# QUESTIONS_CSV = "list_questions.csv"
+# IMAGES_BASE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "images")
+
+QUESTIONS_CSV_1_2 = "list_questions_kalash_new.csv"
+IMAGES_BASE_DIR_1_2 = os.path.join(os.path.dirname(os.path.abspath(__file__)), "video_frames_kalash_new")
+
+# QUESTIONS_CSV_3_4 = "/home/debarpanb1/Videoframe_extract/list_questions_saksham.csv"
+# IMAGES_BASE_DIR_3_4 = "/home/debarpanb1/Videoframe_extract/video_frames_saksham_filtered"
 
 # Google Sheet worksheet names
 SHEET_RESPONSE_METADATA = "seq_response_metadata"
 SHEET_RESPONSE_SIMPLE = "seq_response_simple"
 
-TOTAL_QUESTIONS = 112
-HALF = TOTAL_QUESTIONS // 2  # 56 per part
+# TOTAL_QUESTIONS = 112
+# HALF = TOTAL_QUESTIONS // 2  # 56 per part
+TOTAL_QUESTIONS = 200
+QUESTIONS_PER_PART = 50
 
 
 # --- Session State Initialization ---
@@ -106,9 +114,20 @@ def parse_frames_list(frames_str):
     return [int(n) for n in nums]
 
 
-def video_path_to_folder(video_path):
+def video_path_to_folder(video_path, images_dir=None):
     """Convert video_path like '.../NExTVideo/0089/3066966990.mp4' to folder name 'NExTVideo_0089_3066966990'."""
     video_path = str(video_path).strip()
+    
+    # Check if the exact basename without extension exists in images_dir
+    basename = os.path.basename(video_path)
+    for ext in ['.mp4', '.webm']:
+        if basename.endswith(ext):
+            basename = basename[:-len(ext)]
+            break
+            
+    if images_dir and os.path.exists(os.path.join(images_dir, basename)):
+        return basename
+        
     # Extract components: look for NExTVideo/XXXX/YYYYYYYY.mp4
     parts = video_path.replace("\\", "/").split("/")
     # Find 'NExTVideo' in parts
@@ -117,31 +136,44 @@ def video_path_to_folder(video_path):
             folder_id = parts[i + 1]
             video_file = parts[i + 2].replace(".mp4", "")
             return f"NExTVideo_{folder_id}_{video_file}"
+            
     # Fallback: try to parse from the last segments
-    basename = os.path.basename(video_path).replace(".mp4", "")
     parent = os.path.basename(os.path.dirname(video_path))
     grandparent = os.path.basename(os.path.dirname(os.path.dirname(video_path)))
     return f"{grandparent}_{parent}_{basename}"
 
 
-def resolve_frame_image_path(video_path, frame_num):
+def resolve_frame_image_path(video_path, frame_num, images_dir):
     """Resolve the path to a frame image given a video path and frame number."""
-    folder_name = video_path_to_folder(video_path)
-    frame_filename = f"frame_{frame_num:04d}.png"
-    full_path = os.path.join(IMAGES_BASE_DIR, folder_name, frame_filename)
-    if os.path.exists(full_path):
-        return full_path
-    # Try without zero-padding
-    frame_filename_nopad = f"frame_{frame_num}.png"
-    full_path_nopad = os.path.join(IMAGES_BASE_DIR, folder_name, frame_filename_nopad)
-    if os.path.exists(full_path_nopad):
-        return full_path_nopad
-    return full_path  # Return the expected path even if not found
+    folder_name = video_path_to_folder(video_path, images_dir)
+    
+    for ext in ['.jpg', '.png']:
+        frame_filename = f"frame_{frame_num:04d}{ext}"
+        full_path = os.path.join(images_dir, folder_name, frame_filename)
+        if os.path.exists(full_path):
+            return full_path
+        # Try without zero-padding
+        frame_filename_nopad = f"frame_{frame_num}{ext}"
+        full_path_nopad = os.path.join(images_dir, folder_name, frame_filename_nopad)
+        if os.path.exists(full_path_nopad):
+            return full_path_nopad
+            
+    return os.path.join(images_dir, folder_name, f"frame_{frame_num:04d}.png")  # Return the expected path even if not found
 
 
 def load_questions_data(part):
     """Load questions from list_questions.csv and split into parts."""
-    csv_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), QUESTIONS_CSV)
+    # csv_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), QUESTIONS_CSV)
+    
+    if part in [1, 2]:
+        csv_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), QUESTIONS_CSV_1_2)
+        images_dir = IMAGES_BASE_DIR_1_2
+    # elif part in [3, 4]:
+    #     csv_path = QUESTIONS_CSV_3_4
+    #     images_dir = IMAGES_BASE_DIR_3_4
+    else:
+        return []
+
     if not os.path.exists(csv_path):
         st.error(f"CSV not found: {csv_path}")
         return []
@@ -155,7 +187,7 @@ def load_questions_data(part):
     trials = []
     for idx, row in df.iterrows():
         frames = parse_frames_list(row["frames"])
-        image_paths = [resolve_frame_image_path(row["video_path"], f) for f in frames]
+        image_paths = [resolve_frame_image_path(row["video_path"], f, images_dir) for f in frames]
 
         trials.append(
             {
@@ -170,11 +202,16 @@ def load_questions_data(part):
             }
         )
 
-    # Split into two halves
-    if part == 1:
-        trials = trials[:HALF]
-    elif part == 2:
-        trials = trials[HALF:]
+    # Split into parts
+    # if part == 1:
+    #     trials = trials[:HALF]
+    # elif part == 2:
+    #     trials = trials[HALF:]
+    
+    if part in [1, 3]:
+        trials = trials[:QUESTIONS_PER_PART]
+    elif part in [2, 4]:
+        trials = trials[QUESTIONS_PER_PART:QUESTIONS_PER_PART*2]
 
     # Shuffle so adjacent trials don't share the same category
     trials = shuffle_no_adjacent_category(trials)
@@ -360,27 +397,49 @@ def instructions_page():
 
     st.markdown("### Select Part")
     col_p1, col_p2 = st.columns(2)
+    # col_p1, col_p2, col_p3, col_p4 = st.columns(4)
     with col_p1:
         part1_clicked = st.button(
-            f"▶ Part 1  (Questions 1–{HALF})",
+            f"▶ Part 1 (1–50)",
             use_container_width=True,
             type="primary",
             key="btn_part1",
         )
     with col_p2:
         part2_clicked = st.button(
-            f"▶ Part 2  (Questions {HALF+1}–{TOTAL_QUESTIONS})",
+            f"▶ Part 2 (51–100)",
             use_container_width=True,
             type="primary",
             key="btn_part2",
         )
+    # with col_p3:
+    #     part3_clicked = st.button(
+    #         f"▶ Part 3 (101–150)",
+    #         use_container_width=True,
+    #         type="primary",
+    #         key="btn_part3",
+    #     )
+    # with col_p4:
+    #     part4_clicked = st.button(
+    #         f"▶ Part 4 (151–200)",
+    #         use_container_width=True,
+    #         type="primary",
+    #         key="btn_part4",
+    #     )
+    
+    part3_clicked = False
+    part4_clicked = False
 
-    if part1_clicked or part2_clicked:
+    if part1_clicked or part2_clicked or part3_clicked or part4_clicked:
         if not user_id_input.strip():
             st.error("Please enter a valid Participant ID to continue.")
             return
 
-        selected_part = 1 if part1_clicked else 2
+        if part1_clicked: selected_part = 1
+        elif part2_clicked: selected_part = 2
+        elif part3_clicked: selected_part = 3
+        elif part4_clicked: selected_part = 4
+        
         st.session_state.user_id = user_id_input.strip()
         st.session_state.selected_part = selected_part
         st.session_state.trials = load_questions_data(selected_part)
