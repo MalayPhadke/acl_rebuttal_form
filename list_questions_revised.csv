@@ -14,12 +14,9 @@ images/NExTVideo/1009/6420147083.mp4,Is the boy looking upwards?,"[0080, 0100, 0
 images/NExTVideo/1009/6663748603.mp4,Is the man looking at the book in his hand?,"[0050, 0055, 0060, 0064, 0065, 0066, 0070, 0075, 0078, 0080]",[0065],no,Semantic
 images/NExTVideo/1009/8612900766.mp4,Are there exactly two men in the scene?,"[0370, 0390, 0400, 0410, 0460, 0480, 0600, 0610, 0615, 0620]",[0600],yes,Geometric
 images/NExTVideo/0101/3122394310.mp4,Is the man at the left of the woman?,"[600, 0610, 0615, 0620, 0630, 0635, 0645, 0675, 0680, 0685]",[0645],yes,Geometric
-images/NExTVideo/0101/3404210548.mp4,Is the man sitting on snow?,"[0260, 0265, 0270, 0275, 0280, 0285, 0288, 0290, 0294, 0298]",[0280],yes,Semantic
-images/NExTVideo/0101/4316096248.mp4,Is the bride feeding cake to the groom?,"[1550, 1570, 1600, 1660, 1670, 1680, 1685, 1690, 1695, 1770]",[1680],no,Semantic
+images/NExTVideo/0101/3404210548.mp4,Is the man sitting on the black sled?,"[0260, 0265, 0270, 0275, 0280, 0285, 0288, 0290, 0294, 0298]",[0280],yes,Semantic
 images/NExTVideo/0101/4740074365.mp4,Is the bride at the left of the groom?,"[0080, 0100, 0125, 0140, 0150, 0250, 0260, 0270, 0300, 0330]",[0250],yes,Geometric
-images/NExTVideo/0101/4846820256.mp4,Is the boy at the left of the man?,"[0120, 0122, 0124, 0126, 0134, 0155, 0157, 0158, 0159, 0160]",[0134],yes,Geometric
 images/NExTVideo/1000/2594144360.mp4,Is the baby sitting on the floor?,"[0140, 0143, 0145, 0147, 0150, 0151, 0152, 0153, 0154, 0155]",[0150],no,Semantic
-images/NExTVideo/1000/2594144360.mp4,Is the dog in front of the baby?,"[0348, 0355, 0388, 0395, 0410, 0415, 0418, 0419, 0420, 0421]",[0410],yes,Geometric
 images/NExTVideo/1000/2623063774.mp4,Is the child looking at the toys he is playing with?,"[0230, 0235, 0240, 0245, 0247, 0251, 0255, 0257, 0262, 0265]",[0247],yes,Semantic
 images/NExTVideo/1000/3273928480.mp4,Is the dog at the left of the woman?,"[0300, 0303, 0306, 0308, 0310, 0315, 0318, 0328, 0332, 0335]",[0315],yes,Geometric
 images/NExTVideo/1000/3297776560.mp4,Are there eaxctly three woman in the scene?,"[0840, 0843, 0846, 0850, 0852, 0855, 0857, 0860, 0862, 0864]",[0857],"[yes, yes]",Geometric
