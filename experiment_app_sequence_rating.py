@@ -42,7 +42,7 @@ def _find_dir(dirname, start_dir=None):
     return os.path.join(start_dir, dirname)  # fallback
 
 QUESTIONS_CSV_1_2   = _find_file("list_questions_kalash_new.csv")
-IMAGES_BASE_DIR_1_2 = _find_dir("video_frames_kalash_new")
+IMAGES_BASE_DIR_1_2 = _find_dir("video_frames_kalash_new_filtered")
 # QUESTIONS_CSV_3_4 = "/home/debarpanb1/Videoframe_extract/list_questions_saksham.csv"
 # IMAGES_BASE_DIR_3_4 = "/home/debarpanb1/Videoframe_extract/video_frames_saksham_filtered"
 
