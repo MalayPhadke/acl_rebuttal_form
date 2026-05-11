@@ -1,0 +1,51 @@
+id,video_path,question,ground_truth,frames,center_frames
+0,/home/leapers/data/VideoQA_datasets/star/Charades_v1/0BX9N.mp4,Is the book in the hand of the woman,yes,"[0086,0091,0066,0078,0070,0107,0149,0166,0173,0221]",0070
+1,/home/leapers/data/VideoQA_datasets/star/Charades_v1/0CGMQ.mp4,Is the person looking at the television,yes,"[0000,0040,0369,0370,0372,0375,0376,0379,0384,0400]",0372
+2,/home/leapers/data/VideoQA_datasets/star/Charades_v1/0D5JP.mp4,Is the man looking down,no,"[0191,0080,0117,0125,0128,0132,0390,0398,0400,0409]",0128
+3,/home/leapers/data/VideoQA_datasets/star/Charades_v1/0DD62.mp4,Is the man looking up,no,"[0000,0019,0154,0238,0240,0244,0248,0249,0254,0261]",0240
+4,/home/leapers/data/VideoQA_datasets/star/Charades_v1/0DJ4I.mp4,Are there two persons in the image?,no,"[0000,0080,0555,0098,0279,0101,0138,0104,0105,0114]",0279
+5,/home/leapers/data/VideoQA_datasets/star/Charades_v1/0E6H9.mp4,Are there things in both hand of the person?,yes,"[0002,0016,0349,0439,0470,0594,0605,0625,0714,0738]",0470
+6,/home/leapers/data/VideoQA_datasets/star/Charades_v1/0EJAG.mp4,Are there things in both the hands of the man?,yes,"[0073,0078,0175,0186,0198,0228,0234,0251,0278,0290]",0198
+7,/home/leapers/data/VideoQA_datasets/star/Charades_v1/0F0WE.mp4,Is the man sitting?,no,"[0108,0100,0061,0608,0622,0653,0671,0783,0794,0820]",0622
+8,/home/leapers/data/VideoQA_datasets/star/Charades_v1/0FVYR.mp4,Is there a dog in the image?,no,"[0002,0568,0581,0597,0927,0615,0618,0624,0642,0652]",0927
+9,/home/leapers/data/VideoQA_datasets/star/Charades_v1/0H5VC.mp4,Is the man sleeping?,no,"[0000,0515,0701,0711,0716,0720,0733,0742,0775,0816]",0716
+10,/home/leapers/data/VideoQA_datasets/star/Charades_v1/0HGNK.mp4,Is the person full face visible?,yes,"[0718,0640,0001,0586,0553,0044,0104,0210,0748,0750]",0553
+11,/home/leapers/data/VideoQA_datasets/star/Charades_v1/0HR01.mp4,Is there a cat in the image?,no,"[0002,0032,0194,0385,0330,0418,0534,0591,0634,0604]",0330
+12,/home/leapers/data/VideoQA_datasets/star/Charades_v1/0IJ8T.mp4,Are there two persons in the image?,no,"[0164,0467,0010,0047,0348,0542,0353,0364,0421,0374]",0348
+13,/home/leapers/data/VideoQA_datasets/star/Charades_v1/0IKE9.mp4,Is the woman looking in front or not?,yes,"[0105,0016,0071,0022,0066,0046,0047,0051,0053,0056]",0066
+14,/home/leapers/data/VideoQA_datasets/star/Charades_v1/0J471.mp4,Is the woman standing?,no,"[0001,0257,0277,0292,0298,0328,0347,0370,0401,0492]",0298
+15,/home/leapers/data/VideoQA_datasets/star/Charades_v1/0K0LP.mp4,Is the boy sitting on the sofa,no,"[0008,0098,0250,0255,0295,0299,0302,0309,0320,0343]",0295
+16,/home/leapers/data/VideoQA_datasets/star/Charades_v1/0L0KS.mp4,Is the person sitting on the chair,no,"[0001,0007,0011,0017,0018,0020,0024,0027,0031,0036]",0018
+17,/home/leapers/data/VideoQA_datasets/star/Charades_v1/0LD2V.mp4,Is the girl holding something?,no,"[0153,0105,0184,0194,0408,0426,0431,0446,0457,0467]",0408
+18,/home/leapers/data/VideoQA_datasets/star/Charades_v1/0LNLR.mp4,Is the woman sleeping?,no,"[0000,0050,0068,0215,0225,0238,0248,0257,0321,0468]",0225
+19,/home/leapers/data/VideoQA_datasets/star/Charades_v1/0M6IY.mp4,Is the man sleeping?,no,"[0003,0415,0422,0440,0444,0470,0478,0495,0513,0529]",0444
+20,/home/leapers/data/VideoQA_datasets/star/Charades_v1/0MFAM.mp4,Is the woman looking towards her right?,no,"[0171,0190,0002,0011,0214,0217,0218,0222,0231,0246]",0214
+21,/home/leapers/data/VideoQA_datasets/star/Charades_v1/0N7OQ.mp4,Are there two persons in the image?,no,"[0353,0243,0001,0014,0093,0025,0033,0061,0072,0081]",0093
+22,/home/leapers/data/VideoQA_datasets/star/Charades_v1/0NM06.mp4,Is the man sitting on the chair?,no,"[0100,0512,0587,0619,0622,0629,0637,0644,0652,0690]",0622
+23,/home/leapers/data/VideoQA_datasets/star/Charades_v1/0O022.mp4,Are there two persons in the image?,no,"[0000,0184,0282,0284,0282,0290,0287,0325,0335,0435]",0282
+24,/home/leapers/data/VideoQA_datasets/star/Charades_v1/0P7U1.mp4,Are there two laptops in the image?,no,"[0029,0093,0107,0129,0130,0135,0137,0145,0171,0236]",0130
+25,/home/leapers/data/VideoQA_datasets/star/Charades_v1/0RJKT.mp4,Is the person sitting?,no,"[0001,0298,0319,0330,0334,0341,0347,0360,0382,0451]",0334
+26,/home/leapers/data/VideoQA_datasets/star/Charades_v1/0RNG6.mp4,Is the person sitting?,no,"[0183,0201,0225,0227,0230,0237,0242,0258,0271,0334]",0230
+27,/home/leapers/data/VideoQA_datasets/star/Charades_v1/0RQZC.mp4,Is there a alive person in the image?,yes,"[0174,0004,0069,0326,0340,0500,0350,0363,0376,0494]",0340
+28,/home/leapers/data/VideoQA_datasets/star/Charades_v1/0SE6A.mp4,Is the person standing?,no,"[0003,0465,0507,0525,0616,0624,0632,0645,0671,0711]",0616
+29,/home/leapers/data/VideoQA_datasets/star/Charades_v1/00T1E.mp4,Is the person on bed?,yes,"[0001,0109,0111,0116,0175,0223,0227,0232,0245,0266]",0175
+0,/home/leapers/data/VideoQA_datasets/star/sample-data-Charades/LIQS5.mp4,Is the full face visible?,yes 
+1,/home/leapers/data/VideoQA_datasets/star/sample-data-Charades/LJ3AI.mp4,Are there two persons in the image?,no,"[0134,0000,0131,0029,0031,0039,0106,0214,0296,0281]",0031
+2,/home/leapers/data/VideoQA_datasets/star/sample-data-Charades/LKH9A.mp4,Is the person sitting?,no,"[0856,0006,0435,0424,0416,0824,0404,0478,0558,0599]",0416
+3,/home/leapers/data/VideoQA_datasets/star/sample-data-Charades/LKQQO.mp4,Is the woman sitting?,yes,"[0106,0134,0349,0357,0359,0363,0367,0372,0386,0403]",0359
+4,/home/leapers/data/VideoQA_datasets/star/sample-data-Charades/LLOGB.mp4,Is the man sleeping?,yes,"[0000,0048,0049,0050,0053,0055,0057,0066,0071,0086]",0053
+5,/home/leapers/data/VideoQA_datasets/star/sample-data-Charades/LM4GS.mp4,Is the man face visible?,no,"[0428,0434,0489,0517,0585,0592,0598,0610,0622,0636]",0585
+6,/home/leapers/data/VideoQA_datasets/star/sample-data-Charades/LOP4H.mp4,Is the woman standing?,yes,"[0001,0087,0090,0095,0098,0106,0133,0143,0155,0168]",0098
+7,/home/leapers/data/VideoQA_datasets/star/sample-data-Charades/LP47Z.mp4,Is the woman on the bed?,yes,"[0031,0100,0106,0121,0127,0136,0139,0149,0162,0176]",0127
+8,/home/leapers/data/VideoQA_datasets/star/sample-data-Charades/LPJWM.mp4,Is the woman looking down?,yes,"[0000,0083,0115,0136,0137,0138,0139,0141,0146,0150]",0137
+9,/home/leapers/data/VideoQA_datasets/star/sample-data-Charades/LPT4A.mp4,Is the black woman in the left of the red woman?,yes,"[0000,0053,0179,0181,0186,0268,0269,0283,0309,0315]",0186
+10,/home/leapers/data/VideoQA_datasets/star/sample-data-Charades/LQO5R.mp4,Is the person sitting?,no,"[0051,0061,0067,0087,0097,0109,0114,0121,0126,0133]",0097
+11,/home/leapers/data/VideoQA_datasets/star/sample-data-Charades/LR9KL.mp4,Are there two persons in the image?,no,"[0207,0764,0773,0780,0787,0790,0797,0805,0819,0854]",0787
+12,/home/leapers/data/VideoQA_datasets/star/sample-data-Charades/MB1MR.mp4,Is the person sleeping?,yes,"[0018,0324,0336,0370,0344,0343,0349,0353,0397,0408]",0344
+13,/home/leapers/data/VideoQA_datasets/star/sample-data-Charades/MBGPJ.mp4,Is the man standing?,no,"[0001,0054,0079,0145,0356,0386,0405,0418,0451,0479]",0356
+14,/home/leapers/data/VideoQA_datasets/star/sample-data-Charades/MTUR3.mp4,Are there two persons in the image?,yes,"[0002,0248,0251,0256,0258,0261,0263,0268,0276,0280]",0258
+15,/home/leapers/data/VideoQA_datasets/star/sample-data-Charades/MXW4N.mp4,Is there a person visible in the mirror?,no,"[0001,0294,0331,0349,0198,0069,0082,0159,0099,0444]",0198
+16,/home/leapers/data/VideoQA_datasets/star/sample-data-Charades/NBMH9.mp4,Is the person sitting?,yes,"[0284,0080,0074,0055,0080,0082,0087,0104,0093,0117]",0080
+17,/home/leapers/data/VideoQA_datasets/star/sample-data-Charades/NBSPH.mp4,Are there two persons in the image?,yes,"[0111,0280,0358,0510,0517,0523,0529,0553,0588,0627]",0517
+18,/home/leapers/data/VideoQA_datasets/star/sample-data-Charades/OKHVL.mp4,Is the man sitting on the chair?,no,"[0002,0114,0248,0397,0195,0094,0271,0137,0153,0352]",0195
+19,/home/leapers/data/VideoQA_datasets/star/sample-data-Charades/OOCOF.mp4,Is the woman sitting,no,"[0001,0051,0053,0057,0058,0060,0065,0074,0082,0109]",0058
