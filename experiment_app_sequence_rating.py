@@ -73,6 +73,10 @@ if "countdown_num" not in st.session_state:
     st.session_state.countdown_num = 0
 if "selected_part" not in st.session_state:
     st.session_state.selected_part = None
+if "completed_trial_ids" not in st.session_state:
+    st.session_state.completed_trial_ids = set()
+if "resumed_count" not in st.session_state:
+    st.session_state.resumed_count = 0
 
 
 GSHEETS_SCOPES = [
@@ -121,6 +125,31 @@ def _bg_write_result(creds, spreadsheet_url, save_data):
         f"{SHEET_RESPONSE_SIMPLE}_{safe_uid}",
         save_data["simple_result"],
     )
+
+
+def _fetch_completed_trials(creds, spreadsheet_url, safe_uid, part):
+    """Fetch the set of trial_ids already completed by this user for the given part."""
+    try:
+        client = gspread.authorize(creds)
+        spreadsheet = client.open_by_url(spreadsheet_url)
+        ws_name = f"{SHEET_RESPONSE_SIMPLE}_{safe_uid}"
+        try:
+            ws = spreadsheet.worksheet(ws_name)
+        except gspread.exceptions.WorksheetNotFound:
+            return set()
+
+        records = ws.get_all_records()
+        completed = set()
+        for record in records:
+            if str(record.get("part", "")) == str(part):
+                try:
+                    completed.add(int(record["trial_id"]))
+                except (ValueError, KeyError):
+                    pass
+        return completed
+    except Exception as exc:
+        print(f"[Fetch Completed Error] {exc}")
+        return set()
 
 
 def parse_frames_list(frames_str):
@@ -184,8 +213,14 @@ def resolve_frame_image_path(video_path, frame_num, images_dir):
     return os.path.join(images_dir, folder_name, f"frame_{frame_num:04d}.png")  # Return the expected path even if not found
 
 
-def load_questions_data(part):
-    """Load questions from list_questions.csv and split into parts."""
+def load_questions_data(part, seed=None):
+    """Load questions from list_questions.csv and split into parts.
+    
+    Args:
+        part: Which part to load (1, 2, 3, or 4).
+        seed: Deterministic seed for shuffling. If provided, the same seed
+              always produces the same trial order, enabling session resume.
+    """
     # csv_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), QUESTIONS_CSV)
     
     if part in [1, 2]:
@@ -237,23 +272,35 @@ def load_questions_data(part):
         trials = trials[QUESTIONS_PER_PART:QUESTIONS_PER_PART*2]
 
     # Shuffle so adjacent trials don't share the same category
-    trials = shuffle_no_adjacent_category(trials)
+    # Use deterministic seed so the order is reproducible for resume
+    trials = shuffle_no_adjacent_category(trials, seed=seed)
 
     return trials
 
 
-def shuffle_no_adjacent_category(trials):
-    """Shuffle trials so adjacent items do not share the same category when possible."""
+def shuffle_no_adjacent_category(trials, seed=None):
+    """Shuffle trials so adjacent items do not share the same category when possible.
+    
+    Args:
+        trials: List of trial dicts.
+        seed: If provided, uses a seeded RNG for deterministic ordering.
+    """
     if not trials:
         return []
+
+    # Use a dedicated Random instance so we don't affect global state
+    rng = random.Random(seed)
 
     grouped = defaultdict(list)
     for trial in trials:
         category = str(trial.get("category", "unknown")).strip().lower() or "unknown"
         grouped[category].append(trial)
 
-    for category in grouped:
-        random.shuffle(grouped[category])
+    # Sort keys for deterministic iteration order across runs
+    sorted_categories = sorted(grouped.keys())
+
+    for category in sorted_categories:
+        rng.shuffle(grouped[category])
 
     ordered = []
     last_category = None
@@ -261,13 +308,17 @@ def shuffle_no_adjacent_category(trials):
 
     for _ in range(total):
         candidates = [
-            (category, items)
-            for category, items in grouped.items()
-            if items and category != last_category
+            (category, grouped[category])
+            for category in sorted_categories
+            if grouped[category] and category != last_category
         ]
 
         if not candidates:
-            candidates = [(category, items) for category, items in grouped.items() if items]
+            candidates = [
+                (category, grouped[category])
+                for category in sorted_categories
+                if grouped[category]
+            ]
 
         if not candidates:
             break
@@ -276,7 +327,7 @@ def shuffle_no_adjacent_category(trials):
         top_categories = [
             category for category, items in candidates if len(items) == max_count
         ]
-        chosen_category = random.choice(top_categories)
+        chosen_category = rng.choice(top_categories)
 
         ordered.append(grouped[chosen_category].pop())
         last_category = chosen_category
@@ -373,6 +424,9 @@ def record_response(trial, ratings, good_datapoint, comment):
         daemon=True,
     ).start()
 
+    # Track this trial as completed so we skip it on resume
+    st.session_state.completed_trial_ids.add(trial["id"])
+
     st.session_state.current_trial_index += 1
     st.session_state.start_time = None
     st.session_state.page = "countdown"
@@ -462,18 +516,53 @@ def instructions_page():
         elif part2_clicked: selected_part = 2
         elif part3_clicked: selected_part = 3
         elif part4_clicked: selected_part = 4
-        
-        st.session_state.user_id = user_id_input.strip()
+
+        uid = user_id_input.strip()
+        safe_uid = "".join(x for x in uid if x.isalnum() or x in "._-")
+        st.session_state.user_id = uid
         st.session_state.selected_part = selected_part
-        st.session_state.trials = load_questions_data(selected_part)
-        st.session_state.current_trial_index = 0
-        st.session_state.results = []
+
+        # Deterministic seed = user_id + part  →  same order every time
+        shuffle_seed = f"{uid}_{selected_part}"
+        st.session_state.trials = load_questions_data(selected_part, seed=shuffle_seed)
 
         if not st.session_state.trials:
             st.error(
                 "No trials found. Please check list_questions.csv and the images folder."
             )
             return
+
+        # --- Resume logic: check Google Sheets for already-completed trials ---
+        with st.spinner("Checking for existing progress…"):
+            try:
+                creds, spreadsheet_url = _build_gspread_creds()
+                completed = _fetch_completed_trials(
+                    creds, spreadsheet_url, safe_uid, selected_part
+                )
+            except Exception as exc:
+                st.warning(f"Could not check progress (will start fresh): {exc}")
+                completed = set()
+
+        st.session_state.completed_trial_ids = completed
+
+        if completed:
+            # Find the first uncompleted trial in the deterministic order
+            resume_idx = 0
+            for i, trial in enumerate(st.session_state.trials):
+                if trial["id"] not in completed:
+                    resume_idx = i
+                    break
+            else:
+                # All trials completed → go straight to done page
+                resume_idx = len(st.session_state.trials)
+
+            st.session_state.current_trial_index = resume_idx
+            st.session_state.resumed_count = len(completed)
+        else:
+            st.session_state.current_trial_index = 0
+            st.session_state.resumed_count = 0
+
+        st.session_state.results = []
 
         st.session_state.page = "countdown"
         st.session_state.countdown_num = 3
@@ -512,6 +601,13 @@ def countdown_page():
 def experiment_page():
     total = len(st.session_state.trials)
     idx = st.session_state.current_trial_index
+    completed = st.session_state.get("completed_trial_ids", set())
+
+    # Skip any already-completed trials (handles gaps from prior sessions)
+    while idx < total and st.session_state.trials[idx]["id"] in completed:
+        idx += 1
+        st.session_state.current_trial_index = idx
+
     scroll_to_top(label=f"exp_{idx}")
 
     if idx >= total:
@@ -521,6 +617,14 @@ def experiment_page():
 
     trial = st.session_state.trials[idx]
     part = st.session_state.selected_part
+
+    # Show resume banner if we skipped some
+    resumed = st.session_state.get("resumed_count", 0)
+    if resumed > 0:
+        st.info(
+            f"✅ Resumed session — {resumed} of {total} questions already completed. "
+            f"Continuing from question {idx + 1}."
+        )
 
     st.markdown(f"<div style='margin-top: -20px;'><p><b>Part {part}</b> — Question {idx + 1} of {total}</p></div>", unsafe_allow_html=True)
     st.progress(idx / total)
@@ -647,6 +751,8 @@ def done_page():
         st.session_state.start_time = None
         st.session_state.countdown_num = 0
         st.session_state.selected_part = None
+        st.session_state.completed_trial_ids = set()
+        st.session_state.resumed_count = 0
         st.rerun()
 
 
