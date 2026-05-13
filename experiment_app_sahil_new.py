@@ -67,6 +67,10 @@ if "countdown_num" not in st.session_state:
     st.session_state.countdown_num = 0
 if "selected_part" not in st.session_state:
     st.session_state.selected_part = None
+if "completed_trial_ids" not in st.session_state:
+    st.session_state.completed_trial_ids = set()
+if "resumed_count" not in st.session_state:
+    st.session_state.resumed_count = 0
 
 
 GSHEETS_SCOPES = [
@@ -115,6 +119,31 @@ def _bg_write_result(creds, spreadsheet_url, save_data):
         f"{SHEET_RESPONSE_SIMPLE}_{safe_uid}",
         save_data["simple_result"],
     )
+
+
+def _fetch_completed_trials(creds, spreadsheet_url, safe_uid, part):
+    """Fetch the set of trial_ids already completed by this user for the given part."""
+    try:
+        client = gspread.authorize(creds)
+        spreadsheet = client.open_by_url(spreadsheet_url)
+        ws_name = f"{SHEET_RESPONSE_SIMPLE}_{safe_uid}"
+        try:
+            ws = spreadsheet.worksheet(ws_name)
+        except gspread.exceptions.WorksheetNotFound:
+            return set()
+
+        records = ws.get_all_records()
+        completed = set()
+        for record in records:
+            if str(record.get("part", "")) == str(part):
+                try:
+                    completed.add(int(record["trial_id"]))
+                except (ValueError, KeyError):
+                    pass
+        return completed
+    except Exception as exc:
+        print(f"[Fetch Completed Error] {exc}")
+        return set()
 
 
 def parse_frames_list(frames_str):
@@ -185,8 +214,14 @@ def resolve_frame_image_path(video_path, frame_num, images_dir):
     return os.path.join(images_dir, folder_name, f"frame_{frame_num:04d}.png")  # Return the expected path even if not found
 
 
-def load_questions_data(part):
-    """Load questions from list_questions_sahil_new.csv and split into parts."""
+def load_questions_data(part, seed=None):
+    """Load questions from list_questions_sahil_new.csv and split into parts.
+    
+    Args:
+        part: Which part to load (1 or 2).
+        seed: Deterministic seed for shuffling. If provided, the same seed
+              always produces the same trial order, enabling session resume.
+    """
     csv_path = QUESTIONS_CSV
     images_dir = IMAGES_BASE_DIR
 
@@ -224,8 +259,9 @@ def load_questions_data(part):
     elif part == 2:
         trials = trials[QUESTIONS_PER_PART:QUESTIONS_PER_PART*2]
 
-    # Shuffle trials randomly
-    random.shuffle(trials)
+    # Shuffle trials with deterministic seed for resume capability
+    rng = random.Random(seed)
+    rng.shuffle(trials)
 
     return trials
 
@@ -373,17 +409,52 @@ def instructions_page():
 
         selected_part = 1
         
-        st.session_state.user_id = user_id_input.strip()
+        uid = user_id_input.strip()
+        safe_uid = "".join(x for x in uid if x.isalnum() or x in "._-")
+        st.session_state.user_id = uid
         st.session_state.selected_part = selected_part
-        st.session_state.trials = load_questions_data(selected_part)
-        st.session_state.current_trial_index = 0
-        st.session_state.results = []
+
+        # Deterministic seed = user_id + part  →  same order every time
+        shuffle_seed = f"{uid}_{selected_part}"
+        st.session_state.trials = load_questions_data(selected_part, seed=shuffle_seed)
 
         if not st.session_state.trials:
             st.error(
                 "No trials found. Please check list_questions_sahil_new.csv and the images folder."
             )
             return
+
+        # --- Resume logic: check Google Sheets for already-completed trials ---
+        with st.spinner("Checking for existing progress…"):
+            try:
+                creds, spreadsheet_url = _build_gspread_creds()
+                completed = _fetch_completed_trials(
+                    creds, spreadsheet_url, safe_uid, selected_part
+                )
+            except Exception as exc:
+                st.warning(f"Could not check progress (will start fresh): {exc}")
+                completed = set()
+
+        st.session_state.completed_trial_ids = completed
+
+        if completed:
+            # Find the first uncompleted trial in the deterministic order
+            resume_idx = 0
+            for i, trial in enumerate(st.session_state.trials):
+                if trial["id"] not in completed:
+                    resume_idx = i
+                    break
+            else:
+                # All trials completed → go straight to done page
+                resume_idx = len(st.session_state.trials)
+
+            st.session_state.current_trial_index = resume_idx
+            st.session_state.resumed_count = len(completed)
+        else:
+            st.session_state.current_trial_index = 0
+            st.session_state.resumed_count = 0
+
+        st.session_state.results = []
 
         st.session_state.page = "countdown"
         st.session_state.countdown_num = 3
@@ -432,6 +503,14 @@ def experiment_page():
 
     st.markdown(f"<div style='margin-top: -20px;'><p><b>Part {part}</b> — Question {idx + 1} of {total}</p></div>", unsafe_allow_html=True)
     st.progress(idx / total)
+
+    # Show resume banner if we skipped some
+    resumed = st.session_state.get("resumed_count", 0)
+    if resumed > 0:
+        st.info(
+            f"✅ Resumed session — {resumed} of {total} questions already completed. "
+            f"Continuing from question {idx + 1}."
+        )
 
     st.markdown(
         f'<h4 style="text-align: center; color: #2c3e50; font-size: 16px; margin-top: 5px;">Question: {trial["question"]}</h4>',
@@ -553,6 +632,7 @@ def done_page():
         st.session_state.start_time = None
         st.session_state.countdown_num = 0
         st.session_state.selected_part = None
+        st.session_state.resumed_count = 0
         st.rerun()
 
 
