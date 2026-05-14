@@ -354,6 +354,9 @@ def record_response(trial, ratings, good_datapoint, comment):
         daemon=True,
     ).start()
 
+    # Track this trial as completed so we skip it on resume
+    st.session_state.completed_trial_ids.add(trial["id"])
+
     st.session_state.current_trial_index += 1
     st.session_state.start_time = None
     st.session_state.page = "countdown"
@@ -508,6 +511,13 @@ def countdown_page():
 def experiment_page():
     total = len(st.session_state.trials)
     idx = st.session_state.current_trial_index
+    completed = st.session_state.get("completed_trial_ids", set())
+
+    # Skip any already-completed trials (handles gaps from prior sessions)
+    while idx < total and st.session_state.trials[idx]["id"] in completed:
+        idx += 1
+        st.session_state.current_trial_index = idx
+
     scroll_to_top(label=f"exp_{idx}")
 
     if idx >= total:
@@ -647,6 +657,7 @@ def done_page():
         st.session_state.start_time = None
         st.session_state.countdown_num = 0
         st.session_state.selected_part = None
+        st.session_state.completed_trial_ids = set()
         st.session_state.resumed_count = 0
         st.rerun()
 
