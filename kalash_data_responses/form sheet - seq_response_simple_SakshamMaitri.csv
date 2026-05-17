@@ -1,0 +1,183 @@
+user_id,trial_id,part,question,ratings_list,good_datapoint,comment,reaction_time_ms
+Saksham Maitri,7,1,Is the child standing on the chair?,"[10, 10, 3, 3, 10, 10, 10, 10, 10, 10]",yes,,74307
+Saksham Maitri,51,1,Are there exactly 2 men in the scene?,"[10, 10, 10, 5, 7, 10, 10, 10, 10, 10]",yes,,58783
+Saksham Maitri,27,1,Is the baby wrapped with a piece of cloth?,"[10, 10, 10, 6, 6, 5, 9, 10, 10, 10]",yes,,51097
+Saksham Maitri,21,1,Is the dog in front of the baby?,"[10, 10, 3, 3, 3, 10, 10, 10, 10, 10]",yes,,75017
+Saksham Maitri,12,1,Is the boy looking upwards?,"[10, 10, 10, 10, 10, 3, 7, 10, 10, 10]",yes,,85974
+Saksham Maitri,39,1,Are there exactly two cats in the scene?,"[10, 10, 10, 10, 10, 8, 8, 10, 10, 10]",yes,,69443
+Saksham Maitri,34,1,Is the man looking at the television?,"[10, 10, 10, 7, 4, 2, 7, 10, 10, 10]",yes,,40510
+Saksham Maitri,19,1,Is the boy at the left of the man?,"[10, 10, 10, 10, 10, 8, 10, 10, 10, 10]",no,Technically the answer is deterministic since the question didn't specified if it means exact left or leftside wrt the man,132777
+Saksham Maitri,13,1,Is the man looking at the book in his hand?,"[10, 10, 10, 7, 10, 10, 10, 10, 10, 10]",yes,,65794
+Saksham Maitri,25,1,Is the insect on the palm?,"[10, 10, 10, 10, 7, 10, 10, 10, 10, 10]",yes,,105950
+Saksham Maitri,56,1,Is the boy drinking from the yellow cup?,"[10, 10, 10, 10, 7, 7, 10, 10, 10, 10]",yes,,197465
+Saksham Maitri,23,1,Is the dog at the left of the woman?,"[10, 10, 10, 10, 10, 10, 10, 10, 10, 10]",no,"The dog is either in the left or its not (front + right), so the answer is deterministic",68178
+Saksham Maitri,36,1,Are both the birds standing in water?,"[10, 10, 10, 10, 4, 10, 10, 10, 10, 10]",yes,,45213
+Saksham Maitri,14,1,Are there exactly two men in the scene?,"[10, 10, 10, 10, 10, 10, 10, 10, 10, 10]",yes,,144627
+Saksham Maitri,56,1,Is the boy drinking from the yellow cup?,"[10, 10, 10, 8, 6, 8, 8, 10, 10, 10]",yes,,54139
+Saksham Maitri,30,1,Are there exactly two men in the scene?,"[10, 10, 10, 10, 8, 10, 10, 10, 10, 10]",no,"Question phrasing can be a bit more detailed , like are there exactly 2 people in the scene because the constraint of men is making this confusing , like men and women look same for the blue dress person",166847
+Saksham Maitri,34,1,Is the man looking at the television?,"[10, 10, 10, 10, 5, 5, 10, 10, 10, 10]",yes,,58050
+Saksham Maitri,15,1,Is the man at the left of the woman?,"[10, 10, 10, 10, 10, 10, 10, 10, 10, 10]",no,"It would be helpful if the question specified for the person whose perspective we have to take into account , like if its wrt the woman , the answer is pretty deterministic for every frame",111598
+Saksham Maitri,12,1,Is the boy looking upwards?,"[10, 10, 10, 7, 7, 10, 10, 10, 10, 10]",yes,,52508
+Saksham Maitri,51,1,Are there exactly 2 men in the scene?,"[10, 10, 10, 3, 3, 8, 10, 10, 10, 10]",yes,,84490
+Saksham Maitri,45,1,Is the military lady shaking hands with the military man?,"[10, 10, 10, 10, 7, 7, 10, 10, 10, 10]",yes,,34221
+Saksham Maitri,33,1,Are there exactly two cats in the scene?,"[10, 10, 10, 10, 10, 5, 5, 10, 10, 10]",yes,,178487
+Saksham Maitri,50,1,Is the cyclist jumping off the stairs?,"[7, 10, 10, 10, 10, 6, 7, 9, 9, 9]",yes,,141302
+Saksham Maitri,21,1,Is the dog in front of the baby?,"[10, 10, 9, 8, 10, 10, 10, 10, 10, 10]",yes,,48571
+Saksham Maitri,20,1,Is the baby sitting on the floor?,"[5, 5, 5, 5, 8, 9, 10, 10, 10, 10]",yes,,39545
+Saksham Maitri,9,1,Is the child at the right of the woman?,"[10, 10, 10, 10, 10, 10, 10, 10, 10, 10]",no,"I suppose we are talking wrt the cameraman, adding this to question will be helpful",86731
+Saksham Maitri,36,1,Are both the birds standing in water?,"[10, 10, 8, 8, 5, 10, 10, 10, 10, 10]",yes,,70242
+Saksham Maitri,6,1,Is the baby on the carpet?,"[10, 10, 10, 10, 6, 6, 8, 10, 10, 10]",yes,,46818
+Saksham Maitri,2,1,Is the girl standing on the chair?,"[10, 10, 10, 6, 7, 8, 8, 10, 10, 10]",yes,,52135
+Saksham Maitri,55,1,Are there 2 dogs on the bed?,"[10, 10, 10, 10, 5, 5, 7, 8, 10, 10]",yes,,120722
+Saksham Maitri,42,1,Is the baby sitting on the sofa?,"[10, 10, 10, 10, 10, 5, 5, 5, 10, 10]",yes,,65927
+Saksham Maitri,43,1,Are there 4 men on the stage?,"[10, 10, 10, 10, 10, 10, 10, 10, 10, 10]",no,The back person is sort of visible in all the images so you can remove him for the first 1-3 images,97474
+Saksham Maitri,5,1,Is the child standing on his legs?,"[10, 10, 10, 9, 7, 7, 10, 10, 10, 10]",yes,,53964
+Saksham Maitri,35,1,Is the child at the left of the woman?,"[10, 10, 10, 10, 9, 10, 10, 5, 10, 10]",yes,,91646
+Saksham Maitri,28,1,Is the man kissing the woman?,"[10, 8, 7, 10, 6, 10, 10, 10, 10, 10]",yes,,74497
+Saksham Maitri,18,1,Is the bride at the left of the groom?,"[10, 10, 10, 10, 9, 10, 10, 10, 10, 10]",yes,,69413
+Saksham Maitri,16,1,Is the man sitting on snow?,"[5, 5, 5, 5, 5, 10, 10, 10, 10, 10]",yes,,109150
+Saksham Maitri,24,1,Are there eaxctly three woman in the scene?,"[10, 10, 10, 10, 10, 10, 6, 10, 10, 10]",yes,,57879
+Saksham Maitri,13,1,Is the man looking at the book in his hand?,"[10, 10, 10, 1, 3, 5, 9, 10, 10, 10]",yes,,86445
+Saksham Maitri,37,1,Are there exactly two cats in the image?,"[10, 10, 10, 10, 10, 10, 5, 10, 10, 10]",yes,,46769
+Saksham Maitri,38,1,Is the woman looking towards her left?,"[10, 10, 10, 10, 10, 10, 10, 10, 10, 10]",no,pretty deterministic,35698
+Saksham Maitri,31,1,Are there exactly two red plastic cups in the scene?,"[10, 10, 10, 8, 10, 10, 10, 10, 10, 10]",yes,,40789
+Saksham Maitri,27,1,Is the baby wrapped with a piece of cloth?,"[10, 10, 10, 10, 5, 7, 7, 10, 10, 10]",yes,,102946
+Saksham Maitri,46,1,Are there red and orange container behind the baby?,"[10, 10, 10, 5, 2, 10, 10, 10, 10, 10]",yes,,69640
+Saksham Maitri,39,1,Are there exactly two cats in the scene?,"[10, 10, 10, 10, 10, 10, 10, 8, 10, 10]",yes,,30770
+Saksham Maitri,40,1,Are the two babies in the scene sitting beside each other?,"[10, 10, 10, 10, 10, 10, 8, 8, 10, 10]",yes,,100592
+Saksham Maitri,52,1,Is the female dancer on the left side of the male dancer?,"[10, 10, 10, 7, 7, 10, 10, 10, 10, 10]",yes,,91596
+Saksham Maitri,32,1,Is the boy on the vehicle?,"[10, 10, 10, 5, 5, 5, 8, 10, 10, 10]",yes,,44983
+Saksham Maitri,49,1,Is the man looking at the baby's face?,"[10, 10, 10, 3, 8, 10, 10, 10, 10, 10]",yes,,44023
+Saksham Maitri,54,1,Are there exactly 5 people on the stage?,"[5, 5, 5, 5, 5, 8, 5, 8, 5, 5]",yes,,241380
+Saksham Maitri,29,1,Is the man with brown t-shirt drinking a beer?,"[8, 8, 8, 10, 10, 10, 10, 10, 10, 10]",yes,,74849
+Saksham Maitri,11,1,Is the baby boy skidding towards his back?,"[5, 5, 5, 5, 5, 5, 5, 5, 5, 5]",no,Skidding is not a good criteria to infer from a frame,82958
+Saksham Maitri,1,1,Is the boy with white t-shirt at the left of the boy with black t-shirt?,"[10, 10, 10, 10, 10, 8, 5, 10, 10, 10]",yes,,61823
+Saksham Maitri,23,1,Is the dog at the left of the woman?,"[10, 10, 10, 10, 6, 9, 10, 10, 10, 10]",yes,,79415
+Saksham Maitri,3,1,Are both the dogs standing on the snow?,"[10, 10, 10, 10, 10, 7, 10, 10, 10, 10]",yes,,99027
+Saksham Maitri,41,1,Is the baby on the right side of the man?,"[10, 10, 10, 2, 2, 9, 9, 9, 9, 4]",no,The man is not visible in few images.,156956
+Saksham Maitri,7,1,Is the child standing on the chair?,"[5, 3, 3, 7, 10, 10, 10, 10, 10, 10]",yes,,72331
+Saksham Maitri,8,1,Is the black shirt woman at the right of the red shirt man?,"[10, 10, 10, 9, 9, 10, 10, 10, 10, 10]",yes,,132165
+Saksham Maitri,17,1,Is the bride feeding cake to the groom?,"[7, 7, 8, 7, 9, 10, 10, 10, 10, 10]",yes,,106242
+Saksham Maitri,25,1,Is the insect on the palm?,"[10, 10, 10, 5, 2, 2, 10, 10, 10, 10]",yes,,120223
+Saksham Maitri,26,1,Is the man with yellow pullover at the left of the man with red pullover?,"[10, 10, 10, 10, 10, 10, 10, 10, 10, 10]",no,Deterministic responses,42644
+Saksham Maitri,19,1,Is the boy at the left of the man?,"[10, 10, 10, 6, 3, 10, 10, 10, 10, 10]",yes,,38104
+Saksham Maitri,4,1,Is the man with white t-shirt at the right of the man with black t-shirt?,"[10, 10, 10, 3, 6, 10, 10, 10, 10, 10]",yes,,101326
+Saksham Maitri,44,1,Is th toddle lifting her right leg?,"[10, 10, 10, 10, 7, 5, 10, 10, 10, 10]",yes,,43782
+Saksham Maitri,53,1,Are there exactly 2 women on the boat?,"[10, 10, 10, 10, 10, 10, 10, 10, 10, 10]",no,"Seems deterministic , in none of the frames the yellow one is behind the blue one and i checked all the frames but there is no other person apart from these two on the boat",121686
+Saksham Maitri,47,1,Are there yellow and pink chalks at the bottom of the board?,"[10, 10, 10, 10, 10, 10, 10, 10, 10, 10]",yes,,75770
+Saksham Maitri,22,1,Is the child looking at the toys he is playing with?,"[10, 10, 10, 5, 5, 10, 10, 10, 10, 10]",yes,,71945
+Saksham Maitri,48,1,Is there a black shirt man ahead of the orange shirt man?,"[5, 5, 5, 5, 5, 5, 5, 5, 5, 5]",no,Question should be is there a black shirt man behind the orange shirt man,71133
+Saksham Maitri,10,1,Is the tortoise looking upwards?,"[10, 10, 10, 5, 10, 10, 10, 10, 10, 10]",yes,,28027
+Saksham Maitri,14,1,Are there exactly two men in the scene?,"[10, 10, 10, 10, 10, 10, 10, 7, 10, 10]",yes,,43444
+Saksham Maitri,82,2,Has the person with parachute landed?,"[10, 10, 10, 5, 5, 5, 8, 9, 10, 10]",yes,,42028
+Saksham Maitri,58,2,Are there exactly 2 cats on the floor mat?,"[10, 10, 10, 10, 10, 10, 10, 5, 10, 10]",no,Pretty deterministic,55978
+Saksham Maitri,96,2,Is the man standing on ground?,"[10, 10, 10, 10, 10, 7, 10, 10, 10, 10]",no,"Specify which man , the red one or the white one",72056
+Saksham Maitri,86,2,Are there two people visible?,"[10, 10, 10, 10, 10, 10, 4, 9, 10, 10]",yes,,46022
+Saksham Maitri,99,2,Are both the lion sitting?,"[10, 10, 10, 10, 10, 4, 6, 10, 10, 10]",yes,,42858
+Saksham Maitri,72,2,Are there two people in the image?,"[10, 10, 10, 10, 10, 9, 8, 10, 10, 10]",yes,,39565
+Saksham Maitri,108,2,Is the dog sitting on bed?,"[4, 3, 3, 4, 4, 6, 10, 10, 10, 10]",yes,,47825
+Saksham Maitri,65,2,Are there exactly 3 birds in the scene?,"[9, 9, 9, 9, 9, 10, 10, 10, 10, 10]",yes,,58122
+Saksham Maitri,75,2,Has the plane landed?,"[10, 10, 10, 10, 10, 9, 7, 7, 10, 10]",yes,,37968
+Saksham Maitri,104,2,Is the icecream nearer to girl than boy?,"[10, 10, 10, 8, 2, 5, 10, 10, 10, 10]",yes,,50121
+Saksham Maitri,63,2,Is the baby boy sitting on the toy train?,"[10, 10, 10, 8, 1, 1, 1, 10, 10, 10]",yes,,60026
+Saksham Maitri,101,2,Is there a rock in boy hand?,"[4, 4, 6, 5, 5, 7, 8, 10, 10, 10]",yes,,56078
+Saksham Maitri,111,2,Is the baby standing?,"[10, 7, 5, 5, 5, 8, 8, 5, 10, 10]",yes,,71482
+Saksham Maitri,107,2,Is the dog inside the dogbed?,"[10, 10, 3, 3, 3, 8, 8, 8, 10, 10]",yes,,41156
+Saksham Maitri,88,2,Is there a pig in the picture?,"[10, 10, 10, 10, 10, 8, 10, 10, 10, 10]",yes,,38743
+Saksham Maitri,69,2,Is the dog on bathtub?,"[10, 10, 10, 10, 9, 6, 6, 10, 10, 10]",yes,,115574
+Saksham Maitri,97,2,Is the toddler sitting?,"[10, 10, 10, 10, 10, 5, 7, 7, 8, 9]",yes,,53916
+Saksham Maitri,95,2,Are there two baby in the scene?,"[10, 10, 8, 10, 10, 10, 10, 10, 10, 10]",yes,,128454
+Saksham Maitri,106,2,Is the baby standing?,"[10, 10, 10, 5, 5, 4, 5, 9, 9, 9]",yes,,80250
+Saksham Maitri,60,2,Are there 2 toddlers on the bed?,"[10, 10, 10, 10, 10, 10, 6, 5, 10, 10]",yes,,50840
+Saksham Maitri,83,2,Is the cat standing?,"[10, 10, 10, 8, 8, 8, 10, 10, 10, 10]",no,"Question can be phrased better , like is the cat standing on 2 paws , if its were to be for standing/sitting , it would have been deterministic",91102
+Saksham Maitri,93,2,Are there 2 person?,"[10, 10, 10, 10, 10, 10, 10, 8, 5, 10]",yes,,36549
+Saksham Maitri,76,2,Did the person catch the ball,"[10, 10, 10, 10, 10, 1, 3, 8, 8, 8]",yes,,41694
+Saksham Maitri,71,2,Is the cat on top of the laptop?,"[10, 6, 6, 6, 6, 4, 4, 10, 10, 10]",yes,,30884
+Saksham Maitri,112,2,Is the bird sitting on man's hand?,"[10, 10, 10, 10, 5, 10, 10, 10, 10, 10]",yes,,47979
+Saksham Maitri,102,2,Is the girl left of the tree?,"[10, 10, 10, 10, 10, 10, 10, 10, 10, 10]",no,Pretty deterministic,112211
+Saksham Maitri,73,2,Is the baby touching telephone?,"[10, 10, 10, 5, 10, 10, 10, 10, 10, 10]",yes,,40500
+Saksham Maitri,70,2,Are there two cats in the room?,"[10, 10, 10, 10, 5, 10, 10, 10, 10, 10]",yes,,61123
+Saksham Maitri,110,2,Is the boy sitting?,"[10, 10, 10, 10, 10, 7, 7, 10, 10, 10]",yes,,31935
+Saksham Maitri,62,2,Are there exactly 4 guitarists on the stage?,"[10, 10, 10, 10, 10, 10, 10, 10, 10, 10]",no,Deterministic,53433
+Saksham Maitri,84,2,Did they impact each other?,"[10, 10, 10, 7, 7, 5, 9, 9, 9, 9]",yes,,46235
+Saksham Maitri,57,2,Are exactly 2 adults holding babies in the pool?,"[10, 10, 10, 10, 10, 7, 7, 7, 10, 7]",yes,,59512
+Saksham Maitri,103,2,Is the girl holding the dog?,"[10, 8, 10, 10, 7, 4, 4, 4, 7, 10]",yes,,83297
+Saksham Maitri,67,2,Are there exactly 3 birds in the scene?,"[8, 8, 8, 8, 6, 8, 8, 8, 8, 8]",yes,,111707
+Saksham Maitri,94,2,Is the baby laying on the floor?,"[10, 7, 9, 7, 6, 7, 9, 9, 10, 10]",yes,,59894
+Saksham Maitri,66,2,Is the black dog on the sofa?,"[4, 3, 3, 7, 7, 7, 8, 9, 10, 10]",yes,,68649
+Saksham Maitri,98,2,Is the child standing?,"[10, 8, 8, 8, 4, 7, 8, 8, 7, 8]",yes,,70003
+Saksham Maitri,91,2,Is the dog touching the table?,"[10, 10, 10, 10, 7, 10, 10, 10, 10, 10]",yes,,33884
+Saksham Maitri,61,2,Is the cat opening its mouth?,"[10, 10, 8, 7, 6, 8, 10, 10, 10, 10]",yes,,28771
+Saksham Maitri,59,2,Is the baby girl in middle of the boys?,"[10, 8, 8, 8, 8, 10, 10, 10, 10, 10]",yes,,226315
+Saksham Maitri,64,2,Is the toddler picking up the toy baby?,"[10, 8, 8, 8, 5, 5, 5, 5, 6, 9]",yes,,119418
+Saksham Maitri,92,2,Is the children on the sand?,"[10, 10, 10, 10, 9, 6, 8, 6, 5, 5]",yes,,53389
+Saksham Maitri,100,2,Is the baby standing?,"[7, 7, 5, 7, 7, 10, 10, 8, 9, 9]",yes,,43459
+Saksham Maitri,78,2,Are there three grandmas in the image,"[10, 10, 8, 8, 8, 10, 10, 10, 10, 10]",yes,,59656
+Saksham Maitri,80,2,Has the plane landed?,"[10, 10, 10, 10, 5, 8, 9, 10, 10, 10]",yes,,82886
+Saksham Maitri,68,2,Are both hands above her head?,"[10, 10, 10, 10, 10, 10, 9, 8, 10, 10]",yes,,33837
+Saksham Maitri,87,2,Is the kid jumping in the air?,"[10, 10, 10, 10, 6, 7, 10, 10, 10, 10]",yes,,58087
+Saksham Maitri,90,2,Is the book on baby lap?,"[10, 10, 10, 6, 6, 7, 8, 8, 10, 10]",yes,,70837
+Saksham Maitri,74,2,Is child feeding the baby,"[10, 10, 10, 7, 7, 5, 7, 10, 10, 10]",yes,,55817
+Saksham Maitri,79,2,Are both hands of the priest on the head of the girl,"[10, 10, 10, 9, 9, 7, 10, 10, 10, 10]",yes,,36354
+Saksham Maitri,105,2,Is the boy standing on ground?,"[10, 9, 7, 5, 5, 5, 5, 7, 10, 10]",yes,,31899
+Saksham Maitri,81,2,Is the cat on laptop?,"[10, 10, 10, 10, 7, 7, 5, 5, 10, 10]",yes,,31712
+Saksham Maitri,77,2,Are there two people riding the horse,"[7, 8, 7, 9, 9, 10, 10, 10, 9, 9]",yes,,37802
+Saksham Maitri,109,2,Is the blue boy foot on the ground?,"[10, 10, 1, 1, 5, 9, 9, 10, 10, 10]",yes,,63693
+Saksham Maitri,85,2,Is the boy wearing glasses?,"[10, 10, 10, 10, 9, 7, 9, 9, 7, 7]",yes,,123585
+Saksham Maitri,89,2,Is the man touching the swing?,"[10, 10, 10, 10, 9, 10, 3, 9, 10, 10]",yes,,59091
+Saksham Maitri,29,1,Is the glass on the book?,"[10, 10, 10, 10, 4, 8, 10, 10, 10, 10]",yes,,32392
+Saksham Maitri,27,1,Does the container have its lid on?,"[10, 10, 10, 10, 8, 3, 6, 10, 10, 10]",yes,,27700
+Saksham Maitri,18,1,Is the fruit placed on top of the white cup?,"[10, 10, 10, 10, 2, 6, 10, 10, 10, 10]",yes,,38501
+Saksham Maitri,6,1,Is the plastic lid placed on the transparent tumbler?,"[10, 10, 10, 8, 8, 10, 10, 10, 6, 2]",yes,,66046
+Saksham Maitri,10,1,Are there exactly 2 tumblers?,"[10, 10, 10, 10, 7, 5, 9, 10, 10, 10]",yes,,39185
+Saksham Maitri,21,1,Is there a pink highlighter with black cap beside the left shoe?,"[2, 5, 10, 10, 10, 9, 10, 10, 10, 10]",yes,,49158
+Saksham Maitri,50,1,Is the deodrant can on the green tile?,"[10, 10, 10, 10, 8, 8, 10, 10, 10, 10]",yes,,25613
+Saksham Maitri,4,1,Is the red cup on the wooden board?,"[10, 10, 10, 10, 9, 8, 9, 9, 10, 10]",yes,,31584
+Saksham Maitri,17,1,Is there green leaf in the mixing bowl?,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",no,Image is not clear enough for any ground truth,80534
+Saksham Maitri,20,1,Is water being poured in the transparent container with the egg yolk in it?,"[10, 10, 10, 10, 10, 3, 9, 10, 10, 10]",yes,,66649
+Saksham Maitri,49,1,Is the person holding a camera string?,"[2, 2, 2, 2, 2, 8, 9, 10, 10, 10]",yes,,35049
+Saksham Maitri,43,1,Is the person touching the rubiks cube?,"[10, 8, 3, 3, 3, 5, 8, 8, 10, 10]",yes,,39864
+Saksham Maitri,12,1,Is the blue pen on the green book?,"[10, 10, 10, 10, 7, 3, 8, 9, 10, 10]",yes,,40711
+Saksham Maitri,13,1,Is the ball closer to the salt shaker than the steel container?,"[10, 10, 10, 10, 10, 8, 1, 6, 10, 10]",yes,,28986
+Saksham Maitri,5,1,Are there exactly 3 cups?,"[10, 10, 10, 6, 3, 3, 10, 10, 10, 10]",yes,,46082
+Saksham Maitri,31,1,Is the person holding the wallet?,"[10, 10, 3, 1, 3, 7, 6, 10, 10, 10]",yes,,35532
+Saksham Maitri,19,1,Is the door closed?,"[10, 10, 10, 10, 10, 9, 10, 10, 10, 10]",no,its either closed or open in those 10 images,40140
+Saksham Maitri,46,1,Is there water splatter beneath the wiping cloth?,"[8, 10, 10, 10, 4, 3, 3, 9, 9, 9]",yes,,38247
+Saksham Maitri,8,1,Is the onion being dropped into the footwear?,"[4, 4, 9, 9, 9, 9, 9, 9, 9, 3]",yes,,87228
+Saksham Maitri,33,1,Is the comb touching the onion,"[10, 10, 10, 10, 10, 4, 8, 8, 8, 8]",yes,,53657
+Saksham Maitri,35,1,Is the person holding the bottle?,"[10, 10, 10, 9, 4, 8, 9, 9, 9, 9]",yes,,65594
+Saksham Maitri,25,1,Are there 2 purses hanging on the black chair?,"[10, 10, 10, 10, 10, 7, 7, 9, 9, 10]",yes,,70034
+Saksham Maitri,24,1,Is there an oil bottle on the table?,"[10, 10, 10, 10, 10, 5, 8, 10, 10, 10]",yes,,43086
+Saksham Maitri,32,1,Is the blue lid of the container touching the table?,"[10, 10, 10, 10, 9, 8, 2, 3, 8, 8]",yes,,43863
+Saksham Maitri,37,1,Is the entire wooden block touching the wire?,"[1, 1, 5, 5, 9, 9, 9, 9, 10, 10]",yes,,66614
+Saksham Maitri,47,1,Is the drawer closed?,"[10, 10, 10, 10, 10, 3, 6, 8, 10, 10]",yes,,33783
+Saksham Maitri,30,1,Is the iron on the red sweater?,"[10, 10, 10, 7, 9, 3, 5, 10, 10, 10]",yes,,40432
+Saksham Maitri,48,1,Are there pencils in the box?,"[10, 10, 10, 10, 10, 1, 10, 10, 10, 10]",yes,,47327
+Saksham Maitri,14,1,Is the red cap attached to the popcorn container?,"[6, 4, 3, 6, 6, 10, 10, 10, 8, 9]",yes,,54072
+Saksham Maitri,26,1,Is the Iron placed on the blue shirt?,"[7, 4, 4, 4, 4, 4, 4, 4, 10, 10]",yes,,102196
+Saksham Maitri,2,1,Is the pen closer to the green book than the jar?,"[10, 10, 10, 7, 4, 1, 1, 4, 7, 10]",yes,,42536
+Saksham Maitri,40,1,Is the white object (on top of the grey cylindrical object) closer to the right eye than the left eye?,"[10, 10, 10, 8, 4, 10, 10, 10, 10, 10]",yes,,38527
+Saksham Maitri,15,1,Are there exactly 3 blue cups on the table?,"[10, 10, 10, 10, 10, 10, 10, 10, 10, 10]",no,Frames are pretty deterministic,49267
+Saksham Maitri,1,1,Is the ball closer to the pen as compared to the book?,"[10, 10, 7, 1, 1, 3, 10, 10, 10, 10]",yes,,35317
+Saksham Maitri,11,1,Is the purple tumbler touching the table?,"[10, 10, 10, 10, 10, 7, 3, 10, 10, 10]",yes,,32175
+Saksham Maitri,7,1,Is there an adapter beneath the paper cup?,"[5, 5, 2, 2, 6, 10, 6, 6, 4, 10]",yes,,66588
+Saksham Maitri,9,1,Are there exactly 2 fruits?,"[10, 10, 10, 10, 3, 8, 8, 10, 10, 10]",yes,,35941
+Saksham Maitri,23,1,Is there a pair of scissors on the desk?,"[10, 10, 10, 10, 10, 3, 10, 10, 10, 7]",yes,,27307
+Saksham Maitri,22,1,Is there a knife and spoon on the blue sofa?,"[10, 10, 10, 10, 2, 9, 10, 10, 10, 10]",yes,,40221
+Saksham Maitri,3,1,Is the pen touching the book?,"[10, 9, 6, 10, 7, 10, 10, 10, 3, 10]",yes,,60855
+Saksham Maitri,39,1,Is green glass in contact with the table?,"[10, 10, 10, 10, 1, 10, 10, 10, 10, 10]",yes,,27843
+Saksham Maitri,45,1,Is the brush being held by the person?,"[10, 10, 5, 5, 8, 8, 10, 10, 10, 10]",yes,,50938
+Saksham Maitri,38,1,Is the tape recorder in contact with the magazine?,"[10, 10, 10, 10, 10, 4, 10, 10, 10, 10]",yes,,33942
+Saksham Maitri,41,1,Is the orange object on the right of the green watch?,"[10, 10, 10, 10, 10, 7, 10, 10, 10, 10]",no,Frames make this sort of obvious,65172
+Saksham Maitri,36,1,Is there a coin in the image?,"[10, 10, 10, 10, 10, 8, 10, 10, 10, 10]",no,Coin is not visible at all in the 6th frame,37699
+Saksham Maitri,42,1,Is the person touching the white object?,"[10, 10, 10, 10, 10, 3, 7, 9, 10, 10]",yes,,43578
+Saksham Maitri,28,1,Are there a pair of of white shoes beneath the pair of jeans?,"[5, 2, 2, 9, 9, 10, 10, 10, 10, 4]",yes,,73704
+Saksham Maitri,44,1,Is the brown disk in contact with the persons hand?,"[10, 10, 2, 9, 10, 10, 10, 10, 10, 10]",yes,,31644
+Saksham Maitri,34,1,Is the finger touching the white container?,"[10, 10, 10, 10, 10, 3, 10, 10, 10, 10]",yes,,39891
+Saksham Maitri,16,1,Is there a white chess piece in the hands of the person?,"[10, 10, 10, 10, 10, 10, 10, 10, 10, 10]",no,"Its always in the hand, so no ambiguity",58649
+Saksham Maitri,53,2,Is there a coat beside the man on the cupboard door?,"[8, 9, 9, 9, 2, 6, 10, 10, 10, 10]",yes,,66740
+Saksham Maitri,56,2,Is the old man holding the frame?,"[10, 10, 10, 3, 6, 8, 8, 9, 9, 10]",yes,,54655
+Saksham Maitri,52,2,Does the woman have 2 arms?,"[10, 10, 10, 1, 1, 10, 10, 10, 10, 10]",yes,,49580
+Saksham Maitri,54,2,Are there 2 bottles on the table?,"[10, 10, 10, 10, 2, 10, 10, 10, 10, 10]",yes,,48666
+Saksham Maitri,55,2,Is the glass in contact with the table?,"[10, 10, 10, 10, 10, 8, 10, 10, 10, 10, None, None, None]",no,Somewhat answerable from the images,49975
+Saksham Maitri,51,2,Is the glass being kept on the kitchen table top?,"[10, 10, 10, 10, 3, 10, 10, 10, 10, 10]",yes,,54137

@@ -1,0 +1,101 @@
+user_id,trial_id,part,question,ratings_list,good_datapoint,comment,reaction_time_ms
+malay,13,1,Is the ball closer to the salt shaker than the steel container?,"[10, 10, 9, 9, 9, 2, 1, 8, 10, 10]",yes,,126085
+malay,33,1,Is the comb touching the onion,"[10, 10, 10, 10, 10, 1, 7, 10, 10, 10]",yes,,193598
+malay,6,1,Is the plastic lid placed on the transparent tumbler?,"[10, 10, 10, 3, 4, 10, 10, 10, 10, 10]",yes,,148427
+malay,32,1,Is the blue lid of the container touching the table?,"[10, 10, 10, 10, 10, 8, 8, 4, 10, 10]",yes,,147861
+malay,14,1,Is the red cap attached to the popcorn container?,"[10, 10, 10, 10, 10, 10, 10, 10, 10, 10]",no,seems too deterministic overall,121675
+malay,9,1,Are there exactly 2 fruits?,"[10, 10, 10, 10, 10, 3, 3, 10, 10, 10]",yes,,112563
+malay,36,1,Is there a coin in the image?,"[10, 10, 10, 10, 10, 3, 10, 10, 10, 10]",yes,,63221
+malay,24,1,Is there an oil bottle on the table?,"[10, 10, 10, 10, 10, 4, 4, 10, 10, 10]",yes,,56805
+malay,5,1,Are there exactly 3 cups?,"[10, 10, 10, 4, 1, 1, 10, 10, 10, 10]",yes,,109950
+malay,29,1,Is the glass on the book?,"[10, 10, 10, 10, 2, 10, 10, 10, 10, 10]",yes,,141440
+malay,11,1,Is the purple tumbler touching the table?,"[10, 10, 10, 10, 10, 10, 3, 10, 10, 10]",yes,,49797
+malay,19,1,Is the door closed?,"[10, 10, 10, 10, 10, 2, 10, 10, 10, 10]",yes,,33119
+malay,47,1,Is the drawer closed?,"[10, 10, 10, 10, 10, 3, 10, 10, 10, 10]",no,"the question can be ""is the drawer completely closed"" to make it specific",114386
+malay,8,1,Is the onion being dropped into the footwear?,"[10, 10, 10, 10, 10, 10, 10, 10, 10, 10]",no,feels too deteministic,161227
+malay,16,1,Is there a white chess piece in the hands of the person?,"[10, 10, 10, 10, 1, 3, 10, 10, 10, 10]",yes,,52023
+malay,37,1,Is the entire wooden block touching the wire?,"[8, 8, 7, 7, 10, 10, 10, 10, 10, 10]",yes,,113106
+malay,3,1,Is the pen touching the book?,"[10, 10, 2, 10, 10, 10, 10, 10, 2, 10]",yes,,122790
+malay,42,1,Is the person touching the white object?,"[10, 10, 10, 10, 10, 1, 10, 10, 10, 10]",yes,,130173
+malay,40,1,Is the white object (on top of the grey cylindrical object) closer to the right eye than the left eye?,"[10, 10, 7, 5, 1, 5, 10, 10, 10, 10]",yes,,73940
+malay,30,1,Is the iron on the red sweater?,"[10, 10, 10, 10, 3, 5, 10, 10, 10, 10]",yes,,133895
+malay,12,1,Is the blue pen on the green book?,"[10, 10, 9, 9, 8, 3, 7, 10, 10, 10]",yes,,523452
+malay,20,1,Is water being poured in the transparent container with the egg yolk in it?,"[10, 10, 10, 10, 8, 2, 6, 8, 9, 10]",yes,,370924
+malay,48,1,Are there pencils in the box?,"[10, 10, 10, 10, 10, 2, 10, 10, 10, 10]",yes,,36463
+malay,2,1,Is the pen closer to the green book than the jar?,"[8, 8, 7, 6, 4, 2, 4, 5, 7, 10]",yes,,113896
+malay,28,1,Are there a pair of of white shoes beneath the pair of jeans?,"[8, 8, 8, 7, 7, 10, 3, 8, 9, 10]",yes,,99053
+malay,35,1,Is the person holding the bottle?,"[9, 9, 9, 7, 5, 4, 7, 8, 9, 9]",yes,,123127
+malay,50,1,Is the deodrant can on the green tile?,"[10, 10, 10, 10, 10, 3, 10, 10, 10, 10]",yes,,71869
+malay,41,1,Is the orange object on the right of the green watch?,"[10, 10, 10, 10, 10, 3, 6, 7, 8, 10]",yes,,47074
+malay,46,1,Is there water splatter beneath the wiping cloth?,"[10, 10, 8, 7, 7, 7, 7, 10, 10, 10]",no,bad image quality at ambigous points,163487
+malay,49,1,Is the person holding a camera string?,"[7, 7, 7, 8, 8, 10, 10, 10, 10, 10]",yes,,56080
+malay,23,1,Is there a pair of scissors on the desk?,"[10, 10, 10, 10, 10, 3, 10, 10, 10, 10]",yes,,63256
+malay,21,1,Is there a pink highlighter with black cap beside the left shoe?,"[10, 10, 10, 10, 10, 6, 2, 6, 6, 6]",yes,,86257
+malay,4,1,Is the red cup on the wooden board?,"[10, 10, 10, 7, 5, 8, 8, 8, 10, 10]",yes,,91821
+malay,15,1,Are there exactly 3 blue cups on the table?,"[8, 8, 8, 8, 10, 8, 8, 8, 9, 9]",yes,,131073
+malay,34,1,Is the finger touching the white container?,"[10, 10, 10, 10, 10, 3, 10, 10, 10, 10]",yes,,46777
+malay,25,1,Are there 2 purses hanging on the black chair?,"[10, 10, 10, 10, 3, 10, 10, 10, 10, 10]",yes,,164525
+malay,45,1,Is the brush being held by the person?,"[8, 7, 5, 3, 7, 9, 9, 10, 10, 10]",yes,,65869
+malay,43,1,Is the person touching the rubiks cube?,"[10, 10, 10, 7, 7, 5, 8, 10, 10, 10]",no,"image quality seems pretty bad, hand looks unclear",121670
+malay,44,1,Is the brown disk in contact with the persons hand?,"[10, 10, 7, 10, 10, 10, 10, 10, 10, 10]",no,image quality seems bad at the ambiguous points,72464
+malay,17,1,Is there green leaf in the mixing bowl?,"[10, 10, 10, 10, 10, 7, 7, 8, 9, 10]",yes,,139653
+malay,18,1,Is the fruit placed on top of the white cup?,"[10, 10, 10, 10, 10, 10, 10, 10, 10, 10]",no,seems too deterministic,64276
+malay,31,1,Is the person holding the wallet?,"[10, 10, 10, 8, 6, 6, 9, 10, 10, 10]",yes,,110039
+malay,39,1,Is green glass in contact with the table?,"[10, 10, 10, 10, 3, 10, 10, 10, 10, 10]",yes,,46113
+malay,27,1,Does the container have its lid on?,"[10, 10, 10, 7, 10, 7, 7, 8, 8, 10]",yes,,61619
+malay,26,1,Is the Iron placed on the blue shirt?,"[10, 10, 10, 8, 7, 5, 7, 10, 10, 10]",no,the iron is not completely visible in all pictures,109080
+malay,10,1,Are there exactly 2 tumblers?,"[10, 9, 8, 7, 4, 6, 8, 10, 10, 10]",yes,,109274
+malay,22,1,Is there a knife and spoon on the blue sofa?,"[10, 10, 10, 10, 2, 4, 10, 10, 10, 10]",yes,,45449
+malay,1,1,Is the ball closer to the pen as compared to the book?,"[10, 8, 8, 3, 2, 3, 8, 10, 10, 10]",yes,,61561
+malay,7,1,Is there an adapter beneath the paper cup?,"[10, 10, 3, 4, 8, 10, 8, 7, 4, 10]",yes,,96758
+malay,38,1,Is the tape recorder in contact with the magazine?,"[10, 10, 10, 10, 8, 6, 10, 10, 10, 10]",no,seems too deteministic,124939
+malay,72,2,Is the woman in orange sweatshirt wearing spectacles?,"[10, 10, 10, 8, 7, 2, 4, 8, 8, 10]",yes,,543890
+malay,100,2,Is the girl wearing spectacles?,"[9, 9, 9, 8, 3, 10, 7, 8, 8, 9]",yes,,94177
+malay,94,2,Is the person holding a bottle?,"[9, 9, 9, 9, 3, 6, 8, 10, 10, 10]",yes,,490223
+malay,62,2,Has the man kept the book on the platform?,"[10, 10, 10, 10, 3, 9, 10, 10, 10, 10]",yes,,44739
+malay,69,2,Is there a transparent plastic container over the orange container?,"[10, 10, 10, 10, 8, 10, 10, 10, 10, 10]",no,too deterministic,380417
+malay,97,2,Is there a microwave in the corner of the kitchen?,"[10, 10, 10, 10, 10, 2, 9, 10, 10, 10]",yes,,824204
+malay,78,2,Is the second topmost refrigirator door tray empty?,"[10, 10, 10, 8, 7, 4, 3, 8, 9, 10]",yes,,616194
+malay,53,2,Is there a coat beside the man on the cupboard door?,"[5, 5, 5, 5, 5, 5, 5, 5, 5, 5]",no,bad image quality,59580
+malay,58,2,Is the boy in red shirt holding a red carry bag?,"[10, 10, 9, 9, 2, 8, 9, 9, 10, 10]",yes,,78937
+malay,57,2,Is there a cup in between the womans arms?,"[10, 10, 8, 8, 8, 3, 3, 9, 10, 10]",yes,,496475
+malay,77,2,Are both the feet of the girl on the ground?,"[9, 9, 8, 8, 2, 1, 3, 7, 10, 10]",no,question itself seems a bit ambiogus can be made clear,541869
+malay,56,2,Is the old man holding the frame?,"[10, 9, 9, 9, 6, 3, 6, 7, 8, 9]",yes,,1344514
+malay,76,2,Is the left foot of the man on the third step?,"[10, 10, 10, 10, 3, 1, 9, 9, 10, 10]",yes,,252282
+malay,87,2,Is ther a microwave in front of the man?,"[10, 10, 10, 8, 7, 2, 6, 8, 10, 10]",yes,,601564
+malay,89,2,Is there a person behind the boy with spectacles?,"[10, 10, 10, 10, 8, 4, 6, 10, 10, 10]",yes,,947144
+malay,51,2,Is the glass being kept on the kitchen table top?,"[7, 7, 7, 7, 6, 3, 7, 9, 9, 10]",yes,,1321962
+malay,99,2,Is the person holding a carrybag?,"[9, 9, 9, 9, 8, 2, 4, 7, 7, 10]",yes,,116016
+malay,81,2,Has the man entered the room in front of him?,"[10, 9, 9, 9, 9, 3, 6, 8, 9, 10]",yes,,148415
+malay,86,2,Is there a colourful dotted cloth below the green dusting pan?,"[10, 9, 9, 9, 7, 1, 3, 4, 7, 10]",yes,,239645
+malay,60,2,Is the person holding a pillow?,"[10, 10, 10, 10, 8, 7, 2, 7, 10, 10]",yes,,83029
+malay,88,2,Is the door open?,"[9, 9, 9, 9, 9, 2, 8, 9, 10, 10]",yes,,197690
+malay,54,2,Are there 2 bottles on the table?,"[10, 9, 7, 7, 1, 10, 10, 10, 10, 10]",yes,,192549
+malay,83,2,Are there 2 breads in the electric grill?,"[10, 10, 10, 4, 1, 7, 7, 7, 8, 9]",yes,,187725
+malay,96,2,Has the woman sat on the chair?,"[9, 8, 8, 8, 6, 2, 7, 8, 10, 10]",yes,,100380
+malay,55,2,Is the glass in contact with the table?,"[10, 10, 9, 10, 10, 2, 10, 10, 10, 10, None, None, None]",yes,,60071
+malay,79,2,Is the striped shirt boy holding a container in his right hand?,"[7, 7, 6, 7, 7, 7, 7, 7, 7, 9]",no,main part of all the images seems blurry,5334468
+malay,73,2,Has the woman sat on the wooden bench?,"[8, 8, 8, 8, 3, 3, 10, 10, 10, 10]",yes,,12500308
+malay,95,2,Is the man sitting on the floor?,"[10, 8, 8, 8, 2, 2, 9, 9, 10, 10]",yes,,192262
+malay,74,2,Is the man wearing a baseball cap?,"[10, 10, 10, 10, 3, 10, 10, 10, 10, 10]",no,seems too deteministic,312726
+malay,85,2,Is there a red cloth on the staircase?,"[10, 10, 10, 8, 2, 7, 8, 10, 10, 10]",yes,,822948
+malay,68,2,Is the boys left foot touching the second step?,"[10, 10, 10, 10, 1, 3, 6, 6, 7, 7]",yes,,136862
+malay,82,2,Is the man holding a phone in his left hand?,"[10, 10, 10, 10, 10, 1, 8, 9, 8, 8]",yes,,91165
+malay,64,2,Has the man entered the white tiled room?,"[10, 10, 10, 10, 2, 10, 10, 10, 10, 10]",yes,,140950
+malay,52,2,Does the woman have 2 arms?,"[10, 10, 10, 3, 9, 10, 10, 10, 10, 10]",yes,,107085
+malay,84,2,Is there a red towel hanging on the black rod near the ceiling?,"[10, 10, 10, 10, 10, 2, 3, 4, 8, 10]",yes,,93358
+malay,63,2,Is the fridge door open?,"[10, 10, 10, 10, 3, 3, 6, 8, 8, 9]",yes,,334981
+malay,59,2,Is there a phone in the drawer?,"[10, 10, 10, 10, 10, 7, 8, 8, 10, 10]",yes,,1181016
+malay,92,2,Has the person worn his right shoe?,"[7, 7, 6, 4, 4, 7, 8, 8, 8, 10]",yes,,100885
+malay,67,2,Is there a vaccum cleaner beside the man?,"[10, 10, 10, 8, 3, 8, 10, 10, 10, 10]",yes,,112338
+malay,93,2,Is the glass in contact with the persons mouth?,"[10, 10, 6, 4, 3, 10, 10, 10, 10, 10]",yes,,180537
+malay,90,2,Is there a white label on the frame backside?,"[10, 10, 10, 10, 10, 1, 8, 9, 10, 10]",no,question can be made clearer,2863834
+malay,80,2,Is there a hello kitty soft toy on the black sofa?,"[10, 10, 10, 10, 10, 1, 3, 8, 10, 10]",yes,,1861147
+malay,66,2,Are there pictures on the fridge?,"[10, 10, 10, 10, 9, 2, 4, 8, 10, 10]",yes,,83599
+malay,91,2,Is the man touching the shoes beside the white dustbin?,"[10, 10, 10, 10, 10, 3, 8, 10, 10, 10]",yes,,201922
+malay,65,2,Is the human wearing a cap?,"[10, 10, 10, 10, 1, 10, 10, 10, 10, 10]",yes,,981242
+malay,61,2,Does the man have 2 arms?,"[10, 10, 10, 10, 10, 3, 8, 9, 10, 10]",yes,,67031
+malay,75,2,Does the shoe which the woman is holding have black laces?,"[10, 9, 9, 8, 8, 2, 9, 9, 9, 10]",yes,,79380
+malay,70,2,Are there 3 black cylindrical containers placed one on top of the other?,"[10, 10, 10, 10, 10, 2, 10, 10, 10, 10]",yes,,45720
+malay,71,2,Is the man holding shoes?,"[10, 7, 7, 5, 3, 1, 3, 8, 8, 8]",yes,,46372
+malay,98,2,Is there a laptop on the dining table?,"[10, 10, 10, 10, 10, 1, 9, 10, 10, 10]",yes,,47359

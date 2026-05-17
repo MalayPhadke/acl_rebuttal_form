@@ -1,0 +1,126 @@
+user_id,trial_id,part,question,ratings_list,good_datapoint,comment,reaction_time_ms
+Sandra,34,1,Is the finger touching the white container?,"[10, 10, 10, 10, 10, 10, 10, 10, 10, 10]",yes,,83646
+Sandra,15,1,Are there exactly 3 blue cups on the table?,"[10, 9, 7, 9, 10, 6, 9, 10, 10, 10]",yes,,120049
+Sandra,42,1,Is the person touching the white object?,"[10, 10, 10, 8, 8, 9, 7, 7, 8, 9]",yes,,131462
+Sandra,3,1,Is the pen touching the book?,"[10, 5, 9, 10, 9, 6, 10, 10, 3, 9]",yes,,192534
+Sandra,28,1,Are there a pair of of white shoes beneath the pair of jeans?,"[4, 4, 6, 9, 9, 2, 5, 6, 7, 9]",no,"In the first two images, it is difficult to identify if the jeans is directly above or in just front of the shoes.",344862
+Sandra,41,1,Is the orange object on the right of the green watch?,"[10, 10, 10, 10, 9, 1, 9, 9, 10, 10]",no,The green color is not very distinguishable.,93939
+Sandra,8,1,Is the onion being dropped into the footwear?,"[10, 10, 2, 2, 2, 2, 2, 1, 2, 6]",no,"It looks like the hand is further away from the footwear, and not next to it.",129636
+Sandra,50,1,Is the deodrant can on the green tile?,"[10, 10, 10, 10, 8, 7, 10, 10, 10, 10]",yes,,48908
+Sandra,19,1,Is the door closed?,"[10, 10, 10, 10, 10, 10, 10, 10, 10, 10]",yes,,37781
+Sandra,6,1,Is the plastic lid placed on the transparent tumbler?,"[8, 8, 9, 10, 10, 10, 10, 10, 10, 10]",yes,,121197
+Sandra,13,1,Is the ball closer to the salt shaker than the steel container?,"[10, 10, 10, 10, 10, 4, 4, 9, 10, 10]",yes,,71434
+Sandra,29,1,Is the glass on the book?,"[10, 10, 10, 10, 8, 10, 10, 10, 10, 10]",yes,,92092
+Sandra,45,1,Is the brush being held by the person?,"[8, 6, 2, 2, 7, 7, 9, 10, 10, 10]",yes,,69734
+Sandra,37,1,Is the entire wooden block touching the wire?,"[1, 1, 1, 1, 8, 8, 10, 10, 10, 10]",yes,,46383
+Sandra,22,1,Is there a knife and spoon on the blue sofa?,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",no,Difficult to identify if there is a sofa and if it is blue.,135512
+Sandra,7,1,Is there an adapter beneath the paper cup?,"[1, 1, 2, 2, 7, 3, 7, 7, 7, 1]",no,"In the 6th image, it is not clear under which of the cup.",221851
+Sandra,26,1,Is the Iron placed on the blue shirt?,"[4, 4, 4, 4, 7, 6, 6, 7, 9, 10]",yes,,347028
+Sandra,2,1,Is the pen closer to the green book than the jar?,"[10, 10, 10, 10, 6, 2, 1, 1, 8, 10]",yes,,135926
+Sandra,40,1,Is the white object (on top of the grey cylindrical object) closer to the right eye than the left eye?,"[8, 8, 8, 7, 2, 9, 9, 9, 9, 10]",no,"The question is not specific if it is the right eye of the person, or if it the eye on the right side of the image.",243454
+Sandra,18,1,Is the fruit placed on top of the white cup?,"[10, 10, 10, 10, 10, 10, 10, 10, 10, 10]",yes,,108431
+Sandra,14,1,Is the red cap attached to the popcorn container?,"[10, 10, 10, 10, 10, 10, 10, 10, 10, 8]",yes,,64443
+Sandra,24,1,Is there an oil bottle on the table?,"[10, 10, 10, 10, 10, 5, 10, 10, 10, 10]",yes,,53217
+Sandra,16,1,Is there a white chess piece in the hands of the person?,"[10, 10, 10, 10, 1, 8, 10, 10, 10, 10]",yes,,84327
+Sandra,43,1,Is the person touching the rubiks cube?,"[5, 5, 5, 5, 7, 10, 5, 10, 10, 10]",yes,,101808
+Sandra,38,1,Is the tape recorder in contact with the magazine?,"[10, 10, 10, 10, 10, 7, 10, 10, 10, 10]",yes,,66856
+Sandra,26,1,Is the Iron placed on the blue shirt?,"[5, 5, 5, 5, 8, 7, 7, 8, 9, 9]",yes,,116109
+Sandra,34,1,Is the finger touching the white container?,"[10, 10, 10, 10, 10, 9, 10, 10, 10, 10]",yes,,47217
+Sandra,45,1,Is the brush being held by the person?,"[6, 2, 2, 3, 7, 7, 8, 10, 10, 10]",yes,,77145
+Sandra,19,1,Is the door closed?,"[10, 10, 10, 10, 10, 10, 10, 10, 10, 10]",yes,,32210
+Sandra,18,1,Is the fruit placed on top of the white cup?,"[10, 10, 10, 10, 10, 10, 10, 10, 10, 10]",yes,,27711
+Sandra,5,1,Are there exactly 3 cups?,"[10, 10, 9, 7, 6, 5, 10, 10, 10, 10]",yes,,74339
+Sandra,36,1,Is there a coin in the image?,"[9, 9, 9, 9, 9, 8, 8, 9, 9, 9]",yes,,57257
+Sandra,25,1,Are there 2 purses hanging on the black chair?,"[10, 10, 10, 10, 2, 7, 7, 7, 7, 7]",yes,,66447
+Sandra,23,1,Is there a pair of scissors on the desk?,"[10, 10, 10, 10, 10, 9, 10, 10, 10, 10]",yes,,51150
+Sandra,35,1,Is the person holding the bottle?,"[10, 10, 10, 9, 8, 10, 10, 10, 10, 10]",yes,,53866
+Sandra,16,1,Is there a white chess piece in the hands of the person?,"[10, 10, 10, 10, 1, 8, 10, 10, 10, 10]",yes,,44552
+Sandra,13,1,Is the ball closer to the salt shaker than the steel container?,"[10, 10, 10, 10, 10, 8, 1, 3, 9, 10]",yes,,64777
+Sandra,27,1,Does the container have its lid on?,"[10, 10, 10, 10, 9, 5, 5, 8, 8, 10]",no,The panel shown in the image does not seem to be the lid of the container.,185590
+Sandra,11,1,Is the purple tumbler touching the table?,"[10, 10, 10, 10, 10, 10, 1, 9, 10, 10]",yes,,62466
+Sandra,44,1,Is the brown disk in contact with the persons hand?,"[10, 10, 6, 10, 10, 10, 10, 10, 10, 10]",yes,,68313
+Sandra,30,1,Is the iron on the red sweater?,"[10, 10, 10, 10, 9, 8, 9, 10, 10, 10]",yes,,41115
+Sandra,9,1,Are there exactly 2 fruits?,"[10, 10, 10, 10, 5, 7, 9, 10, 10, 10]",yes,,60359
+Sandra,38,1,Is the tape recorder in contact with the magazine?,"[10, 10, 10, 10, 10, 7, 10, 10, 10, 10]",yes,,27087
+Sandra,14,1,Is the red cap attached to the popcorn container?,"[10, 10, 10, 10, 10, 10, 10, 10, 10, 9]",yes,,43357
+Sandra,37,1,Is the entire wooden block touching the wire?,"[1, 1, 1, 1, 8, 9, 10, 10, 10, 10]",yes,,34680
+Sandra,29,1,Is the glass on the book?,"[10, 10, 10, 10, 8, 10, 10, 10, 10, 10]",yes,,48091
+Sandra,39,1,Is green glass in contact with the table?,"[10, 10, 10, 9, 6, 10, 10, 10, 10, 10]",yes,,41458
+Sandra,49,1,Is the person holding a camera string?,"[2, 2, 2, 5, 7, 8, 10, 10, 10, 10]",yes,,49956
+Sandra,42,1,Is the person touching the white object?,"[10, 10, 10, 10, 10, 9, 10, 10, 10, 10]",yes,,35983
+Sandra,33,1,Is the comb touching the onion,"[10, 10, 10, 10, 10, 2, 5, 6, 6, 8]",yes,,66244
+Sandra,46,1,Is there water splatter beneath the wiping cloth?,"[10, 10, 10, 10, 4, 1, 1, 2, 4, 4]",yes,,84017
+Sandra,43,1,Is the person touching the rubiks cube?,"[8, 7, 7, 7, 6, 10, 9, 10, 10, 10]",yes,,102230
+Sandra,8,1,Is the onion being dropped into the footwear?,"[10, 10, 5, 5, 5, 7, 8, 8, 8, 9]",no,It looks like the shoe is further away from the hand and not next to the hand.,130122
+Sandra,24,1,Is there an oil bottle on the table?,"[10, 10, 10, 10, 10, 5, 10, 10, 10, 10]",yes,,29035
+Sandra,6,1,Is the plastic lid placed on the transparent tumbler?,"[10, 10, 9, 10, 10, 10, 10, 10, 10, 10]",yes,,53088
+Sandra,3,1,Is the pen touching the book?,"[10, 7, 8, 10, 7, 7, 10, 10, 2, 8]",yes,,83941
+Sandra,17,1,Is there green leaf in the mixing bowl?,"[2, 2, 2, 2, 2, 7, 7, 8, 8, 8]",no,"Not very identifiable if it is a green ""leaf"".",123053
+Sandra,47,1,Is the drawer closed?,"[10, 10, 10, 10, 10, 9, 10, 10, 10, 10]",yes,,28441
+Sandra,10,1,Are there exactly 2 tumblers?,"[9, 6, 6, 6, 8, 8, 9, 10, 10, 10]",yes,,66307
+Sandra,15,1,Are there exactly 3 blue cups on the table?,"[10, 9, 7, 9, 10, 7, 10, 9, 10, 10]",yes,,37592
+Sandra,48,1,Are there pencils in the box?,"[10, 10, 10, 10, 10, 7, 10, 10, 10, 10]",yes,,29077
+Sandra,4,1,Is the red cup on the wooden board?,"[7, 6, 4, 3, 2, 3, 4, 6, 10, 10]",yes,,113881
+Sandra,41,1,Is the orange object on the right of the green watch?,"[10, 10, 10, 10, 10, 1, 9, 10, 10, 10]",no,The green color is not very distinguishable.,52150
+Sandra,1,1,Is the ball closer to the pen as compared to the book?,"[10, 10, 10, 3, 1, 3, 10, 10, 10, 10]",yes,,62509
+Sandra,12,1,Is the blue pen on the green book?,"[10, 10, 9, 9, 9, 8, 5, 10, 10, 10]",yes,,39909
+Sandra,28,1,Are there a pair of of white shoes beneath the pair of jeans?,"[10, 10, 10, 10, 10, 2, 5, 7, 9, 10]",no,It seems like the jeans can be either above or in front of the shoes in the first 2 images.,92135
+Sandra,22,1,Is there a knife and spoon on the blue sofa?,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",no,The blue sofa is not very identifiable.,38759
+Sandra,31,1,Is the person holding the wallet?,"[10, 10, 7, 5, 2, 3, 9, 10, 10, 10]",yes,,49957
+Sandra,32,1,Is the blue lid of the container touching the table?,"[10, 10, 10, 10, 8, 10, 10, 7, 7, 9]",yes,,36550
+Sandra,40,1,Is the white object (on top of the grey cylindrical object) closer to the right eye than the left eye?,"[10, 10, 9, 7, 2, 9, 10, 10, 10, 10]",no,"The question does not specify if its right eye of the person, or if it is wrt to the image.",88210
+Sandra,21,1,Is there a pink highlighter with black cap beside the left shoe?,"[10, 10, 10, 10, 10, 1, 7, 9, 9, 9]",yes,,54583
+Sandra,50,1,Is the deodrant can on the green tile?,"[10, 10, 10, 10, 9, 7, 10, 10, 10, 10]",yes,,47925
+Sandra,7,1,Is there an adapter beneath the paper cup?,"[1, 1, 2, 5, 7, 1, 7, 7, 5, 1]",no,"Doesn't specify which paper cup, especially for 6th image.",87548
+Sandra,20,1,Is water being poured in the transparent container with the egg yolk in it?,"[10, 10, 10, 10, 10, 2, 5, 7, 8, 9]",yes,,88928
+Sandra,2,1,Is the pen closer to the green book than the jar?,"[10, 10, 10, 10, 7, 2, 1, 2, 9, 10]",yes,,52711
+Sandra,91,2,Is the man touching the shoes beside the white dustbin?,"[10, 10, 10, 10, 10, 7, 8, 9, 10, 10]",yes,,67660
+Sandra,93,2,Is the glass in contact with the persons mouth?,"[10, 10, 7, 7, 5, 9, 10, 10, 10, 10]",yes,,76921
+Sandra,66,2,Are there pictures on the fridge?,"[9, 9, 10, 9, 9, 1, 7, 9, 10, 10]",yes,,86525
+Sandra,82,2,Is the man holding a phone in his left hand?,"[10, 10, 10, 10, 8, 1, 9, 9, 9, 7]",yes,,91779
+Sandra,86,2,Is there a colourful dotted cloth below the green dusting pan?,"[10, 10, 10, 10, 10, 1, 8, 9, 10, 10]",yes,,59227
+Sandra,78,2,Is the second topmost refrigirator door tray empty?,"[10, 10, 10, 10, 1, 5, 5, 10, 10, 10]",yes,,78000
+Sandra,79,2,Is the striped shirt boy holding a container in his right hand?,"[5, 5, 7, 7, 8, 10, 10, 10, 10, 10]",yes,,108873
+Sandra,74,2,Is the man wearing a baseball cap?,"[10, 10, 10, 10, 10, 10, 10, 10, 10, 10]",yes,,48150
+Sandra,65,2,Is the human wearing a cap?,"[10, 10, 10, 10, 1, 10, 10, 10, 10, 10]",yes,,74663
+Sandra,75,2,Does the shoe which the woman is holding have black laces?,"[10, 10, 10, 10, 10, 1, 9, 9, 9, 9]",yes,,101541
+Sandra,84,2,Is there a red towel hanging on the black rod near the ceiling?,"[10, 10, 10, 10, 10, 1, 4, 4, 10, 10]",yes,,87936
+Sandra,68,2,Is the boys left foot touching the second step?,"[10, 10, 10, 10, 1, 5, 7, 7, 9, 10]",yes,,126907
+Sandra,97,2,Is there a microwave in the corner of the kitchen?,"[10, 10, 10, 10, 10, 2, 9, 10, 10, 10]",yes,,145771
+Sandra,90,2,Is there a white label on the frame backside?,"[10, 10, 10, 10, 10, 1, 10, 10, 9, 10]",no,"The question is a little confusing, as it is not easily identifiable that there is a frame present in the image.",164596
+Sandra,76,2,Is the left foot of the man on the third step?,"[10, 10, 10, 8, 7, 8, 9, 10, 10, 10]",yes,,67143
+Sandra,92,2,Has the person worn his right shoe?,"[8, 8, 7, 5, 5, 5, 10, 7, 6, 10]",yes,,213164
+Sandra,95,2,Is the man sitting on the floor?,"[10, 10, 10, 10, 3, 6, 8, 10, 10, 10]",yes,,77597
+Sandra,71,2,Is the man holding shoes?,"[10, 10, 10, 5, 5, 1, 5, 10, 10, 10]",no,"The man initially seems to be holding a pair of shoes, but later only one show",262535
+Sandra,96,2,Has the woman sat on the chair?,"[10, 10, 10, 10, 9, 6, 8, 8, 10, 10]",yes,,131759
+Sandra,94,2,Is the person holding a bottle?,"[10, 10, 10, 10, 2, 8, 9, 9, 9, 9]",yes,,136153
+Sandra,73,2,Has the woman sat on the wooden bench?,"[10, 10, 6, 6, 7, 8, 9, 10, 10, 10]",yes,,107734
+Sandra,64,2,Has the man entered the white tiled room?,"[10, 10, 10, 10, 7, 10, 10, 10, 10, 10]",yes,,51722
+Sandra,85,2,Is there a red cloth on the staircase?,"[10, 10, 10, 10, 1, 8, 8, 10, 10, 10]",yes,,98122
+Sandra,72,2,Is the woman in orange sweatshirt wearing spectacles?,"[10, 10, 10, 10, 9, 1, 8, 9, 10, 10]",yes,,70172
+Sandra,81,2,Has the man entered the room in front of him?,"[10, 10, 10, 10, 10, 5, 7, 10, 10, 10]",yes,,85711
+Sandra,60,2,Is the person holding a pillow?,"[10, 10, 10, 10, 10, 10, 1, 10, 10, 10]",yes,,254878
+Sandra,70,2,Are there 3 black cylindrical containers placed one on top of the other?,"[8, 8, 8, 8, 8, 5, 10, 10, 10, 10]",yes,,98598
+Sandra,62,2,Has the man kept the book on the platform?,"[10, 10, 10, 10, 7, 8, 8, 9, 9, 9]",yes,,220613
+Sandra,98,2,Is there a laptop on the dining table?,"[10, 10, 10, 10, 10, 1, 10, 10, 10, 10]",yes,,73492
+Sandra,89,2,Is there a person behind the boy with spectacles?,"[10, 10, 10, 10, 10, 1, 9, 10, 10, 10]",yes,,43655
+Sandra,53,2,Is there a coat beside the man on the cupboard door?,"[10, 10, 10, 10, 4, 1, 3, 4, 8, 8]",yes,,107153
+Sandra,61,2,Does the man have 2 arms?,"[10, 10, 10, 10, 10, 1, 9, 9, 9, 9]",yes,,52454
+Sandra,56,2,Is the old man holding the frame?,"[10, 10, 10, 10, 5, 7, 8, 9, 10, 10]",yes,,115107
+Sandra,99,2,Is the person holding a carrybag?,"[10, 10, 10, 10, 10, 1, 3, 5, 8, 10]",yes,,143796
+Sandra,69,2,Is there a transparent plastic container over the orange container?,"[10, 10, 10, 10, 9, 1, 10, 10, 10, 10]",yes,,122251
+Sandra,51,2,Is the glass being kept on the kitchen table top?,"[10, 10, 10, 10, 9, 6, 7, 10, 10, 10]",no,"The question is confusing as the class is being kept in the sink, instead of the table top.",609358
+Sandra,83,2,Are there 2 breads in the electric grill?,"[10, 10, 10, 10, 1, 10, 10, 10, 10, 10]",yes,,43001
+Sandra,54,2,Are there 2 bottles on the table?,"[7, 7, 7, 7, 1, 7, 7, 7, 7, 7]",yes,,79625
+Sandra,67,2,Is there a vaccum cleaner beside the man?,"[10, 10, 10, 10, 1, 8, 10, 10, 10, 10]",yes,,43003
+Sandra,77,2,Are both the feet of the girl on the ground?,"[10, 10, 10, 10, 3, 1, 1, 10, 10, 10]",yes,,127286
+Sandra,55,2,Is the glass in contact with the table?,"[10, 10, 10, 10, 10, 8, 10, 10, 10, 10, None, None, None]",yes,,70915
+Sandra,100,2,Is the girl wearing spectacles?,"[10, 10, 10, 10, 9, 1, 10, 10, 10, 10]",yes,,91725
+Sandra,57,2,Is there a cup in between the womans arms?,"[10, 10, 10, 10, 3, 10, 10, 10, 10, 10]",yes,,94632
+Sandra,88,2,Is the door open?,"[10, 10, 10, 10, 10, 3, 5, 5, 5, 10]",yes,,177052
+Sandra,87,2,Is ther a microwave in front of the man?,"[10, 10, 10, 10, 10, 1, 10, 10, 10, 10]",yes,,54686
+Sandra,52,2,Does the woman have 2 arms?,"[10, 10, 10, 1, 1, 10, 10, 10, 10, 10]",yes,,86137
+Sandra,59,2,Is there a phone in the drawer?,"[1, 1, 3, 3, 4, 6, 7, 9, 9, 9]",yes,,160179
+Sandra,63,2,Is the fridge door open?,"[10, 10, 10, 10, 4, 7, 8, 8, 8, 9]",yes,,128633
+Sandra,80,2,Is there a hello kitty soft toy on the black sofa?,"[10, 10, 10, 10, 10, 1, 8, 9, 9, 10]",yes,,90897
+Sandra,58,2,Is the boy in red shirt holding a red carry bag?,"[10, 10, 10, 10, 1, 9, 10, 10, 10, 10]",yes,,73608

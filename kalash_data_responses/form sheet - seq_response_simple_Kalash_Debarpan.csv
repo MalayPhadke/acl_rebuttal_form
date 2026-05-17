@@ -1,0 +1,101 @@
+user_id,trial_id,part,question,ratings_list,good_datapoint,comment,reaction_time_ms
+Kalash_Debarpan,6,1,Is the plastic lid placed on the transparent tumbler?,"[10, 10, 6, 7, 8, 8, 8, 8, 8, 10]",no,change the qsn-> Is the red plastic lid placed on the transparent tumbler?,3550746
+Kalash_Debarpan,39,1,Is green glass in contact with the table?,"[10, 10, 10, 10, 4, 8, 8, 8, 9, 10]",yes,,43785
+Kalash_Debarpan,12,1,Is the blue pen on the green book?,"[10, 10, 8, 7, 7, 6, 4, 6, 9, 10]",yes,,75656
+Kalash_Debarpan,26,1,Is the Iron placed on the blue shirt?,"[7, 5, 5, 5, 5, 5, 5, 5, 5, 5]",no,"images not good, discard this",45780
+Kalash_Debarpan,13,1,Is the ball closer to the salt shaker than the steel container?,"[5, 5, 5, 5, 5, 5, 5, 5, 5, 5]",no,"discard this, salt shaker not visible in last 2 images.",64873
+Kalash_Debarpan,15,1,Are there exactly 3 blue cups on the table?,"[9, 8, 5, 3, 6, 6, 7, 8, 9, 10]",yes,,83667
+Kalash_Debarpan,43,1,Is the person touching the rubiks cube?,"[8, 7, 4, 3, 5, 7, 7, 8, 10, 10]",yes,,62003
+Kalash_Debarpan,11,1,Is the purple tumbler touching the table?,"[10, 10, 10, 10, 10, 9, 2, 4, 8, 8]",yes,,98154
+Kalash_Debarpan,37,1,Is the entire wooden block touching the wire?,"[5, 5, 5, 5, 5, 5, 5, 5, 5, 5]",no,"Not uncertainty aligned, discard this.",53019
+Kalash_Debarpan,49,1,Is the person holding a camera string?,"[5, 5, 5, 5, 5, 5, 5, 5, 5, 5]",no,"discard this, not uncertainty aligned.",47671
+Kalash_Debarpan,46,1,Is there water splatter beneath the wiping cloth?,"[9, 9, 6, 6, 4, 4, 7, 7, 8, 8]",yes,,38890
+Kalash_Debarpan,19,1,Is the door closed?,"[9, 9, 9, 8, 8, 9, 9, 9, 9, 9]",yes,,51187
+Kalash_Debarpan,27,1,Does the container have its lid on?,"[9, 9, 8, 7, 4, 6, 7, 9, 9, 10]",yes,,71952
+Kalash_Debarpan,33,1,Is the comb touching the onion,"[9, 9, 9, 9, 9, 4, 6, 8, 8, 8]",yes,,36042
+Kalash_Debarpan,40,1,Is the white object (on top of the grey cylindrical object) closer to the right eye than the left eye?,"[9, 7, 7, 6, 2, 5, 7, 8, 9, 10]",yes,,63967
+Kalash_Debarpan,38,1,Is the tape recorder in contact with the magazine?,"[10, 10, 10, 10, 9, 3, 9, 10, 10, 10]",no,change the qsn-> Is the black device in contact with the magazine?,226731
+Kalash_Debarpan,44,1,Is the brown disk in contact with the persons hand?,"[9, 9, 3, 6, 7, 7, 7, 7, 7, 7]",yes,,128878
+Kalash_Debarpan,31,1,Is the person holding the wallet?,"[9, 7, 5, 4, 3, 5, 7, 8, 10, 10]",yes,,91821
+Kalash_Debarpan,23,1,Is there a pair of scissors on the desk?,"[9, 9, 9, 8, 8, 3, 6, 7, 8, 7]",yes,,90351
+Kalash_Debarpan,22,1,Is there a knife and spoon on the blue sofa?,"[5, 5, 5, 5, 5, 5, 5, 5, 5, 5]",no,"knife not visible, discard this.",32134
+Kalash_Debarpan,47,1,Is the drawer closed?,"[9, 9, 9, 9, 9, 4, 3, 5, 7, 8]",yes,,55932
+Kalash_Debarpan,2,1,Is the pen closer to the green book than the jar?,"[5, 5, 5, 5, 5, 5, 5, 5, 5, 5]",no,"not understandable, discard this.",58462
+Kalash_Debarpan,45,1,Is the brush being held by the person?,"[9, 6, 4, 2, 1, 3, 6, 7, 9, 9]",yes,,96827
+Kalash_Debarpan,10,1,Are there exactly 2 tumblers?,"[9, 9, 9, 8, 8, 3, 6, 8, 8, 9]",yes,,44851
+Kalash_Debarpan,14,1,Is the red cap attached to the popcorn container?,"[9, 5, 7, 8, 4, 7, 8, 9, 8, 3]",no,"not uncertainty aligned, discard.",115482
+Kalash_Debarpan,7,1,Is there an adapter beneath the paper cup?,"[10, 10, 7, 5, 6, 8, 7, 7, 5, 8]",no,"not uncertainty algned, discard",61046
+Kalash_Debarpan,29,1,Is the glass on the book?,"[8, 8, 8, 8, 5, 8, 9, 9, 9, 9]",no,change the qsn-> Is the glass touching the book?,64822
+Kalash_Debarpan,8,1,Is the onion being dropped into the footwear?,"[5, 5, 5, 5, 5, 5, 5, 5, 5, 5]",no,"Discard this, the images are not good.",70061
+Kalash_Debarpan,5,1,Are there exactly 3 cups?,"[8, 8, 8, 5, 3, 3, 7, 8, 8, 8]",no,change the qsn-> Are there exactly 3 orange cups?,112160
+Kalash_Debarpan,41,1,Is the orange object on the right of the green watch?,"[9, 8, 8, 7, 6, 4, 6, 7, 7, 7]",yes,,50572
+Kalash_Debarpan,17,1,Is there green leaf in the mixing bowl?,"[5, 5, 5, 5, 5, 5, 5, 5, 5, 5]",no,"bad images, discard.",33117
+Kalash_Debarpan,3,1,Is the pen touching the book?,"[9, 5, 4, 7, 6, 5, 8, 8, 4, 8]",no,Bad uncertainty alignment.,81237
+Kalash_Debarpan,28,1,Are there a pair of of white shoes beneath the pair of jeans?,"[9, 9, 9, 6, 3, 4, 5, 7, 8, 10]",yes,,73650
+Kalash_Debarpan,4,1,Is the red cup on the wooden board?,"[8, 8, 8, 8, 3, 3, 5, 5, 10, 10]",no,change the qsn-> Is the red cup touching the wooden board?,58204
+Kalash_Debarpan,20,1,Is water being poured in the transparent container with the egg yolk in it?,"[9, 9, 9, 9, 8, 5, 7, 8, 9, 9]",no,Is water being poured into the orange container?,179764
+Kalash_Debarpan,42,1,Is the person touching the white object?,"[9, 9, 9, 5, 3, 4, 3, 4, 5, 8]",yes,,227198
+Kalash_Debarpan,36,1,Is there a coin in the image?,"[9, 9, 9, 8, 7, 6, 7, 8, 8, 8]",yes,,206264
+Kalash_Debarpan,18,1,Is the fruit placed on top of the white cup?,"[9, 8, 8, 6, 7, 7, 7, 8, 8, 8]",yes,,51358
+Kalash_Debarpan,24,1,Is there an oil bottle on the table?,"[10, 10, 10, 10, 8, 5, 6, 10, 10, 10]",yes,,1336108
+Kalash_Debarpan,1,1,Is the ball closer to the pen as compared to the book?,"[10, 9, 6, 3, 6, 7, 8, 9, 9, 10]",yes,,156477
+Kalash_Debarpan,48,1,Are there pencils in the box?,"[5, 5, 5, 5, 5, 5, 5, 5, 5, 5]",no,"invalid question, discard this.",42544
+Kalash_Debarpan,21,1,Is there a pink highlighter with black cap beside the left shoe?,"[9, 9, 9, 8, 8, 5, 7, 8, 8, 8]",no,change the qsn-> Is there a pink highlighter in the scene?,98621
+Kalash_Debarpan,32,1,Is the blue lid of the container touching the table?,"[10, 10, 9, 8, 6, 5, 4, 6, 7, 9]",yes,,258779
+Kalash_Debarpan,16,1,Is there a white chess piece in the hands of the person?,"[9, 9, 9, 9, 6, 7, 8, 9, 10, 10]",yes,,357569
+Kalash_Debarpan,50,1,Is the deodrant can on the green tile?,"[10, 9, 9, 8, 6, 2, 6, 7, 8, 10]",yes,,55961
+Kalash_Debarpan,25,1,Are there 2 purses hanging on the black chair?,"[5, 5, 5, 5, 5, 5, 5, 5, 5, 5]",no,"images not good, discard this.",63363
+Kalash_Debarpan,34,1,Is the finger touching the white container?,"[10, 10, 10, 8, 8, 3, 6, 8, 8, 10]",yes,,39800
+Kalash_Debarpan,35,1,Is the person holding the bottle?,"[10, 10, 8, 5, 2, 5, 7, 7, 9, 9]",yes,,47075
+Kalash_Debarpan,9,1,Are there exactly 2 fruits?,"[9, 9, 9, 9, 3, 5, 7, 8, 9, 10]",yes,,38160
+Kalash_Debarpan,30,1,Is the iron on the red sweater?,"[10, 10, 10, 4, 7, 5, 5, 7, 8, 8]",yes,,51027
+Kalash_Debarpan,79,2,Is the striped shirt boy holding a container in his right hand?,"[5, 5, 5, 5, 5, 5, 5, 5, 5, 5]",no,all images look the same. discard this maybe.,328205
+Kalash_Debarpan,81,2,Has the man entered the room in front of him?,"[8, 8, 8, 7, 7, 5, 3, 4, 5, 6]",yes,,2395699
+Kalash_Debarpan,55,2,Is the glass in contact with the table?,"[9, 9, 9, 9, 9, 3, 8, 9, 9, 9, None, None, None]",no,change the qsn-> Is the cup in contact with the table?,74168
+Kalash_Debarpan,80,2,Is there a hello kitty soft toy on the black sofa?,"[10, 10, 10, 9, 8, 8, 4, 7, 8, 8]",yes,,156389
+Kalash_Debarpan,86,2,Is there a colourful dotted cloth below the green dusting pan?,"[9, 9, 9, 9, 6, 4, 7, 8, 8, 9]",yes,,76020
+Kalash_Debarpan,88,2,Is the door open?,"[9, 9, 9, 9, 9, 5, 5, 5, 5, 5]",no,"all are certain, discard this.",41613
+Kalash_Debarpan,53,2,Is there a coat beside the man on the cupboard door?,"[5, 5, 5, 5, 5, 5, 5, 5, 5, 5]",no,discard this.,69057
+Kalash_Debarpan,78,2,Is the second topmost refrigirator door tray empty?,"[5, 5, 5, 5, 5, 5, 5, 5, 5, 5]",no,tray is always open,1466284
+Kalash_Debarpan,63,2,Is the fridge door open?,"[10, 10, 10, 10, 8, 4, 5, 7, 8, 9]",no,change qsn-> Is the bottom fridge door open?,75785
+Kalash_Debarpan,68,2,Is the boys left foot touching the second step?,"[10, 10, 10, 10, 4, 6, 8, 8, 9, 9]",yes,,103019
+Kalash_Debarpan,76,2,Is the left foot of the man on the third step?,"[9, 9, 9, 9, 3, 4, 6, 6, 9, 10]",yes,,89903
+Kalash_Debarpan,61,2,Does the man have 2 arms?,"[10, 10, 10, 10, 10, 5, 8, 8, 8, 8]",no,Does the man have both arms visible?,93762
+Kalash_Debarpan,64,2,Has the man entered the white tiled room?,"[9, 9, 8, 8, 4, 8, 8, 8, 9, 9]",yes,,87754
+Kalash_Debarpan,87,2,Is ther a microwave in front of the man?,"[5, 5, 5, 5, 5, 5, 5, 5, 5, 5]",no,"images not apt, discard this.",37751
+Kalash_Debarpan,60,2,Is the person holding a pillow?,"[10, 10, 10, 10, 9, 9, 5, 9, 9, 9]",yes,,163878
+Kalash_Debarpan,56,2,Is the old man holding the frame?,"[10, 10, 10, 7, 3, 5, 7, 8, 9, 8]",yes,,137424
+Kalash_Debarpan,95,2,Is the man sitting on the floor?,"[10, 10, 8, 7, 2, 4, 6, 7, 9, 10]",yes,,61477
+Kalash_Debarpan,99,2,Is the person holding a carrybag?,"[10, 10, 10, 10, 10, 4, 5, 7, 8, 9]",yes,,72641
+Kalash_Debarpan,71,2,Is the man holding shoes?,"[9, 9, 9, 9, 9, 4, 9, 9, 9, 9]",yes,,37557
+Kalash_Debarpan,91,2,Is the man touching the shoes beside the white dustbin?,"[9, 9, 8, 8, 6, 5, 7, 8, 9, 9]",no,change qsn-> Is the man touching the shoes in front of him?,132513
+Kalash_Debarpan,72,2,Is the woman in orange sweatshirt wearing spectacles?,"[10, 10, 10, 9, 6, 4, 6, 7, 8, 10]",yes,,64437
+Kalash_Debarpan,62,2,Has the man kept the book on the platform?,"[9, 9, 9, 9, 4, 6, 7, 7, 8, 9]",no,change the qsn-> Has the man kept the book on the shelf?,143402
+Kalash_Debarpan,65,2,Is the human wearing a cap?,"[9, 9, 9, 9, 5, 8, 8, 8, 8, 8]",yes,,67158
+Kalash_Debarpan,73,2,Has the woman sat on the wooden bench?,"[9, 8, 5, 6, 7, 9, 9, 9, 9, 9]",yes,,45751
+Kalash_Debarpan,85,2,Is there a red cloth on the staircase?,"[9, 9, 9, 8, 5, 7, 8, 8, 8, 9]",yes,,48568
+Kalash_Debarpan,67,2,Is there a vaccum cleaner beside the man?,"[10, 5, 5, 5, 5, 5, 5, 5, 5, 5]",no,not intelligible.,1394281
+Kalash_Debarpan,92,2,Has the person worn his right shoe?,"[5, 5, 5, 5, 5, 5, 5, 5, 5, 5]",no,shoe is worn in all images.,80988
+Kalash_Debarpan,75,2,Does the shoe which the woman is holding have black laces?,"[10, 10, 10, 10, 10, 5, 9, 9, 9, 8]",no,change the qsn-> Is the woman holding the shoe in both hands?,426669
+Kalash_Debarpan,90,2,Is there a white label on the frame backside?,"[5, 5, 5, 5, 5, 5, 5, 5, 5, 5]",no,no uncertainty dip.,68558
+Kalash_Debarpan,77,2,Are both the feet of the girl on the ground?,"[9, 9, 9, 9, 4, 3, 3, 6, 8, 8]",yes,,60041
+Kalash_Debarpan,82,2,Is the man holding a phone in his left hand?,"[9, 9, 9, 8, 5, 3, 7, 8, 9, 9]",yes,,54678
+Kalash_Debarpan,54,2,Are there 2 bottles on the table?,"[5, 5, 5, 5, 5, 5, 5, 5, 5, 5]",no,can not count no of bottles.,26148
+Kalash_Debarpan,66,2,Are there pictures on the fridge?,"[9, 9, 9, 8, 7, 4, 6, 8, 9, 9]",no,change the qsn-> Are there papers and magnets on the fridge door?,379452
+Kalash_Debarpan,58,2,Is the boy in red shirt holding a red carry bag?,"[9, 9, 9, 8, 3, 5, 7, 7, 9, 9]",no,change the qsn->  Is the boy in red shirt holding a red bag?,85158
+Kalash_Debarpan,51,2,Is the glass being kept on the kitchen table top?,"[5, 5, 5, 5, 5, 5, 5, 5, 5, 5]",no,glass not visible in later images.,63353
+Kalash_Debarpan,94,2,Is the person holding a bottle?,"[10, 10, 10, 10, 5, 7, 7, 7, 7, 7]",yes,,41143
+Kalash_Debarpan,52,2,Does the woman have 2 arms?,"[10, 10, 9, 5, 4, 9, 9, 10, 10, 10]",yes,,44734
+Kalash_Debarpan,84,2,Is there a red towel hanging on the black rod near the ceiling?,"[10, 10, 10, 9, 9, 8, 6, 7, 9, 10]",yes,,204842
+Kalash_Debarpan,89,2,Is there a person behind the boy with spectacles?,"[10, 10, 10, 10, 9, 6, 8, 9, 9, 9]",yes,,78564
+Kalash_Debarpan,59,2,Is there a phone in the drawer?,"[10, 10, 10, 8, 5, 6, 8, 9, 10, 10]",yes,,75908
+Kalash_Debarpan,83,2,Are there 2 breads in the electric grill?,"[5, 5, 5, 5, 5, 5, 5, 5, 5, 5]",no,full occlusion does not mean uncertainty,36390
+Kalash_Debarpan,70,2,Are there 3 black cylindrical containers placed one on top of the other?,"[8, 8, 8, 8, 8, 5, 8, 8, 8, 8]",yes,,166128
+Kalash_Debarpan,69,2,Is there a transparent plastic container over the orange container?,"[10, 10, 10, 9, 8, 8, 9, 9, 9, 9]",no,change the qsn-> Is there a transparent plastic container on top of the orange container?,115802
+Kalash_Debarpan,98,2,Is there a laptop on the dining table?,"[5, 5, 5, 5, 5, 5, 5, 5, 5, 5]",no,complete occlusion,33484
+Kalash_Debarpan,93,2,Is the glass in contact with the persons mouth?,"[9, 8, 5, 3, 6, 8, 9, 9, 9, 9]",yes,,56551
+Kalash_Debarpan,100,2,Is the girl wearing spectacles?,"[10, 10, 10, 8, 6, 5, 8, 8, 8, 8]",yes,,62736
+Kalash_Debarpan,57,2,Is there a cup in between the womans arms?,"[8, 9, 8, 8, 5, 8, 9, 9, 9, 9]",yes,,86652
+Kalash_Debarpan,96,2,Has the woman sat on the chair?,"[9, 9, 9, 8, 5, 7, 8, 9, 9, 10]",yes,,42400
+Kalash_Debarpan,74,2,Is the man wearing a baseball cap?,"[10, 10, 10, 10, 5, 9, 10, 10, 10, 10]",no,change the qsn-> Is the man wearing a cap?,70324
+Kalash_Debarpan,97,2,Is there a microwave in the corner of the kitchen?,"[10, 10, 10, 10, 9, 7, 9, 10, 10, 10]",yes,,145093

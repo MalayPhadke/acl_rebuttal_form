@@ -381,10 +381,9 @@ def prepare_result(trial, ratings, good_datapoint, comment, reaction_time):
         "frames": str(trial.get("frames", [])),
     }
 
-    # Add individual frame ratings
+    # Add individual frame ratings with standardized keys to avoid schema/grid limit issues
     for i, rating in enumerate(ratings):
-        frame_num = trial["frames"][i] if i < len(trial["frames"]) else i
-        message_result[f"frame_{frame_num}_rating"] = rating
+        message_result[f"frame_{i + 1}_rating"] = rating
 
     message_result["ratings_list"] = str(ratings)
     message_result["good_datapoint"] = good_datapoint
