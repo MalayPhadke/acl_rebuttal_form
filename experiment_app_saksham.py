@@ -39,8 +39,8 @@ def _find_dir(dirname, start_dir=None):
         candidate = os.path.dirname(candidate)
     return os.path.join(start_dir, dirname)  # fallback
 
-QUESTIONS_CSV   = _find_file("list_questions_saksham.csv")
-IMAGES_BASE_DIR = _find_dir("video_frames_saksham_filtered")
+QUESTIONS_CSV = _find_file("saksham.csv")
+IMAGES_BASE_DIR = _find_dir("frames_saksham")
 
 # Google Sheet worksheet names
 SHEET_RESPONSE_METADATA = "seq_response_metadata_saksham"
@@ -197,23 +197,25 @@ def video_path_to_folder(video_path, images_dir=None):
 def resolve_frame_image_path(video_path, frame_num, images_dir):
     """Resolve the path to a frame image given a video path and frame number."""
     folder_name = video_path_to_folder(video_path, images_dir)
-    
+
     for ext in ['.jpg', '.png']:
-        frame_filename = f"frame_{frame_num:04d}{ext}"
-        full_path = os.path.join(images_dir, folder_name, frame_filename)
-        if os.path.exists(full_path):
-            return full_path
-        # Try without zero-padding
-        frame_filename_nopad = f"frame_{frame_num}{ext}"
-        full_path_nopad = os.path.join(images_dir, folder_name, frame_filename_nopad)
-        if os.path.exists(full_path_nopad):
-            return full_path_nopad
-            
-    return os.path.join(images_dir, folder_name, f"frame_{frame_num:04d}.png")  # Return the expected path even if not found
+        # The packaged Saksham data uses six digits. Keep the other variants so
+        # the app remains tolerant of older exports of the same dataset.
+        for filename in (
+            f"frame_{frame_num:06d}{ext}",
+            f"frame_{frame_num:04d}{ext}",
+            f"frame_{frame_num}{ext}",
+        ):
+            full_path = os.path.join(images_dir, folder_name, filename)
+            if os.path.exists(full_path):
+                return full_path
+
+    # Return the dataset's expected path so the UI can report it as missing.
+    return os.path.join(images_dir, folder_name, f"frame_{frame_num:06d}.jpg")
 
 
 def load_questions_data(part, seed=None):
-    """Load questions from list_questions_saksham.csv and split into parts.
+    """Load questions from saksham.csv and split into parts.
     
     Args:
         part: Which part to load (1 or 2).
@@ -233,22 +235,34 @@ def load_questions_data(part, seed=None):
         st.error(f"Failed to read {csv_path}: {exc}")
         return []
 
-    # Saksham CSV uses: "Video path", "Question", "Frames", "Center frame", "GT"
+    required_columns = {"video_path", "question", "frames"}
+    missing_columns = required_columns.difference(df.columns)
+    if missing_columns:
+        st.error(
+            "CSV is missing required columns: "
+            + ", ".join(sorted(missing_columns))
+        )
+        return []
+
     trials = []
     for idx, row in df.iterrows():
-        frames = parse_frames_list(row["Frames"])
-        image_paths = [resolve_frame_image_path(row["Video path"], f, images_dir) for f in frames]
+        frames = parse_frames_list(row["frames"])
+        video_path = str(row["video_path"]).strip()
+        image_paths = [
+            resolve_frame_image_path(video_path, frame, images_dir)
+            for frame in frames
+        ]
 
         trials.append(
             {
-                "id": idx + 1,
-                "video_path": str(row["Video path"]).strip(),
-                "question": str(row["Question"]).strip(),
+                "id": int(row.get("datapoint_id", idx + 1)),
+                "video_path": video_path,
+                "question": str(row["question"]).strip(),
                 "frames": frames,
                 "image_paths": image_paths,
-                "center_frames": str(row.get("Center frame", "")).strip(),
-                "gt_answer": str(row.get("GT", "")).strip(),
-                "category": "",  # No category column in saksham CSV
+                "center_frames": str(row.get("center_frames", "")).strip(),
+                "gt_answer": str(row.get("gt_answer", "")).strip(),
+                "category": str(row.get("primary_category", "")).strip(),
             }
         )
 
@@ -370,7 +384,7 @@ def instructions_page():
         """
         ### Instructions
 
-        1. You will see a series of **questions**, each accompanied by a sequence of **10 images** (video frames).
+        1. You will see a series of **questions**, each accompanied by a sequence of **10–11 images** (video frames).
         2. For each image in the sequence, rate on a scale of **1 to 10** how well the question can be answered from that specific image:
             - **1** = The question **cannot be answered at all** from this image
             - **10** = The question can be answered with **very high certainty** from this image
@@ -437,7 +451,7 @@ def instructions_page():
 
         if not st.session_state.trials:
             st.error(
-                "No trials found. Please check list_questions_saksham.csv and the images folder."
+                "No trials found. Please check saksham.csv and the frames_saksham folder."
             )
             return
 
@@ -547,14 +561,17 @@ def experiment_page():
     if st.session_state.start_time is None:
         st.session_state.start_time = time.time()
 
-    # Display 10 images in a 5+5 grid with rating inputs
+    # Display every selected image in rows of up to five.
     st.markdown(
         "<p style='font-size: 12px; margin-bottom: 0px; margin-top: -10px;'><b>Rate each image (1–10):</b> 1 = cannot answer, 10 = very high certainty</p>",
         unsafe_allow_html=True,
     )
 
     ratings = [None] * len(trial["frames"])
-    row_layouts = [5, 5]
+    row_layouts = [
+        min(5, len(trial["frames"]) - start)
+        for start in range(0, len(trial["frames"]), 5)
+    ]
 
     idx_counter = 0
     for row_num, num_cols in enumerate(row_layouts):

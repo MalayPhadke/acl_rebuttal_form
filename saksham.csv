@@ -1,0 +1,101 @@
+datapoint_id,video_path,question,frames,center_frames,gt_answer,primary_category
+1,frames_saksham/00SL4/00SL4.mp4,Is the closet open,"[0042, 0069, 0077, 0095, 0104, 0106, 0107, 0108, 0110, 0111]",[0104],no,Semantic
+2,frames_saksham/00T1E/00T1E.mp4,Is the person lying on the bed,"[0072, 0074, 0076, 0079, 0083, 0086, 0087, 0088, 0099, 0107]",[0086],yes,Semantic
+3,frames_saksham/0RNRI/0RNRI.mp4,Is the person drinking from the cup,"[0511, 0527, 0545, 0558, 0561, 0565, 0570, 0576, 0579, 0590]",[0561],no,Semantic
+4,frames_saksham/0S9KN/0S9KN.mp4,Is the person sitting on the chair,"[0158, 0162, 0175, 0180, 0184, 0187, 0190, 0191, 0192, 0193]",[0180],yes,Semantic
+5,frames_saksham/0SFYS/0SFYS.mp4,Is the blue vacuum on the left of the lady,"[0427, 0433, 0434, 0436, 0438, 0440, 0442, 0443, 0444, 0445]",[0438],no,Compositional
+6,frames_saksham/1DGSW/1DGSW.mp4,Is the guy peaking to see the tv,"[0007, 0075, 0109, 0128, 0135, 0138, 0180, 0182, 0183, 0184, 0185]",[0138],no,Semantic
+7,frames_saksham/1DVV0/1DVV0.mp4,Is the person standing on his knees,"[0244, 0247, 0250, 0253, 0259, 0279, 0280, 0289, 0291, 0300]",[0279],yes,Semantic
+8,frames_saksham/4L6GZ/4L6GZ.mp4,Is the person's face visible,"[0387, 0390, 0393, 0398, 0469, 0473, 0481, 0487, 0489, 0490]",[0473],yes,Geometric
+9,frames_saksham/4L664/4L664.mp4,Is the man standing on the left of the dart board,"[0026, 0029, 0032, 0035, 0040, 0042, 0043, 0046, 0047, 0050]",[0043],yes,Geometric
+10,frames_saksham/4LNPN/4LNPN.mp4,Is the person holding the tumbler,"[0339, 0363, 0365, 0375, 0378, 0380, 0381, 0382, 0383, 0384]",[0363],yes,Semantic
+11,frames_saksham/4N5P9/4N5P9.mp4,Is the guy looking towards the camera,"[0767, 0770, 0773, 0808, 0811, 0821, 0824, 0825, 0826, 0827]",[0811],yes,Semantic
+12,frames_saksham/4N06O/4N06O.mp4,Is the man lying down on floor,"[0001, 0105, 0120, 0130, 0135, 0140, 0145, 0150, 0155, 0160]",[0130],yes,Semantic
+13,frames_saksham/4RLYA/4RLYA.mp4,Is there a utensile in the sink,"[0013, 0020, 0028, 0030, 0041, 0043, 0045, 0047, 0050, 0052]",[0028],no,Geometric
+14,frames_saksham/4VX01/4VX01.mp4,Is the door closed,"[0788, 0801, 0805, 0809, 0832, 0850, 0852, 0854, 0856, 0858]",[0850],no,Semantic
+15,frames_saksham/4WX0H/4WX0H.mp4,Is the head in the bag,"[0439, 0443, 0446, 0450, 0453, 0455, 0457, 0459, 0461, 0463]",[0446],no,Geometric
+16,frames_saksham/4WYQ5/4WYQ5.mp4,Is the man on the right of the tv,"[0001, 0010, 0030, 0070, 0075, 0080, 0090, 0100, 0106, 0112]",[0075],no,Geometric
+17,frames_saksham/4YL07/4YL07.mp4,Is the man looking at the photo on the wall,"[0623, 0628, 0636, 0653, 0654, 0659, 0671, 0675, 0678, 0680]",[0659],no,Semantic
+18,frames_saksham/4ZSAR/4ZSAR.mp4,Is the man sitting on the chair,"[0973, 1032, 1069, 1076, 1085, 1094, 1098, 1100, 1110, 1115]",[1094],no,Semantic
+19,frames_saksham/5B8M5/5B8M5.mp4,Is the lid of washing machine open,"[0405, 0409, 0411, 0413, 0415, 0417, 0419, 0421, 0423, 0425]",[0411],no,Semantic
+20,frames_saksham/5MF9Y/5MF9Y.mp4,Is the woman on the left of the tv,"[0106, 0110, 0116, 0119, 0121, 0123, 0125, 0127, 0129, 0131]",[0119],no,Geometric
+21,frames_saksham/5T607/5T607.mp4,Is the door closed,"[0999, 1004, 1008, 1010, 1012, 1014, 1016, 1018, 1020, 1022]",[1008],yes,Semantic
+22,frames_saksham/5TG5P/5TG5P.mp4,Are there exactly 1 person in the frame,"[0010, 0020, 0030, 0040, 0052, 0053, 0055, 0057, 0059, 0061]",[0052],"[no, no]",Geometric
+23,frames_saksham/5TKIB/5TKIB.mp4,Is there an orange bat in the frame,"[0413, 0416, 0423, 0424, 0430, 0432, 0434, 0440, 0445, 0466]",[0423],no,Compositional
+24,frames_saksham/5TNRZ/5TNRZ.mp4,Is there a person in the frame,"[0109, 0112, 0115, 0139, 0141, 0143, 0145, 0147, 0149, 0151]",[0141],yes,Geometric
+25,frames_saksham/5TYXL/5TYXL.mp4,Is the tumbler the boy is holding above the box,"[0185, 0187, 0189, 0191, 0193, 0195, 0197, 0199, 0201, 0203]",[0191],yes,Compositional
+26,frames_saksham/5U1IT/5U1IT.mp4,Is the man on the left of the blue tub,"[0003, 0007, 0079, 0106, 0224, 0233, 0250, 0255, 0260, 0265]",[0233],yes,Compositional
+27,frames_saksham/5U92L/5U92L.mp4,Is the gray shirt on the floor,"[0098, 0120, 0125, 0130, 0135, 0140, 0145, 0147, 0149, 0153]",[0149],no,Compositional
+28,frames_saksham/5UNMN/5UNMN.mp4,Is the man facing the door,"[0032, 0067, 0098, 0105, 0110, 0115, 0120, 0125, 0130, 0135]",[0105],yes,Semantic
+29,frames_saksham/5US4Z/5US4Z.mp4,Is the man's hand above his head,"[0277, 0281, 0285, 0299, 0301, 0303, 0305, 0307, 0309, 0311]",[0299],no,Geometric
+30,frames_saksham/5UUEP/5UUEP.mp4,Is the cup near the empty container compared to the man,"[0232, 0236, 0245, 0261, 0276, 0274, 0278, 0285, 0289, 0290]",[0285],yes,Compositional
+31,frames_saksham/5V5EL/5V5EL.mp4,Is the woman holding the blue bag,"[0272, 0276, 0284, 0285, 0287, 0289, 0291, 0293, 0295, 0297]",[0285],no,Compositional
+32,frames_saksham/5V8OI/5V8OI.mp4,Is the left cupboard opened,"[0591, 0594, 0598, 0603, 0608, 0629, 0632, 0647, 0650, 0653]",[0647],yes,Semantic
+33,frames_saksham/5VGLI/5VGLI.mp4,Is the woman closer to the utensil than the fridge,"[0190, 0243, 0410, 0471, 0485, 0490, 0505, 0510, 0515, 0520]",[0485],yes,Compositional
+34,frames_saksham/5VS8B/5VS8B.mp4,Has the man crossed the door,"[0318, 0328, 0339, 0455, 0518, 0534, 0556, 0578, 0590, 0610]",[0556],no,Semantic
+35,frames_saksham/5VUT9/5VUT9.mp4,Is the person pouring in the red cup,"[0593, 0597, 0601, 0615, 0623, 0628, 0630, 0632, 0634, 0636]",[0623],no,Compositional
+36,frames_saksham/5W0OC/5W0OC.mp4,Is the red cloth folded,"[0420, 0423, 0426, 0433, 0435, 0437, 0439, 0441, 0443, 0445]",[0435],no,Semantic
+37,frames_saksham/5W1Z7/5W1Z7.mp4,Is the cup in the box,"[0208, 0210, 0212, 0214, 0216, 0218, 0220, 0222, 0224, 0225]",[0216],no,Geometric
+38,frames_saksham/05WY6/05WY6.mp4,Is the dog on the couch,"[0651, 0654, 0658, 0678, 0680, 0682, 0684, 0686, 0688, 0690]",[0680],no,Geometric
+39,frames_saksham/5XCJ6/5XCJ6.mp4,Is the man sitting on the sofa,"[0363, 0370, 0377, 0719, 0723, 0732, 0778, 0789, 0798, 0805]",[0798],yes,Semantic
+40,frames_saksham/5YAN1/5YAN1.mp4,Is the person closer to camera than the pillow on the floor,"[0003, 0007, 0010, 0013, 0025, 0042, 0043, 0045, 0047, 0049]",[0025],yes,Compositional
+41,frames_saksham/5ZGRN/5ZGRN.mp4,Is the container the man is holding in the cabinet,"[0037, 0040, 0043, 0046, 0066, 0070, 0075, 0080, 0085, 0090]",[0070],no,Compositional
+42,frames_saksham/6ALEL/6ALEL.mp4,Is the woman wearing that red jacket,"[0015, 0029, 0040, 0054, 0117, 0131, 0223, 0237, 0241, 0245, 0250]",[0223],no,Semantic
+43,frames_saksham/6B328/6B328.mp4,Is the person's head on pillow,"[0799, 0802, 0805, 0810, 0815, 0819, 0825, 0830, 0835, 0840]",[0819],no,Geometric
+44,frames_saksham/6BXG4/6BXG4.mp4,Is the man drinking from the cup,"[0327, 0328, 0330, 0332, 0334, 0336, 0338, 0340, 0344, 0350]",[0350],no,Semantic
+45,frames_saksham/6EHR7/6EHR7.mp4,Is she lying on the floor,"[0230, 0242, 0246, 0250, 0254, 0284, 0310, 0314, 0318, 0322]",[0284],no,Semantic
+46,frames_saksham/6ERRL/6ERRL.mp4,IS the person sitting instead of standing,"[0277, 0286, 0292, 0301, 0305, 0312, 0315, 0318, 0320, 0322]",[0301],no,Semantic
+47,frames_saksham/6FASX/6FASX.mp4,Is the person standing on the chair,"[0291, 0303, 0316, 0675, 0679, 0683, 0687, 0691, 0695, 0699]",[0679],yes,Semantic
+48,frames_saksham/6FJBD/6FJBD.mp4,Is the laptop closed,"[0160, 0165, 0170, 0175, 0180, 0185, 0190, 0195, 0200, 0205]",[0180],no,Semantic
+49,frames_saksham/6H4D1/6H4D1.mp4,Is thhe man sitting on the floor,"[0023, 0036, 0044, 0050, 0068, 0102, 0105, 0110, 0115, 0120]",[0102],no,Semantic
+50,frames_saksham/6HHCU/6HHCU.mp4,Is the man standing on the stairs,"[0001, 0003, 0005, 0007, 0009, 0011, 0013, 0015, 0017, 0019]",[0001],no,Semantic
+51,frames_saksham/6J00B/6J00B.mp4,Is the laptop on table,"[0367, 0370, 0375, 0378, 0396, 0400, 0405, 0410, 0415, 0420]",[0396],no,Geometric
+52,frames_saksham/6KI0S/6KI0S.mp4,Is the man standing on the floor,"[0656, 0664, 0672, 0678, 0692, 0757, 0760, 0763, 0776, 0789]",[0757],no,Semantic
+53,frames_saksham/06L9P/06L9P.mp4,Is the man on the left of the plate on table,"[0521, 0526, 0538, 0549, 0640, 0645, 0659, 0660, 0661, 0662]",[0645],yes,Geometric
+54,frames_saksham/6N4BD/6N4BD.mp4,Is the man looking towards the yellow polythene,"[0350, 0356, 0362, 0364, 0367, 0370, 0373, 0376, 0379, 0382]",[0362],no,Semantic
+55,frames_saksham/6OQYV/6OQYV.mp4,Is the washing machine lid closed,"[0253, 0256, 0261, 0264, 0267, 0270, 0274, 0277, 0314, 0318]",[0314],no,Semantic
+56,frames_saksham/6OROW/6OROW.mp4,Is the tumbler on the table,"[0641, 0643, 0647, 0649, 0652, 0655, 0658, 0661, 0664, 0667]",[0652],yes,Geometric
+57,frames_saksham/6QW3Y/6QW3Y.mp4,Is the green object lying on the floor,"[0005, 0024, 0027, 0030, 0033, 0039, 0042, 0045, 0048, 0051]",[0039],no,Geometric
+58,frames_saksham/6R7QY/6R7QY.mp4,Is the man standing on the chair,"[0001, 0005, 0015, 0025, 0030, 0038, 0047, 0048, 0049, 0050]",[0047],no,Semantic
+59,frames_saksham/06R14/06R14.mp4,Is the person's head touching the floor,"[0283, 0289, 0293, 0300, 0305, 0318, 0360, 0365, 0370, 0375]",[0360],yes,Geometric
+60,frames_saksham/6TVXT/6TVXT.mp4,Is a green glass bottle visible on the table,"[0558, 0561, 0569, 0575, 0580, 0585, 0586, 0589, 0591, 0592]",[0585],yes,Geometric
+61,frames_saksham/6U8AV/6U8AV.mp4,Are there 2 faces in the frame,"[0001, 0003, 0005, 0007, 0009, 0010, 0011, 0012, 0014, 0015]",[0010],yes,Geometric
+62,frames_saksham/6U47G/6U47G.mp4,Is the person sitting,"[0604, 0606, 0608, 0610, 0612, 0617, 0623, 0625, 0627, 0635]",[0617],no,Semantic
+63,frames_saksham/6U082/6U082.mp4,Is the red stick on the left of the man's face,"[0520, 0523, 0547, 0550, 0553, 0560, 0564, 0569, 0572, 0575]",[0564],yes,Compositional
+64,frames_saksham/6UDGS/6UDGS.mp4,Is the door closed,"[0571, 0573, 0575, 0577, 0580, 0582, 0586, 0594, 0598, 0604]",[0594],no,Semantic
+65,frames_saksham/6VT4U/6VT4U.mp4,Is the red cloth on the floor,"[0707, 0709, 0714, 0723, 0743, 0750, 0775, 0780, 0785, 0790]",[0750],no,Compositional
+66,frames_saksham/6VUKN/6VUKN.mp4,Is the person out of the room,"[0764, 0770, 0775, 0780, 0785, 0793, 0803, 0815, 0826, 0835]",[0815],no,Semantic
+67,frames_saksham/6ZSB2/6ZSB2.mp4,Is the person looking for something in the polythene bag,"[0054, 0060, 0065, 0070, 0072, 0073, 0078, 0080, 0082, 0084]",[0073],no,Semantic
+68,frames_saksham/6ZWSU/6ZWSU.mp4,Is the cat on the left of the woman,"[0397, 0399, 0401, 0420, 0421, 0424, 0441, 0447, 0450, 0453]",[0424],no,Geometric
+69,frames_saksham/7AB3X/7AB3X.mp4,Is the person lying on the bed instead of sitting,"[0006, 0011, 0023, 0031, 0032, 0035, 0038, 0042, 0045, 0048]",[0038],yes,Semantic
+70,frames_saksham/7ARCD/7ARCD.mp4,Is the yellow cup on the table,"[0028, 0031, 0039, 0044, 0046, 0048, 0050, 0052, 0054, 0056]",[0044],no,Compositional
+71,frames_saksham/07AWM/07AWM.mp4,Is the phone on the left of the person's head,"[0058, 0060, 0062, 0064, 0066, 0070, 0107, 0110, 0113, 0116]",[0070],yes,Geometric
+72,frames_saksham/7B6FP/7B6FP.mp4,Is the person standing,"[0100, 0105, 0110, 0115, 0116, 0117, 0120, 0125, 0130, 0135]",[0116],no,Semantic
+73,frames_saksham/7BQ1O/7BQ1O.mp4,Is the table in the room,"[0532, 0538, 0540, 0542, 0547, 0576, 0608, 0610, 0612, 0614]",[0608],yes,Geometric
+74,frames_saksham/7CCM1/7CCM1.mp4,Is the person closer to the camera than the chair,"[0180, 0187, 0194, 0200, 0213, 0216, 0219, 0222, 0225, 0228]",[0213],no,Geometric
+75,frames_saksham/7CXYB/7CXYB.mp4,Is the door of fidge closed,"[0445, 0449, 0453, 0457, 0464, 0470, 0475, 0480, 0485, 0490]",[0470],no,Semantic
+76,frames_saksham/7EYIL/7EYIL.mp4,Is the door of the fridge opened,"[0440, 0445, 0446, 0447, 0448, 0449, 0450, 0451, 0452, 0453]",[0448],no,Semantic
+77,frames_saksham/7FTZR/7FTZR.mp4,Is the person holding the polythene,"[0514, 0524, 0534, 0544, 0554, 0564, 0574, 0584, 0594, 0604]",[0554],no,Semantic
+78,frames_saksham/7G6F0/7G6F0.mp4,Is the person standing,"[0876, 0888, 0892, 0896, 0899, 0902, 0905, 0908, 0911, 0914]",[0896],no,Semantic
+79,frames_saksham/7K2CS/7K2CS.mp4,Is the person in the room,"[0001, 0003, 0004, 0008, 0011, 0014, 0017, 0020, 0023, 0026]",[0003],no,Geometric
+80,frames_saksham/07TCM/07TCM.mp4,Is the person wearing the purple jacket,"[0452, 0463, 0484, 0571, 0585, 0595, 0605, 0615, 0625, 0635]",[0585],no,Semantic
+81,frames_saksham/8ECJ1/8ECJ1.mp4,Is the man drinking from the green cup,"[0389, 0391, 0393, 0396, 0404, 0405, 0407, 0409, 0411, 0413]",[0405],no,Semantic
+82,frames_saksham/8EKYA/8EKYA.mp4,Is the door open,"[0001, 0007, 0014, 0023, 0035, 0046, 0050, 0054, 0058, 0062]",[0046],no,Semantic
+83,frames_saksham/8ENLP/8ENLP.mp4,Do you see any human head in this frame,"[0284, 0288, 0294, 0298, 0301, 0302, 0304, 0306, 0308, 0310]",[0302],yes,Geometric
+84,frames_saksham/8J5YF/8J5YF.mp4,Is the man sitting on the table,"[0094, 0096, 0098, 0102, 0105, 0124, 0134, 0144, 0154, 0164]",[0102],no,Semantic
+85,frames_saksham/8NS1G/8NS1G.mp4,Is the person facing the camera direction,"[0830, 0840, 0850, 0860, 0870, 0880, 0890, 0900, 0910, 0920]",[0870],yes,Semantic
+86,frames_saksham/8NW4J/8NW4J.mp4,Is the person sitting on the bed,"[0142, 0154, 0166, 0180, 0198, 0207, 0217, 0223, 0229, 0235]",[0223],yes,Semantic
+87,frames_saksham/8VNSV/8VNSV.mp4,Is she standing,"[1052, 1056, 1061, 1064, 1065, 1066, 1067, 1078, 1088, 1094]",[1064],no,Semantic
+88,frames_saksham/W1VO2/W1VO2.mp4,Is the man drinking from the gray mug,"[0406, 0408, 0411, 0415, 0418, 0420, 0422, 0424, 0426, 0428]",[0415],no,Semantic
+89,frames_saksham/OBTP8/OBTP8.mp4,Is the man touching the yellow box,"[0396, 0398, 0400, 0402, 0404, 0406, 0408, 0410, 0412, 0414]",[0408],no,Semantic
+90,frames_saksham/V25IB/V25IB.mp4,Is the man looking towards his right,"[0251, 0261, 0271, 0286, 0291, 0301, 0311, 0321, 0331, 0341]",[0286],no,Semantic
+91,frames_saksham/O3Y57/O3Y57.mp4,Is the person holding the backpack in front of their face,"[0418, 0420, 0422, 0424, 0426, 0428, 0430, 0432, 0434, 0436]",[0428],no,Compositional
+92,frames_saksham/001YG/001YG.mp4,Is the man holding the bag,"[0321, 0333, 0340, 0344, 0348, 0352, 0356, 0360, 0364, 0368]",[0344],no,Semantic
+93,frames_saksham/004QE/004QE.mp4,Is the woman drinking from the striped mug,"[0482, 0486, 0490, 0494, 0497, 0500, 0503, 0506, 0509, 0512]",[0497],no,Semantic
+94,frames_saksham/00607/00607.mp4,Is the broom on the left of the man,"[0242, 0243, 0253, 0255, 0257, 0259, 0261, 0263, 0265, 0267]",[0255],yes,Geometric
+95,frames_saksham/02SK4/02SK4.mp4,Is the person seated,"[0207, 0220, 0247, 0263, 0271, 0311, 0329, 0339, 0349, 0359]",[0339],no,Semantic
+96,frames_saksham/UXEL9/UXEL9.mp4,Is the box closer to the camera than the gate,"[0231, 0236, 0254, 0256, 0268, 0270, 0272, 0274, 0276, 0278]",[0256],no,Geometric
+97,frames_saksham/UYJVE/UYJVE.mp4,Is the laptop open,"[0482, 0486, 0489, 0492, 0495, 0499, 0501, 0504, 0507, 0510]",[0499],yes,Semantic
+98,frames_saksham/UZ2AL/UZ2AL.mp4,Is the person bitting the orange carrot,"[0088, 0090, 0092, 0094, 0096, 0098, 0100, 0102, 0104, 0106]",[0098],no,Semantic
+99,frames_saksham/0A8CF/0A8CF.mp4,Is the kid touching the glass,"[0796, 0798, 0800, 0802, 0804, 0806, 0808, 0810, 0812, 0814]",[0804],no,Semantic
+100,frames_saksham/0A8ZT/0A8ZT.mp4,Is the person looking downward,"[0190, 0194, 0198, 0202, 0206, 0210, 0214, 0218, 0222, 0226]",[0214],yes,Semantic
