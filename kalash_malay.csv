@@ -1,0 +1,101 @@
+datapoint_id,source,video_path,question,frames,center_frames,gt_answer,primary_category
+1,kalash,frames_kalash_malay/2809330695/2809330695.mp4,Has the Child opened his mouth?,"[0430,0440,0450,0470,0480,0490,0524,0530,0535,0537]",[0524],no,
+2,kalash,frames_kalash_malay/2898694467/2898694467.mp4,Are there 3 people in the forest?,"[0095,0105,0115,0125,0135,0150,0259,0272,0289,0295]",[0259],no,
+3,kalash,frames_kalash_malay/3064312633/3064312633.mp4,Is there a turtle in the pool,"[0500,0520,0530,0560,0580,0920,0950,0960,0970,0980]",[0920],yes,
+4,kalash,frames_kalash_malay/3141532836/3141532836.mp4,Is the woman in white dress looking at the women in green dress?,"[0350,0360,0370,0380,0390,0498,0550,0560,0570,0580]",[0498],no,
+5,kalash,frames_kalash_malay/3217749642/3217749642.mp4,Are there 2 white dogs on the sofa?,"[2075,2076,2077,2078,2079,2080,2100,2167,2168,2169]",[2100],yes,
+6,kalash,frames_kalash_malay/3360208610/3360208610.mp4,Is the boy in red dress holding the basketball?,"[0100,0110,0120,0130,0140,0150,0160,0170,0175,0180]",[0170],no,
+7,kalash,frames_kalash_malay/3396663702/3396663702.mp4,Is the baby boys head on the brown blanket?,"[0330,0335,0340,0345,0350,0355,0360,0370,0380,0390]",[0360],no,
+8,kalash,frames_kalash_malay/3453984843/3453984843.mp4,Is the man riding a bicycle?,"[0320,0325,0330,0335,0340,0345,0350,0505,0610,0620]",[0505],no,
+9,kalash,frames_kalash_malay/3739319683/3739319683.mp4,Are there 2 people acting on the stage?,"[2215,2245,2275,2300,2335,2370,2418,2460,2470,2480]",[2418],yes,
+10,kalash,frames_kalash_malay/3868250773/3868250773.mp4,Are there 2 women in the frame?,"[1100,1110,1120,1135,1160,1245,1275,1280,1285,1290]",[1245],yes,
+11,kalash,frames_kalash_malay/3968449268/3968449268.mp4,Is the clay cup attached to the potters clay?,"[0435,0440,0445,0450,0480,0508,0509,0511,0515,0565]",[0508],yes,
+12,kalash,frames_kalash_malay/4063352694/4063352694.mp4,Is the kid closer to the aquarium than the woman holding the teddy?,"[0290,0295,0300,0305,0310,0320,0330,0340,0350,0360]",[0330],yes,
+13,kalash,frames_kalash_malay/4336614054/4336614054.mp4,Is the person siting on a green sledge?,"[0120,0130,0140,0150,0160,0305,0835,0845,0855,0870]",[0305],yes,
+14,kalash,frames_kalash_malay/4553916256/4553916256.mp4,Is the baby holding the purple mesh ball with both hands?,"[0972,0973,0974,0980,1040,1043,1045,1047,1080,1083]",[0980],yes,
+15,kalash,frames_kalash_malay/4704253964/4704253964.mp4,Are there 5 people in the frame?,"[0440,0445,0450,0455,0460,0554,0560,0605,0610,0620]",[0554],no,
+16,kalash,frames_kalash_malay/4747203885/4747203885.mp4,Are there 2 red dressed women holding champagne bottles?,"[1270,1280,1290,1300,1321,1360,1380,1400,1420,1460]",[1321],yes,
+17,kalash,frames_kalash_malay/5319843668/5319843668.mp4,Are there 2 kids inside the box?,"[0840,0845,0850,0860,0865,0870,1000,1050,1060,1070]",[1000],yes,
+18,kalash,frames_kalash_malay/5471598600/5471598600.mp4,Are there 2 people walking in the park,"[0050,0060,0070,0080,0090,0100,0160,0240,0260,0280]",[0160],yes,
+19,kalash,frames_kalash_malay/5484959983/5484959983.mp4,Has the persons head entered the water?,"[0435,0437,0439,0441,0449,0452,0455,0456,0457,0459]",[0449],no,
+20,kalash,frames_kalash_malay/5600915537/5600915537.mp4,Is the skier standing on the snow?,"[1110,1115,1120,1125,1130,1135,1140,1153,1160,1165]",[1153],yes,
+21,kalash,frames_kalash_malay/5882598575/5882598575.mp4,Are both legs of the man touching the ground?,"[0580,0585,0590,0595,0600,0655,0660,0663,0666,0670]",[0655],yes,
+22,kalash,frames_kalash_malay/6194807654/6194807654.mp4,Is the woman on the left of the man?,"[1080,1085,1090,1095,1100,1110,1120,1130,1135,1140]",[1120],yes,
+23,kalash,frames_kalash_malay/6255114096/6255114096.mp4,Is the brown dog holding the green bone?,"[0040,0050,0136,0220,0232,0234,0236,0238,0240,0242]",[0136],yes,
+24,kalash,frames_kalash_malay/6903773975/6903773975.mp4,Is the dogs feet touching the sea water?,"[0140,0150,0160,0170,0180,0200,0215,0230,0240,0250]",[0215],no,
+25,kalash,frames_kalash_malay/7251069966/7251069966.mp4,Is the ball in contact with the black dog?,"[0190,0195,0200,0205,0210,0211,0220,0230,0240,0250]",[0211],no,
+26,kalash,frames_kalash_malay/7973772218/7973772218.mp4,Is the red dressed girls left leg touching the ground?,"[0142,0150,0160,0170,0220,0270,0275,0280,0285,0290]",[0220],no,
+27,kalash,frames_kalash_malay/8207664482/8207664482.mp4,Is the baby touching the giraffe toy?,"[1400,1402,1404,1406,1407,1409,1442,1451,1453,1459]",[1442],no,
+28,kalash,frames_kalash_malay/11029491054/11029491054.mp4,Is the baby crawling?,"[0560,0565,0570,0575,0580,0585,0595,0625,0635,0640]",[0595],no,
+29,kalash,frames_kalash_malay/11584732354/11584732354.mp4,Has the dog jumped through the loop?,"[2350,2352,2354,2356,2358,2361,2363,2365,2367,2370]",[2361],no,
+30,kalash,frames_kalash_malay/11645942265/11645942265.mp4,Is the kid holidng the twig with both hands?,"[0460,0462,0464,0465,0467,0470,0471,0472,0473,0474]",[0467],no,
+31,kalash,frames_kalash_malay/3594663176/3594663176.mp4,Is the black dog on top of the brown dog?,"[0190,0195,0200,0205,0210,0215,0230,0380,0385,0390]",[0230],no,
+32,kalash,frames_kalash_malay/4389577717/4389577717.mp4,Are there 2 people on the stage?,"[0405,0408,0412,0416,0420,0427,0440,0443,0446,0450]",[0427],yes,
+33,kalash,frames_kalash_malay/5264432151/5264432151.mp4,Is the toddler holding the hands of the baby?,"[0090,0095,0100,0105,0110,0115,0117,0122,0124,0127]",[0117],no,
+34,kalash,frames_kalash_malay/5477272417/5477272417.mp4,Is the woman squatting on the ground?,"[0430,0435,0440,0445,0450,0453,0460,0463,0467,0470]",[0453],no,
+35,kalash,frames_kalash_malay/5566028125/5566028125.mp4,Is the baby sitting on the swing seat?,"[0180,0183,0186,0190,0193,0195,0198,0235,0240,0245]",[0198],no,
+36,kalash,frames_kalash_malay/5623068492/5623068492.mp4,Have the red gloves hit the black mitts?,"[0338,0339,0340,0342,0343,0344,0345,0346,0347,0348]",[0342],yes,
+37,kalash,frames_kalash_malay/10864382765/10864382765.mp4,Is the girl holding the basketball?,"[0115,0120,0125,0130,0135,0140,0141,0142,0143,0144]",[0140],yes,
+38,kalash,frames_kalash_malay/11219960546/11219960546.mp4,Are the kids hugging each other?,"[0110,0115,0120,0125,0130,0145,0146,0147,0148,0149]",[0130],no,
+39,kalash,frames_kalash_malay/12566336114/12566336114.mp4,Is the girl on the chair?,"[0470,0475,0480,0485,0490,0495,0855,0860,0865,0870]",[0495],no,
+40,kalash,frames_kalash_malay/3828379201/3828379201.mp4,Are there 3 kids in the frame?,"[0400,0405,0410,0415,0420,0448,0565,0570,0575,0580]",[0448],yes,
+41,kalash,frames_kalash_malay/4040727856/4040727856.mp4,Has the robot hit the blue ball?,"[0035,0040,0045,0050,0055,0063,0065,0068,0072,0075]",[0063],no,
+42,kalash,frames_kalash_malay/4097448142/4097448142.mp4,Is swing closer to the dog than the man?,"[0140,0145,0150,0155,0160,0165,0170,0175,0180,0185]",[0165],no,
+43,kalash,frames_kalash_malay/4400119620/4400119620.mp4,Has the woman crossed the doorway?,"[0040,0045,0050,0055,0060,0075,0090.0095,0100,0105]",[0075],no,
+44,kalash,frames_kalash_malay/5708481466/5708481466.mp4,Is the kid driving a toy tractor?,"[0655,0660,0665,0670,0680,0710,0730,0735,0740,0745]",[0710],yes,
+45,kalash,frames_kalash_malay/5908005716/5908005716.mp4,Are there 2 players in the boxing ring?,"[0300,0305,0310,0315,0320,0325,0390,0420,0425,0430]",[0390],yes,
+46,kalash,frames_kalash_malay/6787210378/6787210378.mp4,Is the lower body of the gynast above the bars?,"[0001,0003,0005,0007,0009,0011,0012,0013,0014,0015]",[0009],no,
+47,kalash,frames_kalash_malay/13179487404/13179487404.mp4,Is the balloon behind the boy?,"[0290,0295,0300,0305,0310,0315,0340,0350,0360,0370]",[0340],no,
+48,kalash,frames_kalash_malay/3264772244/3264772244.mp4,Is the shadow of the girl (who is cycling) behind her?,"[0000,0010,0015,0020,0030,0045,0055,0060,0065,0070]",[0045],no,
+49,kalash,frames_kalash_malay/4978322198/4978322198.mp4,Has the front wheel of the bus crossed the zebra crossing?,"[0200,0205,0210,0215,0220,0225,0235,0240,0245,0250]",[0225],no,
+50,kalash,frames_kalash_malay/7975501292/7975501292.mp4,Is the pug puppy to the right of the human being?,"[0020,0025,0030,0035,0040,0060,0075,0080,0085,0090]",[0060],no,
+51,malay,frames_kalash_malay/video_5/video_5.mp4,is the green tennis ball closer to the book than the orbit wrapper,"[0160, 0165, 0170, 0193, 0195, 0200, 0203, 0205, 0210, 0215]",[0200],no,Compositional
+52,malay,frames_kalash_malay/video_9/video_9.mp4,is there a knife beside the iron behind the red tshirt,"[0140, 0145, 0150, 0160, 0166, 0169, 0170, 0182, 0185, 0190]",[0169],yes,Compositional
+53,malay,frames_kalash_malay/video_12/video_12.mp4,is the woman holding a green paper triangle,"[0140, 0142, 0144, 0160, 0165, 0170, 0183, 0186, 0195, 0200]",[0183],yes,Compositional
+54,malay,frames_kalash_malay/video_18/video_18.mp4,are there two pens on the table one green and one black coloured,"[0300, 0320, 0325, 0330, 0335, 0405, 0410, 0415, 0420, 0425]",[0335],yes,Compositional
+55,malay,frames_kalash_malay/video_20/video_20.mp4,does her tshirt have GBG philipennes written on it,"[0070, 0080, 0090, 0100, 0104, 0105, 0110, 0112, 0113, 0115]",[0105],yes,Semantic
+56,malay,frames_kalash_malay/video_30/video_30.mp4,is the pen rolling down exactly in the middle of the book,"[0760, 0765, 0770, 0775, 0780, 0790, 0795, 0796, 0797, 0800]",[0790],no,Compositional
+57,malay,frames_kalash_malay/video_33/video_33.mp4,is there a coin on the table,"[0080, 0085, 0110, 0113, 0115, 0120, 0121, 0123, 0125, 0126]",[0115],yes,Geometric
+58,malay,frames_kalash_malay/video_48/video_48.mp4,does the page have two triangles drawn on it,"[0790, 0795, 0810, 0820, 0828, 0835, 0840, 0841, 0842, 0843]",[0828],no,Geometric
+59,malay,frames_kalash_malay/video_61/video_61.mp4,is there a white container along with the three orange glasses,"[0130, 0135, 0140, 0145, 0165, 0170, 0171, 0172, 0173, 0174]",[0165],no,Compositional
+60,malay,frames_kalash_malay/video_64/video_64.mp4,are there three hearts tattooed on the left arm of the person,"[0160, 0161, 0162, 0163, 0165, 0175, 0195, 0196, 0197, 0198]",[0175],yes,Compositional
+61,malay,frames_kalash_malay/video_69/video_69.mp4,is there an onion and a white paste container in the frame,"[0350, 0360, 0362, 0363, 0366, 0369, 0370, 0371, 0372, 0373]",[0366],yes,Compositional
+62,malay,frames_kalash_malay/video_75/video_75.mp4,does the first container have a packet with 1g written on it,"[0200, 0202, 0203, 0204, 0206, 0208, 0209, 0210, 0211, 0212]",[0206],yes,Compositional
+63,malay,frames_kalash_malay/video_77/video_77.mp4,is there a fruit behind the rolling orange,"[0075, 0076, 0077, 0078, 0080, 0085, 0095, 0096, 0097, 0098]",[0085],yes,Geometric
+64,malay,frames_kalash_malay/video_80/video_80.mp4,is the woman wearing a necklace with a heart pendant on it,"[0001, 0005, 0006, 0007, 0009, 0011, 0012, 0013, 0014, 0015]",[0009],yes,Compositional
+65,malay,frames_kalash_malay/video_86/video_86.mp4,"is there ""Vitergyl C"" written on the orange container","[0180, 0185, 0187, 0188, 0192, 0194, 0195, 0196, 0197, 0198]",[0192],yes,Semantic
+66,malay,frames_kalash_malay/video_94/video_94.mp4,is there tomato on the bread,"[0530, 0535, 0540, 0560, 0565, 0625, 0630, 0631, 0632, 0633]",[0625],no,Geometric
+67,malay,frames_kalash_malay/video_101/video_101.mp4,are there two folded socks on the table,"[0215, 0216, 0217, 0218, 0260, 0475, 0478, 0480, 0481, 0482]",[0478],yes,Geometric
+68,malay,frames_kalash_malay/video_106/video_106.mp4,is there a bald guy behing the books,"[0160, 0161, 0162, 0163, 0165, 0177, 0180, 0181, 0182, 0183]",[0165],no,Compositional
+69,malay,frames_kalash_malay/video_108/video_108.mp4,"is the fruit closer to the container with ""magnetic colour cubes"" written on it than the pepper container","[0010, 0015, 0020, 0060, 0065, 0069, 0075, 0077, 0080, 0090]",[0069],yes,Compositional
+70,malay,frames_kalash_malay/video_112/video_112.mp4,is the blue mug closer to left slipper than the right slipper,"[0001, 0005, 0010, 0020, 0185, 0190, 0195, 0200, 0210, 0215]","[0185, 0190]",no,Compositional
+71,malay,frames_kalash_malay/video_118/video_118.mp4,"Does the table have the letters ""C"" and ""G""?","[0205, 0207, 0209, 0219, 0230, 0235, 0240, 0241, 0242, 0243]",[0230],no,Compositional
+72,malay,frames_kalash_malay/video_132/video_132.mp4,is the clock on her shirt behind the blue cups showing nearly 10 minutes past 10,"[0060, 0061, 0062, 0063, 0064, 0065, 0066, 0067, 0068, 0069]",[0064],yes,Compositional
+73,malay,frames_kalash_malay/video_141/video_141.mp4,does the white cup have a face with red lips on it,"[0170, 0171, 0172, 0173, 0180, 0190, 0220, 0250, 0251, 0252]","[0180, 0190]",yes,Compositional
+74,malay,frames_kalash_malay/video_161/video_161.mp4,"Is the letter ""M"" below the letters ""E"" and ""I""","[0660, 0663, 0670, 0680, 0765, 0770, 0780, 0781, 0782, 0783]",[0765],yes,Compositional
+75,malay,frames_kalash_malay/video_174/video_174.mp4,Is there a fork on top of an orange,"[0010, 0015, 0020, 0175, 0310, 0560, 0780, 0781, 0782, 0783]",[0175],yes,Geometric
+76,malay,frames_kalash_malay/video_187/video_187.mp4,is there a banana behind the fruit and the cup,"[0145, 0150, 0160, 0165, 0170, 0200, 0210, 0220, 0225, 0230]",[0165],yes,Compositional
+77,malay,frames_kalash_malay/video_191/video_191.mp4,is there a spoon near door,"[0015, 0090, 0100, 0110, 0475, 0490, 0500, 0505, 0508, 0510]",[0490],yes,Geometric
+78,malay,frames_kalash_malay/video_197/video_197.mp4,is there a red mug on the sofa,"[0050, 0070, 0080, 0280, 0290, 0300, 0301, 0302, 0303, 0304]",[0290],yes,Compositional
+79,malay,frames_kalash_malay/video_200/video_200.mp4,"is the word ""RAT"" being spelt out by the letters on the table","[0001, 0050, 0090, 0100, 0110, 0130, 0150, 0151, 0152, 0153]",[0110],yes,Compositional
+80,malay,frames_kalash_malay/video_222/video_222.mp4,is there a white bottle behind the lady,"[0600, 0601, 0602, 0603, 0605, 0606, 0607, 0608, 0609, 0610]","[0605, 0606]","[no, no]",Compositional
+81,malay,frames_kalash_malay/video_237/video_237.mp4,is there a pencil behind the left white shoe,"[0240, 0241, 0242, 0243, 0244, 0260, 0261, 0262, 0266, 0269]",[0260],yes,Compositional
+82,malay,frames_kalash_malay/video_287/video_287.mp4,is the tip of the sword and the pen closer to the center orange glass,"[0373, 0374, 0375, 0376, 0380, 0404, 0420, 0421, 0422, 0423]",[0404],yes,Compositional
+83,malay,frames_kalash_malay/video_293/video_293.mp4,is the spoon being used to stir the contents of the cup,"[0405, 0425, 0430, 0435, 0445, 0450, 0460, 0465, 0470, 0475]",[0450],no,Semantic
+84,malay,frames_kalash_malay/video_305/video_305.mp4,is there a scissor on the table,"[0100, 0105, 0185, 0190, 0290, 0370, 0405, 0410, 0413, 0415]",[0370],yes,Geometric
+85,malay,frames_kalash_malay/video_312/video_312.mp4,"Are the letters ""A"", ""B and ""D"" on the table?","[0485, 0488, 0490, 0495, 0500, 0520, 0700, 0710, 0725, 0730]",[0520],"[yes, yes]",Compositional
+86,malay,frames_kalash_malay/video_328/video_328.mp4,is the green tank near the lower end of the book,"[0315, 0316, 0360, 0365, 0370, 0375, 0380, 0385, 0395, 0400]",[0375],no,Compositional
+87,malay,frames_kalash_malay/video_350/video_350.mp4,is the blue square to the left of the red hexagon,"[0020, 0030, 0040, 0045, 0077, 0080, 0085, 0090, 0095, 0100]",[0077],"[yes, yes]",Compositional
+88,malay,frames_kalash_malay/video_360/video_360.mp4,are there two white cups behind the lady on the table,"[0001, 0005, 0008, 0009, 0010, 0011, 0012, 0013, 0014, 0015]",[0010],yes,Compositional
+89,malay,frames_kalash_malay/video_369/video_369.mp4,"is the letter ""C"" to the left of the letter ""U""","[0555, 0557, 0560, 0565, 0580, 0600, 0603, 0605, 0607, 0610]",[0600],yes,Compositional
+90,malay,frames_kalash_malay/video_393/video_393.mp4,does the paper have three shapes on it,"[0650, 0655, 0660, 0680, 0685, 0710, 0715, 0720, 0725, 0730]",[0685],"[yes, yes]",Geometric
+91,malay,frames_kalash_malay/video_411/video_411.mp4,is the red car closer to the lower end of the wooden boards,"[0145, 0150, 0160, 0165, 0170, 0175, 0180, 0183, 0185, 0187]",[0175],no,Compositional
+92,malay,frames_kalash_malay/video_450/video_450.mp4,are there two books one blue and one brown,"[0250, 0260, 0270, 0280, 0285, 0295, 0300, 0301, 0302, 0303]",[0285],yes,Compositional
+93,malay,frames_kalash_malay/video_453/video_453.mp4,"does the shoe have ""adidas"" written on it","[0200, 0205, 0210, 0330, 0335, 0345, 0346, 0347, 0348, 0349]",[0345],yes,Semantic
+94,malay,frames_kalash_malay/video_474/video_474.mp4,does it look like the person is clapping hands,"[0120, 0125, 0130, 0135, 0140, 0145, 0150, 0155, 0156, 0157]",[0140],no,Semantic
+95,malay,frames_kalash_malay/video_493/video_493.mp4,are 3 buttons on the shirt of the person buttoned,"[0445, 0450, 0451, 0452, 0490, 0495, 0500, 0501, 0502, 0503]",[0490],no,Compositional
+96,malay,frames_kalash_malay/video_513/video_513.mp4,are there 4 glasses on the table,"[0150, 0155, 0160, 0230, 0250, 0260, 0265, 0270, 0275, 0280]",[0250],yes,Geometric
+97,malay,frames_kalash_malay/video_533/video_533.mp4,"does the tshirt have ""SINGAPORE"" written on it","[0015, 0017, 0019, 0020, 0023, 0025, 0026, 0027, 0053, 0054]",[0025],yes,Semantic
+98,malay,frames_kalash_malay/video_545/video_545.mp4,is the green fruit at the lower end of the black book near the white container,"[0195, 0197, 0201, 0202, 0203, 0204, 0205, 0206, 0207, 0208]",[0203],no,Compositional
+99,malay,frames_kalash_malay/video_580/video_580.mp4,are there two blue cups at both ends,"[0130, 0135, 0140, 0145, 0152, 0175, 0215, 0430, 0431, 0432]",[0152],yes,Compositional
+100,malay,frames_kalash_malay/video_609/video_609.mp4,is there a black pen on the table,"[0001, 0005, 0010, 0055, 0075, 0080, 0081, 0082, 0083, 0084]",[0075],yes,Compositional
