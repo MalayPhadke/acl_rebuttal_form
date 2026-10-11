@@ -40,7 +40,8 @@ def _find_dir(dirname, start_dir=None):
 
 TRAJECTORIES_CSV = _find_file("trajectory_gt_488.csv")
 IMAGES_BASE_DIR = _find_dir("trajectory_gt_488_images")
-TOTAL_TRAJECTORIES = 488
+TOTAL_TRAJECTORIES = 287
+PART_SIZES = {1: 72, 2: 72, 3: 72, 4: 71}
 
 SHEET_RESPONSE_METADATA = "trajectory_gt_metadata"
 SHEET_RESPONSE_SIMPLE = "trajectory_gt_responses"
@@ -59,6 +60,7 @@ DEFAULT_SESSION_STATE = {
     "user_id": "",
     "results": [],
     "start_time": None,
+    "selected_part": None,
     "completed_trajectory_ids": set(),
     "resumed_count": 0,
 }
@@ -78,21 +80,31 @@ def _build_gspread_creds():
 
 
 def _bg_append_row(creds, spreadsheet_url, worksheet_name, data_dict):
-    """Append one result row without calling Streamlit from the worker thread."""
+    """Append one result row and safely extend existing worksheet headers."""
     try:
         client = gspread.authorize(creds)
         spreadsheet = client.open_by_url(spreadsheet_url)
         try:
             worksheet = spreadsheet.worksheet(worksheet_name)
+            headers = worksheet.row_values(1)
+            missing_headers = [key for key in data_dict if key not in headers]
+            if missing_headers:
+                required_columns = len(headers) + len(missing_headers)
+                if required_columns > worksheet.col_count:
+                    worksheet.add_cols(required_columns - worksheet.col_count)
+                for header in missing_headers:
+                    headers.append(header)
+                    worksheet.update_cell(1, len(headers), header)
         except gspread.exceptions.WorksheetNotFound:
             worksheet = spreadsheet.add_worksheet(
                 title=worksheet_name,
                 rows=1000,
                 cols=max(len(data_dict), 1),
             )
-            worksheet.append_row(list(data_dict.keys()), value_input_option="RAW")
+            headers = list(data_dict.keys())
+            worksheet.append_row(headers, value_input_option="RAW")
         worksheet.append_row(
-            [str(value) for value in data_dict.values()],
+            [str(data_dict.get(header, "")) for header in headers],
             value_input_option="RAW",
         )
     except Exception as exc:
@@ -167,8 +179,8 @@ def resolve_frame_image_path(trajectory_id, frame_number):
     return os.path.join(trajectory_dir, f"frame_{frame_number:04d}.png")
 
 
-def load_trajectories(seed=None):
-    """Load all 488 trajectories and deterministically shuffle their pages."""
+def load_trajectories(part, seed=None):
+    """Load one of the four remaining-data parts and shuffle deterministically."""
     if not os.path.isfile(TRAJECTORIES_CSV):
         st.error(f"Trajectory CSV not found: {TRAJECTORIES_CSV}")
         return []
@@ -181,6 +193,7 @@ def load_trajectories(seed=None):
 
     required = {
         "trajectory_id",
+        "part",
         "question",
         "upper_frames",
         "lower_frames",
@@ -193,12 +206,16 @@ def load_trajectories(seed=None):
 
     trajectories = []
     for _, row in data.iterrows():
+        row_part = int(row["part"])
+        if row_part != part:
+            continue
         trajectory_id = clean_cell(row, "trajectory_id")
         upper_frames = parse_frame_list(row["upper_frames"])
         lower_frames = parse_frame_list(row["lower_frames"])
         trajectories.append(
             {
                 "trajectory_id": trajectory_id,
+                "part": row_part,
                 "round": clean_cell(row, "round"),
                 "source": clean_cell(row, "source"),
                 "source_datapoint_id": clean_cell(row, "source_datapoint_id"),
@@ -260,6 +277,7 @@ def prepare_result(trial, upper_same_gt, upper_gt, lower_same_gt, lower_gt, comm
     metadata = {
         "user_id": user_id,
         "trajectory_id": trial["trajectory_id"],
+        "part": st.session_state.selected_part,
         "round": trial["round"],
         "source": trial["source"],
         "source_datapoint_id": trial["source_datapoint_id"],
@@ -282,6 +300,7 @@ def prepare_result(trial, upper_same_gt, upper_gt, lower_same_gt, lower_gt, comm
     simple = {
         "user_id": user_id,
         "trajectory_id": trial["trajectory_id"],
+        "part": st.session_state.selected_part,
         "upper_all_same_gt": "" if upper_same_gt is None else upper_same_gt,
         "upper_gt": upper_gt or "",
         "lower_all_same_gt": "" if lower_same_gt is None else lower_same_gt,
@@ -324,8 +343,9 @@ def instructions_page():
         """
         ### Instructions
 
-        This experiment contains **488 trajectory pages**. Each page shows one
-        yes/no question and two ordered rows of video frames.
+        This experiment contains the **287 remaining trajectory pages**, divided
+        into four manageable parts. Each page shows one yes/no question and two
+        ordered rows of video frames.
 
         1. The **upper row** is the left side of the trajectory: ambiguity increases from left to right.
         2. The **lower row** is the right side of the trajectory: ambiguity decreases from left to right.
@@ -334,7 +354,7 @@ def instructions_page():
             - Check **“Do all images in this row have the same GT?”** when they do.
             - Select the row's ground truth as **Yes** or **No**.
         5. Use the optional comments box to explain inconsistent or unclear rows.
-        6. Each submitted page is saved automatically. Re-enter the same Participant ID to resume.
+        6. Each submitted page is saved automatically. Re-enter the same Participant ID and select the same part to resume.
         """
     )
 
@@ -343,13 +363,23 @@ def instructions_page():
         "Enter your Participant ID:",
         value=st.session_state.user_id,
     )
-    start_clicked = st.button(
-        "▶ Start / Resume Experiment",
-        use_container_width=True,
-        type="primary",
-    )
+    st.markdown("### Select Part")
+    part_columns = st.columns(4)
+    part_clicked = {}
+    for part, column in enumerate(part_columns, start=1):
+        with column:
+            part_clicked[part] = st.button(
+                f"▶ Part {part} ({PART_SIZES[part]} trajectories)",
+                use_container_width=True,
+                type="primary",
+                key=f"start_part_{part}",
+            )
 
-    if not start_clicked:
+    selected_part = next(
+        (part for part, clicked in part_clicked.items() if clicked),
+        None,
+    )
+    if selected_part is None:
         return
     if not user_id_input.strip():
         st.error("Please enter a valid Participant ID to continue.")
@@ -358,11 +388,17 @@ def instructions_page():
     user_id = user_id_input.strip()
     safe_uid = "".join(char for char in user_id if char.isalnum() or char in "._-")
     st.session_state.user_id = user_id
-    st.session_state.trials = load_trajectories(seed=user_id)
+    st.session_state.selected_part = selected_part
+    st.session_state.trials = load_trajectories(
+        selected_part,
+        seed=f"{user_id}_{selected_part}",
+    )
 
-    if len(st.session_state.trials) != TOTAL_TRAJECTORIES:
+    expected_part_size = PART_SIZES[selected_part]
+    if len(st.session_state.trials) != expected_part_size:
         st.error(
-            f"Expected {TOTAL_TRAJECTORIES} trajectories but loaded "
+            f"Expected {expected_part_size} trajectories in Part {selected_part} "
+            f"but loaded "
             f"{len(st.session_state.trials)}. Check trajectory_gt_488.csv and "
             "trajectory_gt_488_images."
         )
@@ -387,7 +423,7 @@ def instructions_page():
     st.session_state.current_trial_index = 0
     st.session_state.results = []
     st.session_state.start_time = None
-    st.session_state.page = "done" if len(completed) >= TOTAL_TRAJECTORIES else "countdown"
+    st.session_state.page = "done" if len(completed) >= expected_part_size else "countdown"
     st.rerun()
 
 
@@ -477,7 +513,8 @@ def experiment_page():
     scroll_to_top(f"trajectory_{trial['trajectory_id']}")
 
     st.markdown(
-        f"<div class='page-counter'><b>Trajectory page {index + 1} of {total}</b>"
+        f"<div class='page-counter'><b>Part {st.session_state.selected_part}</b> · "
+        f"Trajectory page {index + 1} of {total}"
         f" · ID {trial['trajectory_id']}</div>",
         unsafe_allow_html=True,
     )
@@ -553,8 +590,9 @@ def experiment_page():
 
 def done_page():
     scroll_to_top("done")
-    st.title("Experiment Complete")
-    st.success("Thank you for completing all 488 trajectory pages!")
+    part = st.session_state.selected_part
+    st.title(f"Part {part} Complete")
+    st.success(f"Thank you for completing Part {part}!")
 
     if st.session_state.results:
         results = pd.DataFrame(st.session_state.results)
@@ -562,7 +600,7 @@ def done_page():
         st.download_button(
             label="Download This Session's Results CSV",
             data=results.to_csv(index=False),
-            file_name=f"trajectory_gt_results_{st.session_state.user_id}.csv",
+            file_name=f"trajectory_gt_results_part{part}_{st.session_state.user_id}.csv",
             mime="text/csv",
         )
 
