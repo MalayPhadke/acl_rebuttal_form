@@ -1,0 +1,101 @@
+trial_uid,part,selection_group,target_model,allocation_model,source_correctness,question_id,image_id,question,reference_answer,source_split,image_path,qwenvl_prediction,qwenvl_correctness,gemma3_prediction,gemma3_correctness,llava_prediction,llava_correctness,phi4_prediction,phi4_correctness,pixtral_prediction,pixtral_correctness
+vqav2:329717000,1,model_specific_incorrect,gemma3,,0,329717000,329717,What type of floor is this?,tile,test,vqav2_validation_images/001_329717000.jpg,tile,1,Speckled tile.,0,Tile,1,Tile,1,Tile.,1
+vqav2:468777002,1,unanimous_correct,,qwenvl,1,468777002,468777,Are the bananas ripe?,no,train,vqav2_validation_images/002_468777002.jpg,no,1,No.,1,No,1,no,1,No.,1
+vqav2:530934000,1,unanimous_correct,,phi4,1,530934000,530934,What color is her jacket?,orange,train,vqav2_validation_images/003_530934000.jpg,orange,1,Orange.,1,Orange,1,Orange,1,Orange.,1
+vqav2:522941014,1,model_specific_incorrect,gemma3,,0,522941014,522941,What race are the people?,indian,train,vqav2_validation_images/004_522941014.jpg,indian,1,South Asian.,0,Indian,1,Indian,1,Indian.,1
+vqav2:382715006,1,model_specific_incorrect,llava,,0,382715006,382715,What color are the signal lights?,red,train,vqav2_validation_images/005_382715006.jpg,red,1,Red.,1,Yellow,0,Red,1,Red.,1
+vqav2:206878002,1,unanimous_correct,,llava,1,206878002,206878,Do children enjoy this food?,yes,train,vqav2_validation_images/006_206878002.jpg,yes,1,Yes.,1,Yes,1,Yes,1,Yes.,1
+vqav2:5599000,1,unanimous_correct,,gemma3,1,5599000,5599,Is this a small group of people?,no,train,vqav2_validation_images/007_5599000.jpg,no,1,No.,1,No,1,No,1,No.,1
+vqav2:56013001,1,unanimous_correct,,qwenvl,1,56013001,56013,Is this likely someone's luggage?,yes,train,vqav2_validation_images/008_56013001.jpg,yes,1,Yes.,1,Yes,1,yes,1,Yes.,1
+vqav2:213403003,1,unanimous_correct,,gemma3,1,213403003,213403,Has he already hit the ball?,no,train,vqav2_validation_images/009_213403003.jpg,no,1,No.,1,No,1,No,1,No.,1
+vqav2:154590000,1,unanimous_incorrect,,,0,154590000,154590,What type of food is on the right?,bread and grapes,train,vqav2_validation_images/010_154590000.jpg,cheese,0,Cheese and grapes.,0,Cheese,0,cheese,0,Bread,0
+vqav2:344888000,1,unanimous_correct,,phi4,1,344888000,344888,What season was the picture taken?,summer,train,vqav2_validation_images/011_344888000.jpg,summer,1,Summer.,1,Summer,1,summer,1,Summer.,1
+vqav2:137085000,1,unanimous_incorrect,,,0,137085000,137085,How many vases?,4,train,vqav2_validation_images/012_137085000.jpg,3,0,Three.,0,5,0,3,0,3.,0
+vqav2:523097002,1,unanimous_correct,,phi4,1,523097002,523097,Is the girl eating healthy?,no,train,vqav2_validation_images/013_523097002.jpg,no,1,No.,1,No,1,No,1,No.,1
+vqav2:140444000,1,model_specific_incorrect,llava,,0,140444000,140444,What do the black shapes represent?,paw prints,train,vqav2_validation_images/014_140444000.jpg,paw prints,1,Paw prints.,1,Paws,0,Paw prints,1,Paw prints.,1
+vqav2:90040010,1,unanimous_correct,,llava,1,90040010,90040,Is the sky gray?,yes,train,vqav2_validation_images/015_90040010.jpg,yes,1,Yes.,1,Yes,1,Yes,1,Yes.,1
+vqav2:241174003,1,unanimous_incorrect,,,0,241174003,241174,What colors are the men's ties?,brown,train,vqav2_validation_images/016_241174003.jpg,pink and gold,0,Pink and gold.,0,Gold and yellow,0,"Pink, brown, and blue",0,Black and yellow.,0
+vqav2:398758010,1,unanimous_correct,,gemma3,1,398758010,398758,Is the cat sleeping?,no,train,vqav2_validation_images/017_398758010.jpg,no,1,No.,1,No,1,no,1,No.,1
+vqav2:66879005,1,model_specific_incorrect,gemma3,,0,66879005,66879,What color is the lid?,brown,train,vqav2_validation_images/018_66879005.jpg,brown,1,Wood.,0,Brown,1,brown,1,Brown.,1
+vqav2:330037004,1,model_specific_incorrect,llava,,0,330037004,330037,Is the dog big?,no,train,vqav2_validation_images/019_330037004.jpg,no,1,No.,1,Yes,0,no,1,No.,1
+vqav2:251232000,1,model_specific_incorrect,llava,,0,251232000,251232,Is this train made of plastic?,yes,train,vqav2_validation_images/020_251232000.jpg,yes,1,Yes.,1,No,0,Yes,1,Yes.,1
+vqav2:347740000,1,model_specific_incorrect,pixtral,,0,347740000,347740,Is the toilet seat up?,yes,train,vqav2_validation_images/021_347740000.jpg,yes,1,Yes.,1,Yes,1,Yes,1,No.,0
+vqav2:54965002,1,unanimous_correct,,pixtral,1,54965002,54965,Would this be good for dessert?,yes,test,vqav2_validation_images/022_54965002.jpg,yes,1,Yes.,1,Yes,1,yes,1,Yes.,1
+vqav2:461339000,1,model_specific_incorrect,phi4,,0,461339000,461339,How many animals are standing?,2,train,vqav2_validation_images/023_461339000.jpg,2,1,Two.,1,2,1,1,0,2.,1
+vqav2:286458002,1,unanimous_correct,,qwenvl,1,286458002,286458,What is the yellow word at the bottom?,baggage,train,vqav2_validation_images/024_286458002.jpg,baggage,1,Baggage.,1,Baggage,1,baggage,1,Baggage.,1
+vqav2:459809003,1,unanimous_correct,,pixtral,1,459809003,459809,What is flying in the air?,kite,test,vqav2_validation_images/025_459809003.jpg,kite,1,A kite.,1,Kite,1,kite,1,Kite.,1
+vqav2:548500000,1,unanimous_incorrect,,,0,548500000,548500,Does this dog have healthy teeth?,yes,train,vqav2_validation_images/026_548500000.jpg,no,0,No.,0,No,0,No,0,No.,0
+vqav2:323682001,1,unanimous_correct,,qwenvl,1,323682001,323682,Is the man dressed for work?,no,test,vqav2_validation_images/027_323682001.jpg,no,1,No.,1,No,1,No,1,No.,1
+vqav2:401816001,1,model_specific_incorrect,qwenvl,,0,401816001,401816,Does the road curve?,yes,test,vqav2_validation_images/028_401816001.jpg,no,0,Yes.,1,Yes,1,Yes,1,Yes.,1
+vqav2:459801000,1,unanimous_correct,,llava,1,459801000,459801,What safety measure is the man not wearing?,helmet,train,vqav2_validation_images/029_459801000.jpg,helmet,1,A helmet.,1,Helmet,1,Helmet,1,Helmet.,1
+vqav2:454414001,1,model_specific_incorrect,pixtral,,0,454414001,454414,Are these real zebras?,no,train,vqav2_validation_images/030_454414001.jpg,no,1,No.,1,No,1,No,1,Yes.,0
+vqav2:522612002,1,model_specific_incorrect,gemma3,,0,522612002,522612,What trick is the skater performing?,jump,train,vqav2_validation_images/031_522612002.jpg,jump,1,Ollie.,0,Jump,1,Jump,1,Jump.,1
+vqav2:47898002,1,unanimous_correct,,llava,1,47898002,47898,Could a person surf in the water?,no,test,vqav2_validation_images/032_47898002.jpg,no,1,No.,1,No,1,No,1,No.,1
+vqav2:154830002,1,unanimous_correct,,pixtral,1,154830002,154830,Is the bike in the foreground crossing in the crosswalk?,yes,test,vqav2_validation_images/033_154830002.jpg,yes,1,Yes.,1,Yes,1,Yes,1,Yes.,1
+vqav2:267725003,1,unanimous_incorrect,,,0,267725003,267725,Where is the dog lying down at?,on blanket,train,vqav2_validation_images/034_267725003.jpg,blanket,0,On a pile of blankets and belongings.,0,Outside,0,Street,0,Street,0
+vqav2:426259000,1,unanimous_correct,,llava,1,426259000,426259,Do these people look happy?,no,test,vqav2_validation_images/035_426259000.jpg,no,1,No.,1,No,1,no,1,No.,1
+vqav2:392010003,1,unanimous_correct,,pixtral,1,392010003,392010,Could this be a game of ultimate?,no,train,vqav2_validation_images/036_392010003.jpg,no,1,No.,1,No,1,no,1,No.,1
+vqav2:11115003,1,model_specific_incorrect,phi4,,0,11115003,11115,What holiday is it?,christmas,test,vqav2_validation_images/037_11115003.jpg,christmas,1,Christmas.,1,Christmas,1,christma,0,Christmas.,1
+vqav2:119026001,1,model_specific_incorrect,qwenvl,,0,119026001,119026,What brand of phone is this?,lg,test,vqav2_validation_images/038_119026001.jpg,samsung,0,LG,1,Lg,1,lg,1,Lg.,1
+vqav2:416991001,1,model_specific_incorrect,phi4,,0,416991001,416991,What is in the center of the tables?,umbrellas,train,vqav2_validation_images/039_416991001.jpg,umbrellas,1,Umbrellas.,1,Umbrellas,1,Umbrella,0,Umbrellas.,1
+vqav2:522813001,1,model_specific_incorrect,pixtral,,0,522813001,522813,Is the cat sleeping?,no,train,vqav2_validation_images/040_522813001.jpg,no,1,No.,1,No,1,no,1,Yes.,0
+vqav2:369442003,1,unanimous_correct,,gemma3,1,369442003,369442,What country was this picture taken in?,india,train,vqav2_validation_images/041_369442003.jpg,india,1,India.,1,India,1,India,1,India,1
+vqav2:198489001,1,unanimous_correct,,phi4,1,198489001,198489,What is the color of the umbrella?,pink,train,vqav2_validation_images/042_198489001.jpg,pink,1,Pink.,1,Pink,1,Pink,1,Pink.,1
+vqav2:55668000,1,unanimous_correct,,qwenvl,1,55668000,55668,How many children does this couple have?,2,test,vqav2_validation_images/043_55668000.jpg,2,1,Two.,1,2,1,2,1,2.,1
+vqav2:130921000,1,model_specific_incorrect,qwenvl,,0,130921000,130921,Is the angel a reflection?,yes,train,vqav2_validation_images/044_130921000.jpg,no,0,Yes.,1,Yes,1,yes,1,Yes.,1
+vqav2:572702000,1,unanimous_correct,,pixtral,1,572702000,572702,What animal is shown in this photo?,cat,test,vqav2_validation_images/045_572702000.jpg,cat,1,Cat.,1,Cat,1,Cat,1,Cat.,1
+vqav2:214192000,1,model_specific_incorrect,pixtral,,0,214192000,214192,Is the rider on the right about to fall over?,no,train,vqav2_validation_images/046_214192000.jpg,no,1,No.,1,No,1,No,1,Yes.,0
+vqav2:192200005,1,unanimous_correct,,gemma3,1,192200005,192200,Is it a rainy day?,no,test,vqav2_validation_images/047_192200005.jpg,no,1,No.,1,No,1,no,1,No.,1
+vqav2:436617001,1,model_specific_incorrect,qwenvl,,0,436617001,436617,Is the exit sign plain to see?,yes,test,vqav2_validation_images/048_436617001.jpg,no,0,Yes.,1,Yes,1,Yes,1,Yes.,1
+vqav2:525155001,1,model_specific_incorrect,phi4,,0,525155001,525155,What animal is the man carrying?,sheep,train,vqav2_validation_images/049_525155001.jpg,sheep,1,A sheep.,1,Sheep,1,Lamb,0,Sheep.,1
+vqav2:23051003,1,unanimous_correct,,phi4,1,23051003,23051,Is this a subway?,yes,test,vqav2_validation_images/050_23051003.jpg,yes,1,Yes.,1,Yes,1,yes,1,Yes.,1
+vqav2:580108001,2,unanimous_correct,,llava,1,580108001,580108,What does the sign on the motorcycle say?,for sale,train,vqav2_validation_images/051_580108001.jpg,For Sale,1,FOR SALE,1,For sale,1,for sale,1,For sale.,1
+vqav2:539089003,2,unanimous_correct,,phi4,1,539089003,539089,Are there items in the oven?,yes,train,vqav2_validation_images/052_539089003.jpg,yes,1,Yes.,1,Yes,1,Yes,1,Yes.,1
+vqav2:579060005,2,model_specific_incorrect,qwenvl,,0,579060005,579060,What color is the pattern on the racket strings?,yellow,train,vqav2_validation_images/053_579060005.jpg,white,0,Yellow.,1,Yellow,1,Yellow,1,Yellow,1
+vqav2:547645001,2,unanimous_correct,,llava,1,547645001,547645,What color is the bear?,black,train,vqav2_validation_images/054_547645001.jpg,black,1,Black.,1,Black,1,Black,1,Black.,1
+vqav2:461628002,2,unanimous_correct,,phi4,1,461628002,461628,What color is the train?,red,test,vqav2_validation_images/055_461628002.jpg,red,1,Red.,1,Red,1,Red,1,Red.,1
+vqav2:154431000,2,unanimous_correct,,qwenvl,1,154431000,154431,Can you see outside?,yes,train,vqav2_validation_images/056_154431000.jpg,yes,1,Yes.,1,Yes,1,Yes,1,Yes.,1
+vqav2:470952003,2,unanimous_correct,,pixtral,1,470952003,470952,Is this person moving?,no,test,vqav2_validation_images/057_470952003.jpg,no,1,No.,1,No,1,No,1,No.,1
+vqav2:475723002,2,model_specific_incorrect,qwenvl,,0,475723002,475723,Where is the computer's monitor and keyboard?,on desk,test,vqav2_validation_images/058_475723002.jpg,desk,0,On a desk.,1,On desk.,1,On desk,1,On desk.,1
+vqav2:437910000,2,model_specific_incorrect,pixtral,,0,437910000,437910,What is the wallpaper made of?,newspaper,train,vqav2_validation_images/059_437910000.jpg,newspaper,1,Newspaper.,1,Newspaper,1,newspaper,1,Paper.,0
+vqav2:48133002,2,model_specific_incorrect,pixtral,,0,48133002,48133,Is there a blue fence?,yes,train,vqav2_validation_images/060_48133002.jpg,yes,1,Yes.,1,Yes,1,yes,1,No.,0
+vqav2:317049000,2,model_specific_incorrect,pixtral,,0,317049000,317049,Is he dressed for the weather?,yes,train,vqav2_validation_images/061_317049000.jpg,yes,1,Yes.,1,Yes,1,Yes,1,No.,0
+vqav2:382617001,2,unanimous_incorrect,,,0,382617001,382617,What is the 2nd item from the top?,matches,train,vqav2_validation_images/062_382617001.jpg,stapler,0,A mouse.,0,Computer mouse,0,Computer mouse,0,Mouse,0
+vqav2:23369001,2,unanimous_correct,,pixtral,1,23369001,23369,Is the motorcycle in motion?,no,train,vqav2_validation_images/063_23369001.jpg,no,1,No.,1,No,1,No,1,No.,1
+vqav2:399296002,2,model_specific_incorrect,phi4,,0,399296002,399296,Are the hot dogs ready to eat?,no,train,vqav2_validation_images/064_399296002.jpg,no,1,No.,1,No,1,yes,0,No.,1
+vqav2:380842002,2,unanimous_incorrect,,,0,380842002,380842,How many crosswalk stripes painted on the street?,13,train,vqav2_validation_images/065_380842002.jpg,10,0,12,0,10,0,10,0,7.,0
+vqav2:480268000,2,unanimous_correct,,llava,1,480268000,480268,Which store is this advertisement from?,best buy,train,vqav2_validation_images/066_480268000.jpg,Best Buy,1,Best Buy.,1,Best Buy,1,best buy,1,Best Buy,1
+vqav2:392320001,2,unanimous_correct,,phi4,1,392320001,392320,What color are the plates?,white,train,vqav2_validation_images/067_392320001.jpg,white,1,White.,1,White,1,White,1,White.,1
+vqav2:129587001,2,unanimous_correct,,gemma3,1,129587001,129587,Does the elephant have tusks?,no,test,vqav2_validation_images/068_129587001.jpg,no,1,No.,1,No,1,No,1,No.,1
+vqav2:31016000,2,unanimous_correct,,phi4,1,31016000,31016,Does this person have a lot of work to do?,yes,train,vqav2_validation_images/069_31016000.jpg,yes,1,Yes.,1,Yes,1,Yes,1,Yes.,1
+vqav2:506357000,2,unanimous_correct,,gemma3,1,506357000,506357,Are the dishes clean or dirty?,dirty,train,vqav2_validation_images/070_506357000.jpg,dirty,1,Dirty.,1,Dirty,1,Dirty,1,Dirty.,1
+vqav2:454154000,2,unanimous_correct,,phi4,1,454154000,454154,What kind of cat is laying on the bed?,siamese,train,vqav2_validation_images/071_454154000.jpg,siamese,1,Siamese.,1,Siamese,1,Siamese,1,Siamese.,1
+vqav2:261207001,2,model_specific_incorrect,llava,,0,261207001,261207,Is this banana normal size?,no,train,vqav2_validation_images/072_261207001.jpg,no,1,No.,1,Yes,0,No,1,No.,1
+vqav2:578786005,2,unanimous_incorrect,,,0,578786005,578786,What color is the building?,tan,test,vqav2_validation_images/073_578786005.jpg,brown,0,Red and yellow.,0,Brown,0,Brown,0,Yellow.,0
+vqav2:5076008,2,model_specific_incorrect,qwenvl,,0,5076008,5076,What is the brown object in the foreground?,picnic table,train,vqav2_validation_images/074_5076008.jpg,bench,0,A picnic table.,1,Picnic table,1,Picnic table,1,Picnic table.,1
+vqav2:136929007,2,model_specific_incorrect,phi4,,0,136929007,136929,What is this food?,donuts,train,vqav2_validation_images/075_136929007.jpg,donuts,1,Donuts.,1,Donuts,1,donut,0,Donuts.,1
+vqav2:268375002,2,unanimous_incorrect,,,0,268375002,268375,Which elephant does the baby elephant belong to?,second from left,test,vqav2_validation_images/076_268375002.jpg,middle one,0,The middle elephant.,0,Middle,0,Mother,0,Middle.,0
+vqav2:83049002,2,model_specific_incorrect,qwenvl,,0,83049002,83049,Is it sunny?,yes,train,vqav2_validation_images/077_83049002.jpg,no,0,Yes.,1,Yes,1,Yes,1,Yes.,1
+vqav2:214042002,2,model_specific_incorrect,llava,,0,214042002,214042,What number of rolls of toilet paper are in this package?,6,train,vqav2_validation_images/078_214042002.jpg,6,1,6,1,3,0,6,1,6,1
+vqav2:329604000,2,unanimous_correct,,gemma3,1,329604000,329604,Is the woman dressed in winter clothes?,yes,train,vqav2_validation_images/079_329604000.jpg,yes,1,Yes.,1,Yes,1,Yes,1,Yes.,1
+vqav2:136270004,2,model_specific_incorrect,gemma3,,0,136270004,136270,Was the cake professionally made?,yes,test,vqav2_validation_images/080_136270004.jpg,yes,1,Possibly.,0,Yes,1,Yes,1,Yes.,1
+vqav2:573134004,2,unanimous_incorrect,,,0,573134004,573134,Why is the horse completely off the ground?,jumping,test,vqav2_validation_images/081_573134004.jpg,The horse is not completely off the ground; it appears to be walking on the beach near the water's edge.,0,It appears to be galloping.,0,It's not.,0,Running,0,Running.,0
+vqav2:113271002,2,unanimous_correct,,qwenvl,1,113271002,113271,Has the dog been tied?,no,train,vqav2_validation_images/082_113271002.jpg,no,1,No.,1,No,1,No,1,No.,1
+vqav2:191585001,2,unanimous_correct,,pixtral,1,191585001,191585,How many red suitcases?,2,train,vqav2_validation_images/083_191585001.jpg,2,1,Two.,1,2,1,2,1,2.,1
+vqav2:399532000,2,model_specific_incorrect,llava,,0,399532000,399532,What is the circular item in the center of the screen?,golf ball,train,vqav2_validation_images/084_399532000.jpg,golf ball,1,A golf ball.,1,Ball,0,golf ball,1,Golf ball.,1
+vqav2:344730002,2,unanimous_correct,,qwenvl,1,344730002,344730,Is there a sidewalk?,no,train,vqav2_validation_images/085_344730002.jpg,no,1,No.,1,No,1,No,1,No.,1
+vqav2:61207000,2,model_specific_incorrect,gemma3,,0,61207000,61207,Is this plane landing?,yes,test,vqav2_validation_images/086_61207000.jpg,yes,1,No.,0,Yes,1,yes,1,Yes.,1
+vqav2:345134000,2,model_specific_incorrect,gemma3,,0,345134000,345134,What color is the suitcase?,black,train,vqav2_validation_images/087_345134000.jpg,black,1,Black and beige.,0,Black,1,Black,1,Black.,1
+vqav2:82815002,2,unanimous_correct,,qwenvl,1,82815002,82815,Is the person holding something?,yes,train,vqav2_validation_images/088_82815002.jpg,yes,1,Yes.,1,Yes,1,Yes,1,Yes.,1
+vqav2:285681014,2,unanimous_correct,,pixtral,1,285681014,285681,What is the brand of the airline?,singapore airlines,train,vqav2_validation_images/089_285681014.jpg,Singapore Airlines,1,Singapore Airlines.,1,Singapore airlines,1,Singapore airlines,1,Singapore airlines.,1
+vqav2:322858000,2,model_specific_incorrect,gemma3,,0,322858000,322858,What environment is the animal in?,zoo,train,vqav2_validation_images/090_322858000.jpg,zoo,1,Zoo enclosure.,0,Zoo,1,Zoo,1,Zoo.,1
+vqav2:136555000,2,model_specific_incorrect,phi4,,0,136555000,136555,What is the baby wearing?,bow tie,train,vqav2_validation_images/091_136555000.jpg,bow tie,1,A bow tie.,1,Bow tie,1,bowtie,0,Bow tie.,1
+vqav2:82465002,2,model_specific_incorrect,phi4,,0,82465002,82465,Does the dolly have a graduated width?,yes,test,vqav2_validation_images/092_82465002.jpg,yes,1,Yes.,1,Yes,1,No,0,Yes.,1
+vqav2:53016000,2,unanimous_correct,,pixtral,1,53016000,53016,Is this a zoo?,yes,train,vqav2_validation_images/093_53016000.jpg,yes,1,Yes.,1,Yes,1,yes,1,Yes.,1
+vqav2:344397001,2,unanimous_correct,,gemma3,1,344397001,344397,What company is the plane from?,united,train,vqav2_validation_images/094_344397001.jpg,United,1,United.,1,United,1,united,1,United.,1
+vqav2:75786005,2,unanimous_correct,,llava,1,75786005,75786,Is this a grown bear?,no,train,vqav2_validation_images/095_75786005.jpg,no,1,No.,1,No,1,No,1,No.,1
+vqav2:1064000,2,unanimous_correct,,gemma3,1,1064000,1064,What is the green food on the plate?,broccoli,train,vqav2_validation_images/096_1064000.jpg,broccoli,1,Broccoli.,1,Broccoli,1,Broccoli,1,Broccoli.,1
+vqav2:154053003,2,unanimous_correct,,qwenvl,1,154053003,154053,Is the dog considered small breed?,yes,test,vqav2_validation_images/097_154053003.jpg,yes,1,Yes.,1,Yes,1,Yes,1,Yes.,1
+vqav2:344307002,2,model_specific_incorrect,llava,,0,344307002,344307,What is the person holding in his left hand?,helmet,test,vqav2_validation_images/098_344307002.jpg,helmet,1,A helmet.,1,Skateboard,0,Helmet,1,Helmet.,1
+vqav2:213432012,2,unanimous_correct,,llava,1,213432012,213432,What color are the flowers in the field?,yellow,test,vqav2_validation_images/099_213432012.jpg,yellow,1,Yellow.,1,Yellow,1,Yellow,1,Yellow.,1
+vqav2:60409002,2,model_specific_incorrect,pixtral,,0,60409002,60409,Are there numbers on the clock?,yes,test,vqav2_validation_images/100_60409002.jpg,yes,1,Yes.,1,Yes,1,yes,1,No.,0
