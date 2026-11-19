@@ -1,0 +1,101 @@
+trial_uid,trajectory_id,round,source,question,frame_number,frame_position,reference_gt,primary_category,image_path
+original_0021:348,original_0021,1,,Is the dog in front of the baby?,348,1,yes,Geometric,unordered_annotation_100_images/original_0021/frame_0348.png
+original_0021:355,original_0021,1,,Is the dog in front of the baby?,355,2,yes,Geometric,unordered_annotation_100_images/original_0021/frame_0355.png
+original_0021:388,original_0021,1,,Is the dog in front of the baby?,388,3,yes,Geometric,unordered_annotation_100_images/original_0021/frame_0388.png
+original_0021:395,original_0021,1,,Is the dog in front of the baby?,395,4,yes,Geometric,unordered_annotation_100_images/original_0021/frame_0395.png
+original_0021:410,original_0021,1,,Is the dog in front of the baby?,410,5,yes,Geometric,unordered_annotation_100_images/original_0021/frame_0410.png
+original_0021:415,original_0021,1,,Is the dog in front of the baby?,415,6,no,Geometric,unordered_annotation_100_images/original_0021/frame_0415.png
+original_0021:418,original_0021,1,,Is the dog in front of the baby?,418,7,no,Geometric,unordered_annotation_100_images/original_0021/frame_0418.png
+original_0021:419,original_0021,1,,Is the dog in front of the baby?,419,8,no,Geometric,unordered_annotation_100_images/original_0021/frame_0419.png
+original_0021:420,original_0021,1,,Is the dog in front of the baby?,420,9,no,Geometric,unordered_annotation_100_images/original_0021/frame_0420.png
+original_0021:421,original_0021,1,,Is the dog in front of the baby?,421,10,no,Geometric,unordered_annotation_100_images/original_0021/frame_0421.png
+original_0150:0,original_0150,2,kalash,Is the orange object to the right of the green watch?,0,1,yes,Compositional,unordered_annotation_100_images/original_0150/frame_0000.jpg
+original_0150:1,original_0150,2,kalash,Is the orange object to the right of the green watch?,1,2,yes,Compositional,unordered_annotation_100_images/original_0150/frame_0001.jpg
+original_0150:2,original_0150,2,kalash,Is the orange object to the right of the green watch?,2,3,yes,Compositional,unordered_annotation_100_images/original_0150/frame_0002.jpg
+original_0150:3,original_0150,2,kalash,Is the orange object to the right of the green watch?,3,4,yes,Compositional,unordered_annotation_100_images/original_0150/frame_0003.jpg
+original_0150:4,original_0150,2,kalash,Is the orange object to the right of the green watch?,4,5,yes,Compositional,unordered_annotation_100_images/original_0150/frame_0004.jpg
+original_0150:5,original_0150,2,kalash,Is the orange object to the right of the green watch?,5,6,yes,Compositional,unordered_annotation_100_images/original_0150/frame_0005.jpg
+original_0150:7,original_0150,2,kalash,Is the orange object to the right of the green watch?,7,7,no,Compositional,unordered_annotation_100_images/original_0150/frame_0007.jpg
+original_0150:8,original_0150,2,kalash,Is the orange object to the right of the green watch?,8,8,no,Compositional,unordered_annotation_100_images/original_0150/frame_0008.jpg
+original_0150:9,original_0150,2,kalash,Is the orange object to the right of the green watch?,9,9,no,Compositional,unordered_annotation_100_images/original_0150/frame_0009.jpg
+original_0150:12,original_0150,2,kalash,Is the orange object to the right of the green watch?,12,10,no,Compositional,unordered_annotation_100_images/original_0150/frame_0012.jpg
+malay_020:1,malay_020,3,malay,Is the blue mug closer to the left slipper than to the right slipper?,1,1,no,Compositional,unordered_annotation_100_images/malay_020/frame_000001.jpg
+malay_020:5,malay_020,3,malay,Is the blue mug closer to the left slipper than to the right slipper?,5,2,no,Compositional,unordered_annotation_100_images/malay_020/frame_000005.jpg
+malay_020:10,malay_020,3,malay,Is the blue mug closer to the left slipper than to the right slipper?,10,3,no,Compositional,unordered_annotation_100_images/malay_020/frame_000010.jpg
+malay_020:20,malay_020,3,malay,Is the blue mug closer to the left slipper than to the right slipper?,20,4,no,Compositional,unordered_annotation_100_images/malay_020/frame_000020.jpg
+malay_020:185,malay_020,3,malay,Is the blue mug closer to the left slipper than to the right slipper?,185,5,no,Compositional,unordered_annotation_100_images/malay_020/frame_000185.jpg
+malay_020:190,malay_020,3,malay,Is the blue mug closer to the left slipper than to the right slipper?,190,6,no,Compositional,unordered_annotation_100_images/malay_020/frame_000190.jpg
+malay_020:195,malay_020,3,malay,Is the blue mug closer to the left slipper than to the right slipper?,195,7,yes,Compositional,unordered_annotation_100_images/malay_020/frame_000195.jpg
+malay_020:200,malay_020,3,malay,Is the blue mug closer to the left slipper than to the right slipper?,200,8,yes,Compositional,unordered_annotation_100_images/malay_020/frame_000200.jpg
+malay_020:210,malay_020,3,malay,Is the blue mug closer to the left slipper than to the right slipper?,210,9,yes,Compositional,unordered_annotation_100_images/malay_020/frame_000210.jpg
+malay_020:215,malay_020,3,malay,Is the blue mug closer to the left slipper than to the right slipper?,215,10,yes,Compositional,unordered_annotation_100_images/malay_020/frame_000215.jpg
+original_0158:9,original_0158,2,kalash,Is the person holding a camera string?,9,1,yes,Semantic,unordered_annotation_100_images/original_0158/frame_0009.jpg
+original_0158:10,original_0158,2,kalash,Is the person holding a camera string?,10,2,yes,Semantic,unordered_annotation_100_images/original_0158/frame_0010.jpg
+original_0158:11,original_0158,2,kalash,Is the person holding a camera string?,11,3,yes,Semantic,unordered_annotation_100_images/original_0158/frame_0011.jpg
+original_0158:12,original_0158,2,kalash,Is the person holding a camera string?,12,4,yes,Semantic,unordered_annotation_100_images/original_0158/frame_0012.jpg
+original_0158:14,original_0158,2,kalash,Is the person holding a camera string?,14,5,yes,Semantic,unordered_annotation_100_images/original_0158/frame_0014.jpg
+original_0158:24,original_0158,2,kalash,Is the person holding a camera string?,24,6,yes,Semantic,unordered_annotation_100_images/original_0158/frame_0024.jpg
+original_0158:25,original_0158,2,kalash,Is the person holding a camera string?,25,7,yes,Semantic,unordered_annotation_100_images/original_0158/frame_0025.jpg
+original_0158:26,original_0158,2,kalash,Is the person holding a camera string?,26,8,yes,Semantic,unordered_annotation_100_images/original_0158/frame_0026.jpg
+original_0158:27,original_0158,2,kalash,Is the person holding a camera string?,27,9,yes,Semantic,unordered_annotation_100_images/original_0158/frame_0027.jpg
+original_0158:28,original_0158,2,kalash,Is the person holding a camera string?,28,10,yes,Semantic,unordered_annotation_100_images/original_0158/frame_0028.jpg
+saksham_001:42,saksham_001,3,saksham,Is the closet open?,42,1,no,Semantic,unordered_annotation_100_images/saksham_001/frame_000042.jpg
+saksham_001:69,saksham_001,3,saksham,Is the closet open?,69,2,no,Semantic,unordered_annotation_100_images/saksham_001/frame_000069.jpg
+saksham_001:77,saksham_001,3,saksham,Is the closet open?,77,3,no,Semantic,unordered_annotation_100_images/saksham_001/frame_000077.jpg
+saksham_001:95,saksham_001,3,saksham,Is the closet open?,95,4,no,Semantic,unordered_annotation_100_images/saksham_001/frame_000095.jpg
+saksham_001:104,saksham_001,3,saksham,Is the closet open?,104,5,no,Semantic,unordered_annotation_100_images/saksham_001/frame_000104.jpg
+saksham_001:106,saksham_001,3,saksham,Is the closet open?,106,6,yes,Semantic,unordered_annotation_100_images/saksham_001/frame_000106.jpg
+saksham_001:107,saksham_001,3,saksham,Is the closet open?,107,7,yes,Semantic,unordered_annotation_100_images/saksham_001/frame_000107.jpg
+saksham_001:108,saksham_001,3,saksham,Is the closet open?,108,8,yes,Semantic,unordered_annotation_100_images/saksham_001/frame_000108.jpg
+saksham_001:110,saksham_001,3,saksham,Is the closet open?,110,9,yes,Semantic,unordered_annotation_100_images/saksham_001/frame_000110.jpg
+saksham_001:111,saksham_001,3,saksham,Is the closet open?,111,10,yes,Semantic,unordered_annotation_100_images/saksham_001/frame_000111.jpg
+original_0035:188,original_0035,1,,Is the child to the left of the woman?,188,1,yes,Geometric,unordered_annotation_100_images/original_0035/frame_0188.png
+original_0035:193,original_0035,1,,Is the child to the left of the woman?,193,2,yes,Geometric,unordered_annotation_100_images/original_0035/frame_0193.png
+original_0035:196,original_0035,1,,Is the child to the left of the woman?,196,3,yes,Geometric,unordered_annotation_100_images/original_0035/frame_0196.png
+original_0035:199,original_0035,1,,Is the child to the left of the woman?,199,4,yes,Geometric,unordered_annotation_100_images/original_0035/frame_0199.png
+original_0035:203,original_0035,1,,Is the child to the left of the woman?,203,5,yes,Geometric,unordered_annotation_100_images/original_0035/frame_0203.png
+original_0035:210,original_0035,1,,Is the child to the left of the woman?,210,6,yes,Geometric,unordered_annotation_100_images/original_0035/frame_0210.png
+original_0035:215,original_0035,1,,Is the child to the left of the woman?,215,7,yes,Geometric,unordered_annotation_100_images/original_0035/frame_0215.png
+original_0035:220,original_0035,1,,Is the child to the left of the woman?,220,8,yes,Geometric,unordered_annotation_100_images/original_0035/frame_0220.png
+original_0035:225,original_0035,1,,Is the child to the left of the woman?,225,9,yes,Geometric,unordered_annotation_100_images/original_0035/frame_0225.png
+original_0035:229,original_0035,1,,Is the child to the left of the woman?,229,10,yes,Geometric,unordered_annotation_100_images/original_0035/frame_0229.png
+kalash_020:1110,kalash_020,3,kalash,Is the skier standing on the snow?,1110,1,yes,Semantic,unordered_annotation_100_images/kalash_020/frame_1110.jpg
+kalash_020:1115,kalash_020,3,kalash,Is the skier standing on the snow?,1115,2,yes,Semantic,unordered_annotation_100_images/kalash_020/frame_1115.jpg
+kalash_020:1120,kalash_020,3,kalash,Is the skier standing on the snow?,1120,3,yes,Semantic,unordered_annotation_100_images/kalash_020/frame_1120.jpg
+kalash_020:1125,kalash_020,3,kalash,Is the skier standing on the snow?,1125,4,yes,Semantic,unordered_annotation_100_images/kalash_020/frame_1125.jpg
+kalash_020:1130,kalash_020,3,kalash,Is the skier standing on the snow?,1130,5,yes,Semantic,unordered_annotation_100_images/kalash_020/frame_1130.jpg
+kalash_020:1135,kalash_020,3,kalash,Is the skier standing on the snow?,1135,6,yes,Semantic,unordered_annotation_100_images/kalash_020/frame_1135.jpg
+kalash_020:1140,kalash_020,3,kalash,Is the skier standing on the snow?,1140,7,yes,Semantic,unordered_annotation_100_images/kalash_020/frame_1140.jpg
+kalash_020:1153,kalash_020,3,kalash,Is the skier standing on the snow?,1153,8,yes,Semantic,unordered_annotation_100_images/kalash_020/frame_1153.jpg
+kalash_020:1160,kalash_020,3,kalash,Is the skier standing on the snow?,1160,9,no,Semantic,unordered_annotation_100_images/kalash_020/frame_1160.jpg
+kalash_020:1165,kalash_020,3,kalash,Is the skier standing on the snow?,1165,10,no,Semantic,unordered_annotation_100_images/kalash_020/frame_1165.jpg
+malay_046:150,malay_046,3,malay,Are there 4 glasses on the table?,150,1,yes,Geometric,unordered_annotation_100_images/malay_046/frame_000150.jpg
+malay_046:155,malay_046,3,malay,Are there 4 glasses on the table?,155,2,yes,Geometric,unordered_annotation_100_images/malay_046/frame_000155.jpg
+malay_046:160,malay_046,3,malay,Are there 4 glasses on the table?,160,3,yes,Geometric,unordered_annotation_100_images/malay_046/frame_000160.jpg
+malay_046:230,malay_046,3,malay,Are there 4 glasses on the table?,230,4,yes,Geometric,unordered_annotation_100_images/malay_046/frame_000230.jpg
+malay_046:250,malay_046,3,malay,Are there 4 glasses on the table?,250,5,yes,Geometric,unordered_annotation_100_images/malay_046/frame_000250.jpg
+malay_046:260,malay_046,3,malay,Are there 4 glasses on the table?,260,6,no,Geometric,unordered_annotation_100_images/malay_046/frame_000260.jpg
+malay_046:265,malay_046,3,malay,Are there 4 glasses on the table?,265,7,no,Geometric,unordered_annotation_100_images/malay_046/frame_000265.jpg
+malay_046:270,malay_046,3,malay,Are there 4 glasses on the table?,270,8,no,Geometric,unordered_annotation_100_images/malay_046/frame_000270.jpg
+malay_046:275,malay_046,3,malay,Are there 4 glasses on the table?,275,9,no,Geometric,unordered_annotation_100_images/malay_046/frame_000275.jpg
+malay_046:280,malay_046,3,malay,Are there 4 glasses on the table?,280,10,no,Geometric,unordered_annotation_100_images/malay_046/frame_000280.jpg
+kalash_007:330,kalash_007,3,kalash,Is the baby boy's head on the brown blanket?,330,1,no,Compositional,unordered_annotation_100_images/kalash_007/frame_0330.jpg
+kalash_007:335,kalash_007,3,kalash,Is the baby boy's head on the brown blanket?,335,2,no,Compositional,unordered_annotation_100_images/kalash_007/frame_0335.jpg
+kalash_007:340,kalash_007,3,kalash,Is the baby boy's head on the brown blanket?,340,3,no,Compositional,unordered_annotation_100_images/kalash_007/frame_0340.jpg
+kalash_007:345,kalash_007,3,kalash,Is the baby boy's head on the brown blanket?,345,4,no,Compositional,unordered_annotation_100_images/kalash_007/frame_0345.jpg
+kalash_007:350,kalash_007,3,kalash,Is the baby boy's head on the brown blanket?,350,5,no,Compositional,unordered_annotation_100_images/kalash_007/frame_0350.jpg
+kalash_007:355,kalash_007,3,kalash,Is the baby boy's head on the brown blanket?,355,6,no,Compositional,unordered_annotation_100_images/kalash_007/frame_0355.jpg
+kalash_007:360,kalash_007,3,kalash,Is the baby boy's head on the brown blanket?,360,7,no,Compositional,unordered_annotation_100_images/kalash_007/frame_0360.jpg
+kalash_007:370,kalash_007,3,kalash,Is the baby boy's head on the brown blanket?,370,8,yes,Compositional,unordered_annotation_100_images/kalash_007/frame_0370.jpg
+kalash_007:380,kalash_007,3,kalash,Is the baby boy's head on the brown blanket?,380,9,yes,Compositional,unordered_annotation_100_images/kalash_007/frame_0380.jpg
+kalash_007:390,kalash_007,3,kalash,Is the baby boy's head on the brown blanket?,390,10,yes,Compositional,unordered_annotation_100_images/kalash_007/frame_0390.jpg
+saksham_032:591,saksham_032,3,saksham,Is the left cupboard open?,591,1,yes,Semantic,unordered_annotation_100_images/saksham_032/frame_000591.jpg
+saksham_032:594,saksham_032,3,saksham,Is the left cupboard open?,594,2,yes,Semantic,unordered_annotation_100_images/saksham_032/frame_000594.jpg
+saksham_032:598,saksham_032,3,saksham,Is the left cupboard open?,598,3,yes,Semantic,unordered_annotation_100_images/saksham_032/frame_000598.jpg
+saksham_032:603,saksham_032,3,saksham,Is the left cupboard open?,603,4,yes,Semantic,unordered_annotation_100_images/saksham_032/frame_000603.jpg
+saksham_032:608,saksham_032,3,saksham,Is the left cupboard open?,608,5,yes,Semantic,unordered_annotation_100_images/saksham_032/frame_000608.jpg
+saksham_032:629,saksham_032,3,saksham,Is the left cupboard open?,629,6,yes,Semantic,unordered_annotation_100_images/saksham_032/frame_000629.jpg
+saksham_032:632,saksham_032,3,saksham,Is the left cupboard open?,632,7,yes,Semantic,unordered_annotation_100_images/saksham_032/frame_000632.jpg
+saksham_032:647,saksham_032,3,saksham,Is the left cupboard open?,647,8,yes,Semantic,unordered_annotation_100_images/saksham_032/frame_000647.jpg
+saksham_032:650,saksham_032,3,saksham,Is the left cupboard open?,650,9,no,Semantic,unordered_annotation_100_images/saksham_032/frame_000650.jpg
+saksham_032:653,saksham_032,3,saksham,Is the left cupboard open?,653,10,no,Semantic,unordered_annotation_100_images/saksham_032/frame_000653.jpg
