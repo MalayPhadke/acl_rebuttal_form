@@ -18,6 +18,9 @@ from google.oauth2.service_account import Credentials
 
 APP_DIR = os.path.dirname(os.path.abspath(__file__))
 FORM_SIZE = 90
+EXAMPLE_IMAGES_DIR = os.path.join(
+    APP_DIR, "trajectory_gt_450_example_images", "original_0093"
+)
 GSHEETS_SCOPES = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive",
@@ -266,6 +269,65 @@ def scroll_to_top(label=""):
     )
 
 
+def render_example_row(row_name, direction, frames, all_same, ground_truth):
+    st.markdown(
+        f'<div class="row-heading"><b>{row_name} example</b> — {direction}</div>',
+        unsafe_allow_html=True,
+    )
+    columns = st.columns(len(frames), gap="small")
+    for position, (column, frame) in enumerate(zip(columns, frames), start=1):
+        image_path = resolve_frame_image_path("original_0093", frame)
+        # The example has a separate shared asset directory rather than a form
+        # directory, so resolve it explicitly.
+        image_path = os.path.join(EXAMPLE_IMAGES_DIR, os.path.basename(image_path))
+        with column:
+            if os.path.isfile(image_path):
+                st.image(image_path, width="stretch")
+            else:
+                st.warning("Example image missing")
+            st.caption(f"Image {position}")
+    st.success(
+        f"Correct annotation: All images have the same GT = **{all_same}** · "
+        f"Row GT = **{ground_truth}**"
+    )
+
+
+def worked_example():
+    st.markdown("---")
+    st.subheader("Worked example")
+    st.markdown(
+        "Question: **Are there 2 people?**  "
+        "  \nThe images are arranged by trajectory ambiguity, not necessarily by "
+        "their frame numbers. Judge the visible evidence in every image."
+    )
+    render_example_row(
+        "Upper",
+        "ambiguity increases →",
+        [538, 159, 165, 170],
+        "Yes",
+        "Yes",
+    )
+    st.info(
+        "The maximum-ambiguity image is omitted here, just as it is in the "
+        "actual form. Do not infer its answer."
+    )
+    render_example_row(
+        "Lower",
+        "ambiguity decreases →",
+        [186, 651, 864, 892, 962],
+        "Yes",
+        "No",
+    )
+    st.markdown(
+        "**What this shows:** all images within each row agree, but the shared "
+        "GT changes from **Yes** in the upper row to **No** in the lower row. "
+        "Evaluate the two rows independently. If even one image in a row has a "
+        "different GT, answer **No** to the consistency question and explain "
+        "the change in the comments box."
+    )
+    st.markdown("---")
+
+
 def prepare_result(trial, upper_same, upper_gt, lower_same, lower_gt, comment):
     reaction_time = time.time() - st.session_state.start_time
     metadata = {
@@ -354,7 +416,7 @@ def instructions_page():
         6. Responses are saved after every page. Use the same Participant ID to resume.
         """
     )
-    st.markdown("---")
+    worked_example()
     user_id = st.text_input("Participant ID", value=st.session_state.user_id)
     if not st.button("Start / resume Form " + str(FORM_ID), type="primary"):
         return
