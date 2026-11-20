@@ -435,15 +435,19 @@ def instructions_page():
            ground truth. If **Yes**, select the shared row GT as **Yes** or **No**.
            If **No**, no row GT needs to be entered.
         3. Use the optional comment box for GT changes or data issues.
-        4. Responses are saved after every page. Use the same Participant ID to resume.
+        4. Responses are saved after every page. Use the same Prolific ID to resume.
         """
     )
     worked_example()
-    user_id = st.text_input("Participant ID", value=st.session_state.user_id)
+    user_id = st.text_input(
+        "Prolific ID",
+        value=st.session_state.user_id,
+        help="Enter your Prolific ID exactly as shown in Prolific.",
+    )
     if not st.button("Start / resume Form " + str(FORM_ID), type="primary"):
         return
     if not user_id.strip():
-        st.error("Enter a Participant ID before starting.")
+        st.error("Enter your Prolific ID before starting.")
         return
 
     st.session_state.user_id = user_id.strip()
