@@ -274,6 +274,7 @@ def render_example_row(
     frames,
     all_same,
     ground_truth=None,
+    explanation=None,
 ):
     st.markdown(
         f'<div class="row-heading"><b>{row_name}</b> — read left to right →</div>',
@@ -295,6 +296,8 @@ def render_example_row(
             else:
                 st.warning("Example image missing")
             st.caption(f"Image {position}")
+    if explanation:
+        st.markdown(f"**Why:** {explanation}")
     if all_same == "No":
         st.success(
             "Correct annotation: All images have the same GT = **No** · "
@@ -336,6 +339,10 @@ def worked_example():
         "Are there 2 people?",
         [651, 864, 892, 962],
         "No",
+        explanation=(
+            "Images 2 and 3 show two people, while Images 1 and 4 show only "
+            "one person, so the GT changes across the row."
+        ),
     )
     st.markdown(
         "**What this shows:** when all images agree, select **Yes** for "
