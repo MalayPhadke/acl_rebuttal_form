@@ -297,23 +297,19 @@ def worked_example():
     st.subheader("Worked example")
     st.markdown(
         "Question: **Are there 2 people?**  "
-        "  \nThe images are arranged by trajectory ambiguity, not necessarily by "
-        "their frame numbers. Judge the visible evidence in every image."
+        "  \nRead each row from left to right and judge the visible evidence "
+        "in every image."
     )
     render_example_row(
         "Upper",
-        "ambiguity increases →",
+        "read left to right →",
         [538, 159, 165, 170],
         "Yes",
         "Yes",
     )
-    st.info(
-        "The maximum-ambiguity image is omitted here, just as it is in the "
-        "actual form. Do not infer its answer."
-    )
     render_example_row(
         "Lower",
-        "ambiguity decreases →",
+        "read left to right →",
         [186, 651, 864, 892, 962],
         "Yes",
         "No",
@@ -405,15 +401,11 @@ def instructions_page():
         This form contains **{FORM_SIZE} trajectory pages**. Each page shows one
         yes/no question and two ordered rows of video frames.
 
-        1. The **upper row** is the left side of the trajectory; ambiguity
-           increases from left to right.
-        2. The **lower row** is the right side; ambiguity decreases from left
-           to right.
-        3. The maximum-ambiguity frame or interval is omitted.
-        4. For each available row, answer whether every image has the same
+        1. Read both the **upper row** and **lower row** from left to right.
+        2. For each available row, answer whether every image has the same
            ground truth, then select the row's ground truth as **Yes** or **No**.
-        5. Use the optional comment box for GT changes, ambiguity, or data issues.
-        6. Responses are saved after every page. Use the same Participant ID to resume.
+        3. Use the optional comment box for GT changes or data issues.
+        4. Responses are saved after every page. Use the same Participant ID to resume.
         """
     )
     worked_example()
@@ -470,10 +462,7 @@ def render_image_row(trial, row_name, direction, frames, image_paths):
         unsafe_allow_html=True,
     )
     if not frames:
-        st.info(
-            f"No {row_name.lower()}-row images are available because maximum "
-            "ambiguity occurs at this trajectory boundary."
-        )
+        st.info(f"No {row_name.lower()}-row images are available for this page.")
         return None, None, False
 
     columns = st.columns(len(frames), gap="small")
@@ -550,7 +539,7 @@ def experiment_page():
     upper_same, upper_gt, upper_available = render_image_row(
         trial,
         "Upper",
-        "increasing ambiguity →",
+        "read left to right →",
         trial["upper_frames"],
         trial["upper_image_paths"],
     )
@@ -558,7 +547,7 @@ def experiment_page():
     lower_same, lower_gt, lower_available = render_image_row(
         trial,
         "Lower",
-        "decreasing ambiguity →",
+        "read left to right →",
         trial["lower_frames"],
         trial["lower_image_paths"],
     )
@@ -567,7 +556,7 @@ def experiment_page():
         "Comments (optional)",
         key=f"{trial['trajectory_id']}_comment",
         height=80,
-        placeholder="Note any GT change, ambiguity, or issue.",
+        placeholder="Note any GT change or data issue.",
     )
     _, submit_column, _ = st.columns([2, 3, 2])
     with submit_column:
