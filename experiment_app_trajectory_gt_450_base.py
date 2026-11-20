@@ -310,7 +310,7 @@ def worked_example():
     render_example_row(
         "Lower",
         "read left to right →",
-        [186, 651, 864, 892, 962],
+        [651, 864, 892, 962],
         "Yes",
         "No",
     )
