@@ -18,9 +18,7 @@ from google.oauth2.service_account import Credentials
 
 APP_DIR = os.path.dirname(os.path.abspath(__file__))
 FORM_SIZE = 90
-EXAMPLE_IMAGES_DIR = os.path.join(
-    APP_DIR, "trajectory_gt_450_example_images", "original_0093"
-)
+EXAMPLE_IMAGES_ROOT = os.path.join(APP_DIR, "trajectory_gt_450_example_images")
 GSHEETS_SCOPES = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive",
@@ -269,57 +267,81 @@ def scroll_to_top(label=""):
     )
 
 
-def render_example_row(row_name, direction, frames, all_same, ground_truth):
+def render_example_row(
+    row_name,
+    trajectory_id,
+    question,
+    frames,
+    all_same,
+    ground_truth=None,
+):
     st.markdown(
-        f'<div class="row-heading"><b>{row_name} example</b> — {direction}</div>',
+        f'<div class="row-heading"><b>{row_name}</b> — read left to right →</div>',
         unsafe_allow_html=True,
     )
+    st.markdown(f"Question: **{question}**")
     columns = st.columns(len(frames), gap="small")
     for position, (column, frame) in enumerate(zip(columns, frames), start=1):
-        image_path = resolve_frame_image_path("original_0093", frame)
-        # The example has a separate shared asset directory rather than a form
-        # directory, so resolve it explicitly.
-        image_path = os.path.join(EXAMPLE_IMAGES_DIR, os.path.basename(image_path))
+        image_path = os.path.join(
+            EXAMPLE_IMAGES_ROOT,
+            trajectory_id,
+            f"frame_{frame:04d}.png",
+        )
+        if not os.path.isfile(image_path):
+            image_path = os.path.splitext(image_path)[0] + ".jpg"
         with column:
             if os.path.isfile(image_path):
                 st.image(image_path, width="stretch")
             else:
                 st.warning("Example image missing")
             st.caption(f"Image {position}")
-    st.success(
-        f"Correct annotation: All images have the same GT = **{all_same}** · "
-        f"Row GT = **{ground_truth}**"
-    )
+    if all_same == "No":
+        st.success(
+            "Correct annotation: All images have the same GT = **No** · "
+            "Row GT = **nothing needs to be entered**"
+        )
+    else:
+        st.success(
+            f"Correct annotation: All images have the same GT = **{all_same}** · "
+            f"Row GT = **{ground_truth}**"
+        )
 
 
 def worked_example():
     st.markdown("---")
-    st.subheader("Worked example")
+    st.subheader("Worked examples")
     st.markdown(
-        "Question: **Are there 2 people?**  "
-        "  \nRead each row from left to right and judge the visible evidence "
-        "in every image."
+        "Read each row from left to right and judge the visible evidence in "
+        "every image. These three rows show all possible response patterns."
     )
     render_example_row(
-        "Upper",
-        "read left to right →",
+        "Row 1 · consistent Yes",
+        "original_0093",
+        "Are there 2 people?",
         [538, 159, 165, 170],
         "Yes",
         "Yes",
     )
     render_example_row(
-        "Lower",
-        "read left to right →",
-        [651, 864, 892, 962],
+        "Row 2 · consistent No",
+        "original_0279",
+        "Is the bottle pointing toward the camera?",
+        [3, 10, 35, 41],
         "Yes",
         "No",
     )
+    render_example_row(
+        "Row 3 · GT changes",
+        "original_0093",
+        "Are there 2 people?",
+        [651, 864, 892, 962],
+        "No",
+    )
     st.markdown(
-        "**What this shows:** all images within each row agree, but the shared "
-        "GT changes from **Yes** in the upper row to **No** in the lower row. "
-        "Evaluate the two rows independently. If even one image in a row has a "
-        "different GT, answer **No** to the consistency question and explain "
-        "the change in the comments box."
+        "**What this shows:** when all images agree, select **Yes** for "
+        "consistency and then enter their shared row GT. If even one image has "
+        "a different GT, select **No** for consistency; no row GT is required. "
+        "Use the comments box to describe the change if helpful."
     )
     st.markdown("---")
 
@@ -403,7 +425,8 @@ def instructions_page():
 
         1. Read both the **upper row** and **lower row** from left to right.
         2. For each available row, answer whether every image has the same
-           ground truth, then select the row's ground truth as **Yes** or **No**.
+           ground truth. If **Yes**, select the shared row GT as **Yes** or **No**.
+           If **No**, no row GT needs to be entered.
         3. Use the optional comment box for GT changes or data issues.
         4. Responses are saved after every page. Use the same Participant ID to resume.
         """
@@ -493,7 +516,14 @@ def render_image_row(trial, row_name, direction, frames, image_paths):
             index=None,
             horizontal=True,
             key=f"{prefix}_gt",
+            disabled=all_same != "Yes",
         )
+        if all_same == "No":
+            st.info("No row GT needs to be entered.")
+            ground_truth = None
+        elif all_same is None:
+            st.caption("Answer the consistency question first.")
+            ground_truth = None
     return (
         all_same.lower() if all_same else None,
         ground_truth.lower() if ground_truth else None,
@@ -570,11 +600,11 @@ def experiment_page():
         missing = []
         if upper_available and upper_same is None:
             missing.append("upper-row consistency")
-        if upper_available and upper_gt is None:
+        if upper_available and upper_same == "yes" and upper_gt is None:
             missing.append("upper-row GT")
         if lower_available and lower_same is None:
             missing.append("lower-row consistency")
-        if lower_available and lower_gt is None:
+        if lower_available and lower_same == "yes" and lower_gt is None:
             missing.append("lower-row GT")
         if missing:
             st.error("Please select: " + ", ".join(missing) + ".")
